@@ -1,13 +1,3 @@
 # D&D 3기 1조 Documentation
 
-## 팀원 명단
-- 김동영 (개발)
-- 김호준 (개발)
-- 손재현 (개발)
-- 신채원 (디자이너)
-- 이철우 (조장, 개발)
-- 황다솔 (개발)
-
-## 각 주차 별 문서
-- [ ] [1주차](./1st/README.md)
-
+[Wiki를 이용합니다](https://github.com/dnd-mentee-3rd/dnd-mentee-3rd-1-documentation/wiki)
