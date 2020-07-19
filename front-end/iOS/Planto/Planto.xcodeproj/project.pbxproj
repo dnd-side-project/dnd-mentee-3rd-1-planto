@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A44FD2E524C42F5100037F7A /* Plentö.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plentö.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44FD2E524C42F5100037F7A /* Plantö.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plantö.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44FD2E824C42F5100037F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A44FD2EC24C42F5100037F7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		A44FD2DC24C42F5100037F7A = {
 			isa = PBXGroup;
 			children = (
-				A44FD2E724C42F5100037F7A /* Plento */,
+				A44FD2E724C42F5100037F7A /* Planto */,
 				A44FD2E624C42F5100037F7A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		A44FD2E624C42F5100037F7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A44FD2E524C42F5100037F7A /* Plentö.app */,
+				A44FD2E524C42F5100037F7A /* Plantö.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A44FD2E724C42F5100037F7A /* Plento */ = {
+		A44FD2E724C42F5100037F7A /* Planto */ = {
 			isa = PBXGroup;
 			children = (
 				A44FD2E824C42F5100037F7A /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */,
 				A44FD2F624C42F5200037F7A /* Info.plist */,
 			);
-			path = Plento;
+			path = Planto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A44FD2E424C42F5100037F7A /* Plento */ = {
+		A44FD2E424C42F5100037F7A /* Planto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A44FD2F924C42F5200037F7A /* Build configuration list for PBXNativeTarget "Plento" */;
+			buildConfigurationList = A44FD2F924C42F5200037F7A /* Build configuration list for PBXNativeTarget "Planto" */;
 			buildPhases = (
 				A44FD2E124C42F5100037F7A /* Sources */,
 				A44FD2E224C42F5100037F7A /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Plento;
+			name = Planto;
 			productName = Plento;
-			productReference = A44FD2E524C42F5100037F7A /* Plentö.app */;
+			productReference = A44FD2E524C42F5100037F7A /* Plantö.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A44FD2E024C42F5100037F7A /* Build configuration list for PBXProject "Plento" */;
+			buildConfigurationList = A44FD2E024C42F5100037F7A /* Build configuration list for PBXProject "Planto" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A44FD2E424C42F5100037F7A /* Plento */,
+				A44FD2E424C42F5100037F7A /* Planto */,
 			);
 		};
 /* End PBXProject section */
@@ -285,13 +285,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Plento/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Planto/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Plento;
-				PRODUCT_NAME = "Plentö";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Planto;
+				PRODUCT_NAME = "Plantö";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,13 +302,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Plento/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Planto/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Plento;
-				PRODUCT_NAME = "Plentö";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Planto;
+				PRODUCT_NAME = "Plantö";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,7 +317,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A44FD2E024C42F5100037F7A /* Build configuration list for PBXProject "Plento" */ = {
+		A44FD2E024C42F5100037F7A /* Build configuration list for PBXProject "Planto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A44FD2F724C42F5200037F7A /* Debug */,
@@ -326,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A44FD2F924C42F5200037F7A /* Build configuration list for PBXNativeTarget "Plento" */ = {
+		A44FD2F924C42F5200037F7A /* Build configuration list for PBXNativeTarget "Planto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A44FD2FA24C42F5200037F7A /* Debug */,
