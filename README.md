@@ -1,6 +1,6 @@
 # D&D 3기 1조 Documentation
 
-[Wiki를 이용합니다](https://github.com/dnd-mentee-3rd/dnd-mentee-3rd-1-documentation/wiki)
+[Notion을 이용합니다.](https://www.notion.so/1-3f247dce995f4234a69a98226bcc3887)
 
 ## 🙋‍♀️ 팀원 명단
 
