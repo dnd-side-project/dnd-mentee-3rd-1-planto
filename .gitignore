@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 thumbs.db
 
@@ -155,16 +156,21 @@ fastlane/test_output
 iOSInjectionProject/
 
 # Node JS
+=======
+>>>>>>> node/master
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+=======
+>>>>>>> node/master
 
 # Runtime data
 pids
@@ -177,12 +183,19 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+<<<<<<< HEAD
 *.lcov
+=======
+>>>>>>> node/master
 
 # nyc test coverage
 .nyc_output
 
+<<<<<<< HEAD
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+=======
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+>>>>>>> node/master
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -198,11 +211,16 @@ build/Release
 node_modules/
 jspm_packages/
 
+<<<<<<< HEAD
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
+=======
+# Typescript v1 declaration files
+typings/
+>>>>>>> node/master
 
 # Optional npm cache directory
 .npm
@@ -210,12 +228,15 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 
+<<<<<<< HEAD
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 
+=======
+>>>>>>> node/master
 # Optional REPL history
 .node_repl_history
 
@@ -225,6 +246,7 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
+<<<<<<< HEAD
 # dotenv environment variables file
 .env
 .env.test
@@ -271,3 +293,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+=======
+# dotenv environment constiables file
+.env
+
+# next.js build output
+.next
+>>>>>>> node/master
