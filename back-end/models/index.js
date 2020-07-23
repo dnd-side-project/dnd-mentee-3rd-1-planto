@@ -1,11 +1,13 @@
 const mariadb = require("mariadb");
+require("dotenv").config();
 
 const getConnection = async () => {
   try {
     const conn = await mariadb.createConnection({
-      user: "user",
-      password: "user",
-      host: "localhost",
+      user: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
       connectTimeout: 1000,
     });
 
@@ -18,9 +20,10 @@ const getConnection = async () => {
 const getPool = () => {
   try {
     const pool = mariadb.createPool({
-      user: "user",
-      password: "user",
-      host: "localhost",
+      user: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
       connectTimeout: 1000,
       connectionLimit: 3,
     });
