@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */; };
 		A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2E824C42F5100037F7A /* AppDelegate.swift */; };
 		A44FD2EB24C42F5100037F7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */; };
-		A44FD2ED24C42F5100037F7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2EC24C42F5100037F7A /* ViewController.swift */; };
+		A44FD2ED24C42F5100037F7A /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2EC24C42F5100037F7A /* FirstIntroViewController.swift */; };
 		A44FD2F024C42F5100037F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2EE24C42F5100037F7A /* Main.storyboard */; };
 		A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F124C42F5200037F7A /* Assets.xcassets */; };
 		A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */; };
+		A4B31B9324CCA2D100E58386 /* IntroButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B31B9224CCA2D100E58386 /* IntroButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A44FD2E524C42F5100037F7A /* Plantö.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plantö.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroViewController.swift; sourceTree = "<group>"; };
+		A44FD2E524C42F5100037F7A /* Planto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44FD2E824C42F5100037F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A44FD2EC24C42F5100037F7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A44FD2EC24C42F5100037F7A /* FirstIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
 		A44FD2EF24C42F5100037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A44FD2F124C42F5200037F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44FD2F424C42F5200037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44FD2F624C42F5200037F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B31B9224CCA2D100E58386 /* IntroButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42AD62C24CC988900B07566 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				A44FD2EE24C42F5100037F7A /* Main.storyboard */,
+				A44FD2EC24C42F5100037F7A /* FirstIntroViewController.swift */,
+				A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */,
+				A4B31B9224CCA2D100E58386 /* IntroButton.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		A44FD2DC24C42F5100037F7A = {
 			isa = PBXGroup;
 			children = (
@@ -48,7 +63,7 @@
 		A44FD2E624C42F5100037F7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A44FD2E524C42F5100037F7A /* Plantö.app */,
+				A44FD2E524C42F5100037F7A /* Planto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +71,9 @@
 		A44FD2E724C42F5100037F7A /* Planto */ = {
 			isa = PBXGroup;
 			children = (
+				A42AD62C24CC988900B07566 /* Intro */,
 				A44FD2E824C42F5100037F7A /* AppDelegate.swift */,
 				A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */,
-				A44FD2EC24C42F5100037F7A /* ViewController.swift */,
-				A44FD2EE24C42F5100037F7A /* Main.storyboard */,
 				A44FD2F124C42F5200037F7A /* Assets.xcassets */,
 				A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */,
 				A44FD2F624C42F5200037F7A /* Info.plist */,
@@ -84,7 +98,7 @@
 			);
 			name = Planto;
 			productName = Plento;
-			productReference = A44FD2E524C42F5100037F7A /* Plantö.app */;
+			productReference = A44FD2E524C42F5100037F7A /* Planto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44FD2ED24C42F5100037F7A /* ViewController.swift in Sources */,
+				A4B31B9324CCA2D100E58386 /* IntroButton.swift in Sources */,
+				A44FD2ED24C42F5100037F7A /* FirstIntroViewController.swift in Sources */,
+				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
 				A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */,
 				A44FD2EB24C42F5100037F7A /* SceneDelegate.swift in Sources */,
 			);
@@ -290,8 +306,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Planto;
-				PRODUCT_NAME = "Plantö";
+				PRODUCT_BUNDLE_IDENTIFIER = com.planto;
+				PRODUCT_NAME = Planto;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,8 +323,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Planto;
-				PRODUCT_NAME = "Plantö";
+				PRODUCT_BUNDLE_IDENTIFIER = com.planto;
+				PRODUCT_NAME = Planto;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
