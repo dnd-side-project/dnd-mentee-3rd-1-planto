@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Plento
 //
-//  Created by Aaron Lee on 7/19/20.
-//  Copyright © 2020 D&D. All rights reserved.
+//  Created by Planto on 7/19/20.
+//  Copyright © 2020 Planto. All rights reserved.
 //
 
 import UIKit
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        sleep(1)    // 런치 스크린 딜레이 1sec
         return true
     }
 
