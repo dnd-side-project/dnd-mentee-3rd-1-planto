@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "jest"
+    "start": "npm run dev",
+    "test": "jest",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node ./bin/www",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -15,6 +19,7 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "jest": "^26.1.0"
   }
 }
