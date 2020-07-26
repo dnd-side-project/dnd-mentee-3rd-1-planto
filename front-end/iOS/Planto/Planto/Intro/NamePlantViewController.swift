@@ -16,7 +16,11 @@ class NamePlantViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         print(plantName!)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 화면 터치 시 키보드 숨기기
+        self.view.endEditing(true)
     }
 }
