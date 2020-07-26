@@ -1,14 +1,17 @@
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const logger = require("morgan");
+const morgan = require("morgan");
+const { stream } = require("./config/logger");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
+const morganFormat = process.env.NODE_ENV === "production" ? "combined" : "dev";
+
 const app = express();
 
-app.use(logger("dev"));
+app.use(morgan(morganFormat, { stream }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
