@@ -1,6 +1,6 @@
 # D&D 3기 1조 Documentation
 
-[Notion을 이용합니다.](https://www.notion.so/1-3f247dce995f4234a69a98226bcc3887)
+[Notion을 이용합니다.](https://www.notion.so/1-HOME-008adae147e74566bb2bcaacf857c1f4)
 
 ## 🙋‍♀️ 팀원 명단
 
