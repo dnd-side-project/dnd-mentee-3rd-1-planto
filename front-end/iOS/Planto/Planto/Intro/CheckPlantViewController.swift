@@ -10,20 +10,20 @@ import UIKit
 
 class CheckPlantViewController: UIViewController {
     
-    let plantName: String = "스투키"
+    var plantName: String!
 
     @IBOutlet weak var lblPlantName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lblPlantName.text = "음, \(plantName)와(과)"   // 레이블 텍스트
+        lblPlantName.text = "음, \(plantName!)와(과)"   // 레이블 텍스트
         
         // 이름 부분 Bold 적용
         let attribute = NSMutableAttributedString(string: lblPlantName.text!)
         attribute.addAttribute(NSAttributedString.Key.init(kCTFontAttributeName as String),
                                value: UIFont.systemFont(ofSize: 22, weight: UIFont.Weight.bold),
-                               range: (lblPlantName.text! as NSString).range(of: plantName))
+                               range: (lblPlantName.text! as NSString).range(of: plantName!))
         lblPlantName.attributedText = attribute
     }
     
@@ -36,6 +36,7 @@ class CheckPlantViewController: UIViewController {
         }
     }
 
+    // 다시 고르기 버튼 클릭
     @IBAction func btnDismiss(_ sender: UIButton) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TakePictureVC") else {
             return

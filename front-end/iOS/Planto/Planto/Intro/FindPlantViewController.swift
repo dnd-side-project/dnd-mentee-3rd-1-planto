@@ -26,9 +26,16 @@ class FindPlantViewController: UIViewController {
         imgView.layer.masksToBounds = true
         imgView.clipsToBounds = true
         
-        // To Do: 이미지 검색 및 결과 도출 후 화면 전환
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.performSegue(withIdentifier: "PlantFound", sender: self)
+        }
+    }
+    
+    // To Do: 이미지 검색 및 결과 도출 후 화면 전환
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "PlantFound") {
+            guard let nextVc = segue.destination as? PlantFoundViewController else { return }
+            nextVc.plantName = "스투키"
         }
     }
 

@@ -9,6 +9,8 @@
 import UIKit
 
 class PlantFoundViewController: UIViewController {
+    
+    var plantName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +20,11 @@ class PlantFoundViewController: UIViewController {
             self.performSegue(withIdentifier: "CheckPlant", sender: self)
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "CheckPlant") {
+            guard let nextVc = segue.destination as? CheckPlantViewController else { return }
+            nextVc.plantName = plantName
+        }
+    }
 }
