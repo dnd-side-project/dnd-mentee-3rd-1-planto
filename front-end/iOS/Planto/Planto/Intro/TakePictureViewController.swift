@@ -30,6 +30,7 @@ UIImagePickerControllerDelegate {
         // 이미지 크기 및 라운드 처리
         imgView.frame = CGRect(x: 0, y: 0, width: width, height: width)
         imgView.layer.cornerRadius = imgView.layer.frame.height / 2
+        imgView.layer.masksToBounds = true
         imgView.clipsToBounds = true
     }
     

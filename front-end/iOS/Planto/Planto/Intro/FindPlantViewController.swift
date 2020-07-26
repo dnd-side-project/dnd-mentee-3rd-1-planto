@@ -23,6 +23,7 @@ class FindPlantViewController: UIViewController {
         // 이미지 크기 및 라운드 처리
         imgView.frame = CGRect(x: 0, y: 0, width: width, height: width)
         imgView.layer.cornerRadius = imgView.layer.frame.height / 2
+        imgView.layer.masksToBounds = true
         imgView.clipsToBounds = true
         
         // To Do: 이미지 검색 및 결과 도출 후 화면 전환
