@@ -38,9 +38,22 @@ class CheckPlantViewController: UIViewController {
 
     // 다시 고르기 버튼 클릭
     @IBAction func btnDismiss(_ sender: UIButton) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TakePictureVC") else {
-            return
-        }
-        self.present(vc, animated: true)
+        let alert = UIAlertController(title: "다시 고르기",
+                                      message: "사진을 잘못 찍거나 선택하셨나요?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "응, 다시 고를래", style: .default, handler: {action in
+            // TakePictureVC로 이동
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TakePictureVC") else {
+                return
+            }
+            self.present(vc, animated: true)
+        })
+        let cancelAction = UIAlertAction(title: "아니!", style: .default, handler: nil)
+        
+        alert.addAction(confirmAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
 }
