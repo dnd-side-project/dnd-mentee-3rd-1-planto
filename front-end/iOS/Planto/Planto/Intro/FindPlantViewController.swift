@@ -28,7 +28,7 @@ class FindPlantViewController: UIViewController {
         
         // 화면 전환 + 지연 3초
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.performSegue(withIdentifier: Constants.SegueName.foundPlant, sender: self)
+            self.performSegue(withIdentifier: "PlantFound", sender: self)
         }
     }
     

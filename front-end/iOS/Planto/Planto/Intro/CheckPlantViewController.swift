@@ -48,15 +48,8 @@ class CheckPlantViewController: UIViewController {
     
     // 식물 이름 다음 뷰 전달
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-<<<<<<< HEAD
-        if (segue.identifier == Constants.SegueName.namePlant) {
-            guard let nextVc = segue.destination as? NamePlantViewController else {
-                return
-            }
-=======
         if (segue.identifier == "ConfirmPlant") {
             guard let nextVc = segue.destination as? ConfirmPlantViewController else { return }
->>>>>>> acbd83c91a869afab4c45d622137f0def2fb417c
             nextVc.plantName = plantName
             nextVc.plantNameEN = plantNameEN
         }

@@ -36,7 +36,6 @@ class ConfirmPlantViewController: UIViewController {
                 return
             }
             nextVc.plantName = plantName
-            nextVc.plantNameEN = plantNameEN
         }
     }
     
