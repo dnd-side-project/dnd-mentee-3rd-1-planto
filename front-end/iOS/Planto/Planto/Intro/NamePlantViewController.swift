@@ -17,12 +17,11 @@ class NamePlantViewController: UIViewController {
     // CheckPlantVC로 부터 default name 받아옴
     var plantName: String!
     var delegate: SendDataDelegate?
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(plantName!)
+        print(plantName!, plantNameEN!)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
