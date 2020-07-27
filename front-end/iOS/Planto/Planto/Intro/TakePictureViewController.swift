@@ -9,9 +9,9 @@
 import UIKit
 import MobileCoreServices
 
-class TakePictureViewController: UIViewController, UINavigationControllerDelegate,
-UIImagePickerControllerDelegate {
+class TakePictureViewController: UIViewController {
     
+    // - MARK: IBOutlets
     @IBOutlet weak var imgView: UIImageView!    // 이미지 뷰
     
     // UIImagePickerController 인스턴스
@@ -34,16 +34,8 @@ UIImagePickerControllerDelegate {
         imgView.clipsToBounds = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // FindPlnat 세그웨이 실행 준비
-        if segue.identifier == "FindPlant" {
-            guard let nextVc = segue.destination as? FindPlantViewController else {
-                return
-            }
-            nextVc.image = captureImage
-        }
-    }
     
+    // - MARK: IBActions
     // 사진 촬영
     @IBAction func btnCaptureImageFromCamera(_ sender: UIButton) {
         if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
@@ -93,6 +85,29 @@ UIImagePickerControllerDelegate {
         }
     }
     
+    func alert(_ title: String, message: String, actionTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: actionTitle, style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+// - MARK: UINavigationControllerDelegate
+extension TakePictureViewController: UINavigationControllerDelegate {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // FindPlnat 세그웨이 실행 준비
+        if segue.identifier == "FindPlant" {
+            guard let nextVc = segue.destination as? FindPlantViewController else {
+                return
+            }
+            nextVc.image = captureImage
+        }
+    }
+}
+
+// - MARK: UIImagePickerControllerDelegate
+extension TakePictureViewController: UIImagePickerControllerDelegate {
     // 촬영이나 선택 후 호출되는 델리게이트 메서드
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -119,12 +134,4 @@ UIImagePickerControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)   // 이미지 피커 제거
     }
-    
-    func alert(_ title: String, message: String, actionTitle: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: actionTitle, style: .default, handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
 }
