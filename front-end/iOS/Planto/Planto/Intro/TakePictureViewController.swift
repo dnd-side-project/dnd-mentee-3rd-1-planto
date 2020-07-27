@@ -34,6 +34,16 @@ class TakePictureViewController: UIViewController {
         imgView.clipsToBounds = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // FindPlnat 세그웨이 실행 준비
+        if segue.identifier == "FindPlant" {
+            guard let nextVc = segue.destination as? FindPlantViewController else {
+                return
+            }
+            nextVc.image = captureImage
+        }
+    }
+    
     
     // - MARK: IBActions
     // 사진 촬영
@@ -81,7 +91,7 @@ class TakePictureViewController: UIViewController {
                   actionTitle: "알겠어!")
         } else {
             // FindPlant 세그웨이 실행
-            performSegue(withIdentifier: "FindPlant", sender: btnFindPlant)
+            performSegue(withIdentifier: Constants.SegueName.findPlant, sender: btnFindPlant)
         }
     }
     
@@ -95,15 +105,7 @@ class TakePictureViewController: UIViewController {
 
 // - MARK: UINavigationControllerDelegate
 extension TakePictureViewController: UINavigationControllerDelegate {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // FindPlnat 세그웨이 실행 준비
-        if segue.identifier == "FindPlant" {
-            guard let nextVc = segue.destination as? FindPlantViewController else {
-                return
-            }
-            nextVc.image = captureImage
-        }
-    }
+    
 }
 
 // - MARK: UIImagePickerControllerDelegate

@@ -28,7 +28,7 @@ class CheckPlantViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "NamePlant") {
+        if (segue.identifier == Constants.SegueName.namePlant) {
             guard let nextVc = segue.destination as? NamePlantViewController else {
                 return
             }

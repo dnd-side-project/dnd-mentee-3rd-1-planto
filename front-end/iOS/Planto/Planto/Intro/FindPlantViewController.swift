@@ -27,7 +27,7 @@ class FindPlantViewController: UIViewController {
         imgView.clipsToBounds = true
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.performSegue(withIdentifier: "PlantFound", sender: self)
+            self.performSegue(withIdentifier: Constants.SegueName.foundPlant, sender: self)
         }
     }
     

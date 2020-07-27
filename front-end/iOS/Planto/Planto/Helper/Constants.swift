@@ -1,9 +1,11 @@
-//
-//  Constants.swift
-//  Planto
-//
-//  Created by 김호준 on 2020/07/27.
-//  Copyright © 2020 D&D. All rights reserved.
-//
-
 import Foundation
+
+class Constants {
+    struct SegueName {
+        static let findPlant = "FindPlant"
+        static let foundPlant = "PlantFound"
+        static let checkPlant = "CheckPlant"
+        static let namePlant = "NamePlant"
+        static let confirmName = "ConfirmName"
+    }
+}

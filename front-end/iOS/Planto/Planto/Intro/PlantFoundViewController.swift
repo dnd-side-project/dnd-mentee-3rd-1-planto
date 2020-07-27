@@ -17,12 +17,12 @@ class PlantFoundViewController: UIViewController {
 
         // 화면 전환
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.performSegue(withIdentifier: "CheckPlant", sender: self)
+            self.performSegue(withIdentifier: Constants.SegueName.checkPlant, sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "CheckPlant") {
+        if (segue.identifier == Constants.SegueName.checkPlant) {
             guard let nextVc = segue.destination as? CheckPlantViewController else { return }
             nextVc.plantName = plantName
         }

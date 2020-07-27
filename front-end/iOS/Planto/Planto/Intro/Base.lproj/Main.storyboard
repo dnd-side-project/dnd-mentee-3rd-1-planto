@@ -582,7 +582,7 @@
                                 </state>
                                 <connections>
                                     <action selector="gotoNextPressed:" destination="7mN-sf-Lct" eventType="touchUpInside" id="t0Z-Ej-hEy"/>
-                                    <segue destination="DyA-rk-Twm" kind="show" id="50M-cr-lIl"/>
+                                    <segue destination="DyA-rk-Twm" kind="show" identifier="ConfirmName" id="50M-cr-lIl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9X-qn-Mmu">
@@ -623,22 +623,85 @@
                         <viewLayoutGuide key="safeArea" id="qQu-t5-wur"/>
                     </view>
                     <navigationItem key="navigationItem" id="duj-VR-rbo"/>
+                    <connections>
+                        <outlet property="customName" destination="YhS-0o-V0j" id="xFA-4W-RWL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHA-Ad-IZk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5636" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm Name View Controller-->
         <scene sceneID="zbq-OO-e2m">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DyA-rk-Twm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmNameVC" modalPresentationStyle="fullScreen" id="DyA-rk-Twm" customClass="ConfirmNameViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kjb-Wf-i13">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1tx-Zh-z52">
+                                <rect key="frame" x="20" y="94" width="161.5" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDH-ls-Hhm">
+                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멋진 이름이네요 : )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKe-WK-r33">
+                                        <rect key="frame" x="0.0" y="41.5" width="161.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DdF-HU-oW6">
+                                <rect key="frame" x="30" y="760" width="354" height="92"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-M2-0NK" customClass="WideButton" customModule="Planto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
+                                        <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="lZc-VX-s1g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="고마워 : )">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gotoNextPressed:" destination="7mN-sf-Lct" eventType="touchUpInside" id="jy9-Sr-vca"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ML-hm-N05">
+                                        <rect key="frame" x="0.0" y="60" width="354" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="그 이름 아니야">
+                                            <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDecline:" destination="0rU-pS-qBZ" eventType="touchUpInside" id="mvY-sg-iW4"/>
+                                            <action selector="btnDismiss:" destination="092-eJ-ez0" eventType="touchUpInside" id="zs0-cx-90b"/>
+                                            <action selector="renamePressed:" destination="DyA-rk-Twm" eventType="touchUpInside" id="khS-bs-ZUS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DdF-HU-oW6" firstAttribute="leading" secondItem="1Dg-Lc-kEQ" secondAttribute="leading" constant="30" id="39S-sj-02b"/>
+                            <constraint firstItem="1tx-Zh-z52" firstAttribute="top" secondItem="1Dg-Lc-kEQ" secondAttribute="top" constant="50" id="8p2-0d-Wvv"/>
+                            <constraint firstItem="1Dg-Lc-kEQ" firstAttribute="bottom" secondItem="DdF-HU-oW6" secondAttribute="bottom" constant="10" id="qBg-er-oUn"/>
+                            <constraint firstItem="1Dg-Lc-kEQ" firstAttribute="trailing" secondItem="DdF-HU-oW6" secondAttribute="trailing" constant="30" id="rU2-zw-dbj"/>
+                            <constraint firstItem="1tx-Zh-z52" firstAttribute="leading" secondItem="1Dg-Lc-kEQ" secondAttribute="leading" constant="20" id="rf0-KJ-wcy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1Dg-Lc-kEQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="zMv-rW-dXd"/>
+                    <connections>
+                        <outlet property="plantName" destination="TDH-ls-Hhm" id="Jx9-mD-bK1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3w-Mf-Pex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

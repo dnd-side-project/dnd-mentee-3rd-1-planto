@@ -21,6 +21,8 @@
 		A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684624CD4D9300AE038D /* FirstIntroViewController.swift */; };
 		A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684824CD508400AE038D /* TakePictureViewController.swift */; };
 		A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B31B9224CCA2D100E58386 /* Buttons.swift */; };
+		B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */; };
+		B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79D24CED89300BFE2E3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A492684624CD4D9300AE038D /* FirstIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
 		A492684824CD508400AE038D /* TakePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
 		A4B31B9224CCA2D100E58386 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNameViewController.swift; sourceTree = "<group>"; };
+		B4ACB79D24CED89300BFE2E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 				A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */,
 				A46E3AC324CDA29E005037C6 /* CheckPlantViewController.swift */,
 				A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */,
+				B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 		A44FD2E724C42F5100037F7A /* Planto */ = {
 			isa = PBXGroup;
 			children = (
+				B4ACB79C24CED88300BFE2E3 /* Helper */,
 				A42AD62C24CC988900B07566 /* Intro */,
 				A492684A24CD526200AE038D /* Resources */,
 				A44FD2E824C42F5100037F7A /* AppDelegate.swift */,
@@ -105,6 +111,14 @@
 				A4B31B9224CCA2D100E58386 /* Buttons.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4ACB79C24CED88300BFE2E3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B4ACB79D24CED89300BFE2E3 /* Constants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,12 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */,
 				A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */,
 				A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */,
 				A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */,
 				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
 				A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */,
 				A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */,
+				B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */,
 				A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */,
 				A44FD2EB24C42F5100037F7A /* SceneDelegate.swift in Sources */,
 				A46E3AC424CDA29E005037C6 /* CheckPlantViewController.swift in Sources */,
