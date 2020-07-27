@@ -18,8 +18,16 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.lifestyle</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>식물 확인을 위해 카메라를 사용합니다</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>식물 확인을 위해 사진을 사용합니다</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>식물 확인을 위해 사진을 사용합니다</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

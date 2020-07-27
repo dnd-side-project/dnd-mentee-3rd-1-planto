@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  Plento
 //
-//  Created by Aaron Lee on 7/19/20.
-//  Copyright © 2020 D&D. All rights reserved.
+//  Created by Planto on 7/19/20.
+//  Copyright © 2020 Planto. All rights reserved.
 //
 
 import UIKit

@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420434724CD7EA0008A5278 /* FindPlantViewController.swift */; };
+		A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */; };
 		A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2E824C42F5100037F7A /* AppDelegate.swift */; };
 		A44FD2EB24C42F5100037F7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */; };
-		A44FD2ED24C42F5100037F7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2EC24C42F5100037F7A /* ViewController.swift */; };
 		A44FD2F024C42F5100037F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2EE24C42F5100037F7A /* Main.storyboard */; };
 		A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F124C42F5200037F7A /* Assets.xcassets */; };
 		A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */; };
+		A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */; };
+		A46E3AC424CDA29E005037C6 /* CheckPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC324CDA29E005037C6 /* CheckPlantViewController.swift */; };
+		A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */; };
+		A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684424CD48E800AE038D /* ThirdIntroViewController.swift */; };
+		A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684624CD4D9300AE038D /* FirstIntroViewController.swift */; };
+		A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684824CD508400AE038D /* TakePictureViewController.swift */; };
+		A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B31B9224CCA2D100E58386 /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A44FD2E524C42F5100037F7A /* Plantö.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plantö.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A420434724CD7EA0008A5278 /* FindPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlantViewController.swift; sourceTree = "<group>"; };
+		A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroViewController.swift; sourceTree = "<group>"; };
+		A44FD2E524C42F5100037F7A /* Planto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44FD2E824C42F5100037F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A44FD2EC24C42F5100037F7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A44FD2EF24C42F5100037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A44FD2F124C42F5200037F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44FD2F424C42F5200037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44FD2F624C42F5200037F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantFoundViewController.swift; sourceTree = "<group>"; };
+		A46E3AC324CDA29E005037C6 /* CheckPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPlantViewController.swift; sourceTree = "<group>"; };
+		A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePlantViewController.swift; sourceTree = "<group>"; };
+		A492684424CD48E800AE038D /* ThirdIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdIntroViewController.swift; sourceTree = "<group>"; };
+		A492684624CD4D9300AE038D /* FirstIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
+		A492684824CD508400AE038D /* TakePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
+		A4B31B9224CCA2D100E58386 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42AD62C24CC988900B07566 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				A44FD2EE24C42F5100037F7A /* Main.storyboard */,
+				A492684624CD4D9300AE038D /* FirstIntroViewController.swift */,
+				A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */,
+				A492684424CD48E800AE038D /* ThirdIntroViewController.swift */,
+				A492684824CD508400AE038D /* TakePictureViewController.swift */,
+				A420434724CD7EA0008A5278 /* FindPlantViewController.swift */,
+				A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */,
+				A46E3AC324CDA29E005037C6 /* CheckPlantViewController.swift */,
+				A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		A44FD2DC24C42F5100037F7A = {
 			isa = PBXGroup;
 			children = (
@@ -48,7 +80,7 @@
 		A44FD2E624C42F5100037F7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A44FD2E524C42F5100037F7A /* Plantö.app */,
+				A44FD2E524C42F5100037F7A /* Planto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +88,23 @@
 		A44FD2E724C42F5100037F7A /* Planto */ = {
 			isa = PBXGroup;
 			children = (
+				A42AD62C24CC988900B07566 /* Intro */,
+				A492684A24CD526200AE038D /* Resources */,
 				A44FD2E824C42F5100037F7A /* AppDelegate.swift */,
 				A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */,
-				A44FD2EC24C42F5100037F7A /* ViewController.swift */,
-				A44FD2EE24C42F5100037F7A /* Main.storyboard */,
 				A44FD2F124C42F5200037F7A /* Assets.xcassets */,
 				A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */,
 				A44FD2F624C42F5200037F7A /* Info.plist */,
 			);
 			path = Planto;
+			sourceTree = "<group>";
+		};
+		A492684A24CD526200AE038D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4B31B9224CCA2D100E58386 /* Buttons.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +124,7 @@
 			);
 			name = Planto;
 			productName = Plento;
-			productReference = A44FD2E524C42F5100037F7A /* Plantö.app */;
+			productReference = A44FD2E524C42F5100037F7A /* Planto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,9 +178,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44FD2ED24C42F5100037F7A /* ViewController.swift in Sources */,
+				A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */,
+				A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */,
+				A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */,
+				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
 				A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */,
+				A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */,
+				A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */,
 				A44FD2EB24C42F5100037F7A /* SceneDelegate.swift in Sources */,
+				A46E3AC424CDA29E005037C6 /* CheckPlantViewController.swift in Sources */,
+				A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */,
+				A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,13 +333,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TTCZNUY7AA;
 				INFOPLIST_FILE = "$(SRCROOT)/Planto/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Planto;
-				PRODUCT_NAME = "Plantö";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronlab;
+				PRODUCT_NAME = Planto;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,13 +351,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TTCZNUY7AA;
 				INFOPLIST_FILE = "$(SRCROOT)/Planto/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dnd.Planto;
-				PRODUCT_NAME = "Plantö";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronlab;
+				PRODUCT_NAME = Planto;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
