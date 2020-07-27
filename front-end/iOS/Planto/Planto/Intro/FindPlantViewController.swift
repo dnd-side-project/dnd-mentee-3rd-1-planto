@@ -26,6 +26,7 @@ class FindPlantViewController: UIViewController {
         imgView.layer.masksToBounds = true
         imgView.clipsToBounds = true
         
+        // 화면 전환 + 지연 3초
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.performSegue(withIdentifier: Constants.SegueName.foundPlant, sender: self)
         }
@@ -35,7 +36,8 @@ class FindPlantViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "PlantFound") {
             guard let nextVc = segue.destination as? PlantFoundViewController else { return }
-            nextVc.plantName = "스투키"
+            nextVc.plantName = "스투키"    // 임시 이름
+            nextVc.plantNameEN = "Stuckyi"    // 임시 이름
         }
     }
 

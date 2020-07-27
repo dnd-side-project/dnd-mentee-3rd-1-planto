@@ -2,7 +2,7 @@
 //  CheckPlantViewController.swift
 //  Planto
 //
-//  Created by Aaron Lee on 7/26/20.
+//  Created by Aaron Lee on 7/27/20.
 //  Copyright © 2020 D&D. All rights reserved.
 //
 
@@ -11,49 +11,73 @@ import UIKit
 class CheckPlantViewController: UIViewController {
     
     var plantName: String!
-
-    @IBOutlet weak var lblPlantName: UILabel!
+    var plantNameEN: String!
+    
+    let greenColor = UIColor(red: 85/255, green: 144/255, blue: 121/255, alpha: 1)
+    
+    @IBOutlet weak var lblResult: UILabel!      // 검색 결과
+    @IBOutlet weak var imgView: UIImageView!        // 이미지
+    @IBOutlet weak var lblPlantNameKR: UILabel!     // 한글이름
+    @IBOutlet weak var lblPlantNameEN: UILabel!     // 영어이름
+    @IBOutlet weak var lblPlantDescription: UILabel!    // 설명
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lblPlantName.text = "음, \(plantName!)와(과)"   // 레이블 텍스트
+        let resultText = "제가 보기에, 이 친구는 \(plantName!) 같네요!"
         
-        // 이름 부분 Bold 적용
-        let attribute = NSMutableAttributedString(string: lblPlantName.text!)
+        // 이름 부분 Bold 및 색상 적용
+        let attribute = NSMutableAttributedString(string: resultText)
+        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: greenColor,
+                               range: (resultText as NSString).range(of:plantName))
         attribute.addAttribute(NSAttributedString.Key.init(kCTFontAttributeName as String),
-                               value: UIFont.systemFont(ofSize: 22, weight: UIFont.Weight.bold),
-                               range: (lblPlantName.text! as NSString).range(of: plantName!))
-        lblPlantName.attributedText = attribute
+                               value: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.bold),
+                               range: (resultText as NSString).range(of: plantName))
+        lblResult.attributedText = attribute
+        
+        // img view
+        imgView.image = UIImage(named: "\(plantName!).png")
+        
+        // plantName & description
+        lblPlantNameKR.text = plantName
+        lblPlantNameEN.text = plantNameEN
+        // To Do: DB와 이름 대조 후 설명 호출
+        lblPlantDescription.text = "스투키(Sansevieria stuckyi 또는 Diocletian's spear)는 적도 아프리카에 자생하는 놀리나아과 식물의 다육 식물의 하나로, 경작이 쉬운 편이다."
+        
     }
     
+    // 식물 이름 다음 뷰 전달
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+<<<<<<< HEAD
         if (segue.identifier == Constants.SegueName.namePlant) {
             guard let nextVc = segue.destination as? NamePlantViewController else {
                 return
             }
+=======
+        if (segue.identifier == "ConfirmPlant") {
+            guard let nextVc = segue.destination as? ConfirmPlantViewController else { return }
+>>>>>>> acbd83c91a869afab4c45d622137f0def2fb417c
             nextVc.plantName = plantName
+            nextVc.plantNameEN = plantNameEN
         }
     }
-
-    // 다시 고르기 버튼 클릭
-    @IBAction func btnDismiss(_ sender: UIButton) {
-        let alert = UIAlertController(title: "다시 고르기",
-                                      message: "사진을 잘못 찍거나 선택하셨나요?", preferredStyle: .alert)
-        let confirmAction = UIAlertAction(title: "응, 다시 고를래", style: .default, handler: {action in
-            // TakePictureVC로 이동
-            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TakePictureVC") else {
-                return
-            }
-            self.present(vc, animated: true)
-        })
-        let cancelAction = UIAlertAction(title: "아니!", style: .default, handler: nil)
+    
+    
+    @IBAction func btnCancel(_ sender: UIButton) {
+        let alert = UIAlertController(title: "To Do",
+                                      message: "식물 목록 생성 후 보여주는 창 호출",
+                                      preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "산 넘어",
+                                          style: .default,
+                                          handler: nil)
+        let cancelAction = UIAlertAction(title: "산",
+                                         style: .default,
+                                         handler: nil)
         
         alert.addAction(confirmAction)
         alert.addAction(cancelAction)
         
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
+    
 }

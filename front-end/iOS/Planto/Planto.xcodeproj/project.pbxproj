@@ -15,8 +15,9 @@
 		A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F124C42F5200037F7A /* Assets.xcassets */; };
 		A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */; };
 		A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */; };
-		A46E3AC424CDA29E005037C6 /* CheckPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC324CDA29E005037C6 /* CheckPlantViewController.swift */; };
+		A46E3AC424CDA29E005037C6 /* ConfirmPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */; };
 		A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */; };
+		A47F318A24CE72F200B36072 /* CheckPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F318924CE72F200B36072 /* CheckPlantViewController.swift */; };
 		A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684424CD48E800AE038D /* ThirdIntroViewController.swift */; };
 		A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684624CD4D9300AE038D /* FirstIntroViewController.swift */; };
 		A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684824CD508400AE038D /* TakePictureViewController.swift */; };
@@ -36,8 +37,9 @@
 		A44FD2F424C42F5200037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44FD2F624C42F5200037F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantFoundViewController.swift; sourceTree = "<group>"; };
-		A46E3AC324CDA29E005037C6 /* CheckPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPlantViewController.swift; sourceTree = "<group>"; };
+		A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPlantViewController.swift; sourceTree = "<group>"; };
 		A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePlantViewController.swift; sourceTree = "<group>"; };
+		A47F318924CE72F200B36072 /* CheckPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPlantViewController.swift; sourceTree = "<group>"; };
 		A492684424CD48E800AE038D /* ThirdIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdIntroViewController.swift; sourceTree = "<group>"; };
 		A492684624CD4D9300AE038D /* FirstIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
 		A492684824CD508400AE038D /* TakePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +69,8 @@
 				A492684824CD508400AE038D /* TakePictureViewController.swift */,
 				A420434724CD7EA0008A5278 /* FindPlantViewController.swift */,
 				A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */,
-				A46E3AC324CDA29E005037C6 /* CheckPlantViewController.swift */,
+				A47F318924CE72F200B36072 /* CheckPlantViewController.swift */,
+				A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */,
 				A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */,
 				B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */,
 			);
@@ -194,6 +197,7 @@
 			files = (
 				B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */,
 				A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */,
+				A47F318A24CE72F200B36072 /* CheckPlantViewController.swift in Sources */,
 				A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */,
 				A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */,
 				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
@@ -202,7 +206,7 @@
 				B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */,
 				A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */,
 				A44FD2EB24C42F5100037F7A /* SceneDelegate.swift in Sources */,
-				A46E3AC424CDA29E005037C6 /* CheckPlantViewController.swift in Sources */,
+				A46E3AC424CDA29E005037C6 /* ConfirmPlantViewController.swift in Sources */,
 				A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */,
 				A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */,
 			);

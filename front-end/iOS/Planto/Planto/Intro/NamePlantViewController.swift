@@ -12,12 +12,21 @@ class NamePlantViewController: UIViewController {
     
     @IBOutlet weak var customName: UITextField!
     // CheckPlantVC로 부터 default name 받아옴
+<<<<<<< HEAD
     var plantName: String?
     
+=======
+    var plantName: String!
+    var delegate: SendDataDelegate?
+>>>>>>> acbd83c91a869afab4c45d622137f0def2fb417c
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+<<<<<<< HEAD
+=======
+        print(plantName!, plantNameEN!)
+>>>>>>> acbd83c91a869afab4c45d622137f0def2fb417c
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
