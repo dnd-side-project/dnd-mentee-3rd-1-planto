@@ -11,20 +11,23 @@ import UIKit
 class PlantFoundViewController: UIViewController {
     
     var plantName: String!
+    var plantNameEN: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 화면 전환
+        
+        // 화면 전환 + 지연시간 2초
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.performSegue(withIdentifier: "CheckPlant", sender: self)
         }
     }
     
+    // 이름 다음 뷰로 전달
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "CheckPlant") {
             guard let nextVc = segue.destination as? CheckPlantViewController else { return }
             nextVc.plantName = plantName
+            nextVc.plantNameEN = plantNameEN
         }
     }
 }
