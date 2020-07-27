@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func SendData(_ data: String)
+}
+
 class NamePlantViewController: UIViewController {
     
     // CheckPlantVC로 부터 default name 받아옴
     var plantName: String!
-    var plantNameEN: String!
+    var delegate: SendDataDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +27,7 @@ class NamePlantViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // 화면 터치 시 키보드 숨기기
         self.view.endEditing(true)
+    }
+    @IBAction func gotoNextPressed(_ sender: UIButton) {
     }
 }

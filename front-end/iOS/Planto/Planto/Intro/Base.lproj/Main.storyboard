@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,36 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-4M-bqE">
-                                <rect key="frame" x="20" y="94" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.37754046920000001" green="0.57377248999999997" blue="0.49803161620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물과 함께하는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiE-er-Nsc">
-                                <rect key="frame" x="20" y="136" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.37754046920000001" green="0.57377248999999997" blue="0.49803161620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐거운 삶," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-94-Iue">
-                                <rect key="frame" x="20" y="178" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plantö에 오신 것을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWK-ml-mCg">
-                                <rect key="frame" x="20" y="220" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWU-7K-rDe">
-                                <rect key="frame" x="20" y="262" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-ix-Wuh">
+                                <rect key="frame" x="20" y="94" width="170.5" height="192.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-4M-bqE">
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.37754046920000001" green="0.57377248999999997" blue="0.49803161620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물과 함께하는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiE-er-Nsc">
+                                        <rect key="frame" x="0.0" y="41.5" width="170.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.37754046920000001" green="0.57377248999999997" blue="0.49803161620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐거운 삶," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-94-Iue">
+                                        <rect key="frame" x="0.0" y="83" width="170.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plantö에 오신 것을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWK-ml-mCg">
+                                        <rect key="frame" x="0.0" y="124.5" width="170.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWU-7K-rDe">
+                                        <rect key="frame" x="0.0" y="166" width="170.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGh-6s-cKQ" customClass="WideButton" customModule="Planto" customModuleProvider="target">
                                 <rect key="frame" x="30" y="782" width="354" height="60"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,24 +67,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZWU-7K-rDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Sw-9C-BT5"/>
                             <constraint firstItem="sGh-6s-cKQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6HF-mb-yXi"/>
-                            <constraint firstItem="NWK-ml-mCg" firstAttribute="top" secondItem="XgC-94-Iue" secondAttribute="bottom" constant="15" id="GdQ-M6-vlg"/>
-                            <constraint firstItem="TQM-4M-bqE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NEA-WY-XsL"/>
+                            <constraint firstItem="KGm-ix-Wuh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IFc-Bv-AVZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sGh-6s-cKQ" secondAttribute="bottom" constant="20" id="OTy-Y7-DhS"/>
+                            <constraint firstItem="KGm-ix-Wuh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="VPt-Sq-1Fc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sGh-6s-cKQ" secondAttribute="trailing" constant="30" id="ZnD-89-jqn"/>
-                            <constraint firstItem="PiE-er-Nsc" firstAttribute="top" secondItem="TQM-4M-bqE" secondAttribute="bottom" constant="15" id="bF4-Ma-wlB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NWK-ml-mCg" secondAttribute="trailing" constant="20" id="bUz-iq-jC4"/>
-                            <constraint firstItem="NWK-ml-mCg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bcU-g6-KGX"/>
-                            <constraint firstItem="ZWU-7K-rDe" firstAttribute="top" secondItem="NWK-ml-mCg" secondAttribute="bottom" constant="15" id="cgz-ve-glH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZWU-7K-rDe" secondAttribute="trailing" constant="20" id="hMx-WT-8kp"/>
-                            <constraint firstItem="XgC-94-Iue" firstAttribute="top" secondItem="PiE-er-Nsc" secondAttribute="bottom" constant="15" id="kw8-j6-3C3"/>
-                            <constraint firstItem="TQM-4M-bqE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="obe-xg-hme"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TQM-4M-bqE" secondAttribute="trailing" constant="20" id="qyc-8K-nxs"/>
-                            <constraint firstItem="XgC-94-Iue" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tZB-h5-66m"/>
-                            <constraint firstItem="PiE-er-Nsc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uSv-7c-ijm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PiE-er-Nsc" secondAttribute="trailing" constant="20" id="wdK-tv-fKJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XgC-94-Iue" secondAttribute="trailing" constant="20" id="zwU-Mf-T6h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -96,6 +88,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wnc-nI-1tb">
+                                <rect key="frame" x="20" y="94" width="186" height="151"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저는 앞으로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC4-VP-r7n">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 식물을 관리 할" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv4-gE-0x3">
+                                        <rect key="frame" x="0.0" y="41.5" width="186" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="토오라고 해요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-bj-Rej">
+                                        <rect key="frame" x="0.0" y="83" width="186" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만나서 반갑습니다:)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7R-D6-UbU">
+                                        <rect key="frame" x="0.0" y="124.5" width="186" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TO-OH_1" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-pg-Pg2">
                                 <rect key="frame" x="23" y="414" width="461" height="478"/>
                                 <constraints>
@@ -103,30 +124,6 @@
                                     <constraint firstAttribute="width" constant="461" id="iK2-70-bl2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저는 앞으로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC4-VP-r7n">
-                                <rect key="frame" x="20" y="94" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 식물을 관리 할" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv4-gE-0x3">
-                                <rect key="frame" x="20" y="136" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="토오라고 해요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBU-bj-Rej">
-                                <rect key="frame" x="20" y="178" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만나서 반갑습니다:)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7R-D6-UbU">
-                                <rect key="frame" x="20" y="220" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agR-LG-kbk" customClass="WideButton" customModule="Planto" customModuleProvider="target">
                                 <rect key="frame" x="30" y="782" width="354" height="60"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -144,23 +141,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ysl-Eu-CNU" firstAttribute="trailing" secondItem="OC4-VP-r7n" secondAttribute="trailing" constant="20" id="1GX-T2-0sU"/>
-                            <constraint firstItem="ysl-Eu-CNU" firstAttribute="trailing" secondItem="rBU-bj-Rej" secondAttribute="trailing" constant="20" id="3Pw-NA-sor"/>
+                            <constraint firstItem="wnc-nI-1tb" firstAttribute="leading" secondItem="ysl-Eu-CNU" secondAttribute="leading" constant="20" id="0HH-8H-VOf"/>
                             <constraint firstItem="ysl-Eu-CNU" firstAttribute="trailing" secondItem="ASH-pg-Pg2" secondAttribute="trailing" constant="-70" id="4E8-VG-IPu"/>
-                            <constraint firstItem="Lv4-gE-0x3" firstAttribute="leading" secondItem="ysl-Eu-CNU" secondAttribute="leading" constant="20" id="8TG-qM-XSk"/>
-                            <constraint firstItem="ysl-Eu-CNU" firstAttribute="trailing" secondItem="Lv4-gE-0x3" secondAttribute="trailing" constant="20" id="HIp-1P-fTa"/>
+                            <constraint firstItem="wnc-nI-1tb" firstAttribute="top" secondItem="ysl-Eu-CNU" secondAttribute="top" constant="50" id="CJ6-Xi-Le7"/>
                             <constraint firstItem="agR-LG-kbk" firstAttribute="leading" secondItem="ysl-Eu-CNU" secondAttribute="leading" constant="30" id="IJv-BA-xQd"/>
-                            <constraint firstItem="ysl-Eu-CNU" firstAttribute="trailing" secondItem="q7R-D6-UbU" secondAttribute="trailing" constant="20" id="IKn-Eg-WZQ"/>
-                            <constraint firstItem="rBU-bj-Rej" firstAttribute="leading" secondItem="ysl-Eu-CNU" secondAttribute="leading" constant="20" id="KHf-09-wrD"/>
-                            <constraint firstItem="OC4-VP-r7n" firstAttribute="leading" secondItem="ysl-Eu-CNU" secondAttribute="leading" constant="20" id="Nsk-jz-Qov"/>
-                            <constraint firstItem="q7R-D6-UbU" firstAttribute="leading" secondItem="ysl-Eu-CNU" secondAttribute="leading" constant="20" id="OIW-So-gfi"/>
-                            <constraint firstItem="q7R-D6-UbU" firstAttribute="top" secondItem="rBU-bj-Rej" secondAttribute="bottom" constant="15" id="Sop-g5-wgj"/>
                             <constraint firstItem="ysl-Eu-CNU" firstAttribute="bottom" secondItem="ASH-pg-Pg2" secondAttribute="bottom" constant="-30" id="TMY-Qy-eeJ"/>
-                            <constraint firstItem="rBU-bj-Rej" firstAttribute="top" secondItem="Lv4-gE-0x3" secondAttribute="bottom" constant="15" id="a9a-g1-5R8"/>
                             <constraint firstItem="ysl-Eu-CNU" firstAttribute="trailing" secondItem="agR-LG-kbk" secondAttribute="trailing" constant="30" id="fAR-0q-UBV"/>
-                            <constraint firstItem="OC4-VP-r7n" firstAttribute="top" secondItem="ysl-Eu-CNU" secondAttribute="top" constant="50" id="n3z-s2-tH6"/>
                             <constraint firstItem="ysl-Eu-CNU" firstAttribute="bottom" secondItem="agR-LG-kbk" secondAttribute="bottom" constant="20" id="o5I-Qe-KFY"/>
-                            <constraint firstItem="Lv4-gE-0x3" firstAttribute="top" secondItem="OC4-VP-r7n" secondAttribute="bottom" constant="15" id="tgM-Ti-y5L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ysl-Eu-CNU"/>
                     </view>
@@ -182,6 +169,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="K98-wy-7MV">
+                                <rect key="frame" x="20" y="94" width="226.5" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plantö에 오신 걸 보니," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxe-7e-g3d">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물을 키우고 계신가봐요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdX-Wr-p7K">
+                                        <rect key="frame" x="0.0" y="41.5" width="226.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-TL-dID">
+                                <rect key="frame" x="20" y="187" width="211.5" height="109.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저한테 그 친구," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OQ-o7-rUb">
+                                        <rect key="frame" x="0.0" y="0.0" width="211.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보여주실 수 있으신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-O2-Aig">
+                                        <rect key="frame" x="0.0" y="41.5" width="211.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제가 누군지 맞춰볼게요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kc-R0-81o">
+                                        <rect key="frame" x="0.0" y="83" width="211.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TO-OH_2" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-BN-2A4">
                                 <rect key="frame" x="115" y="427" width="419" height="435"/>
                                 <constraints>
@@ -189,86 +216,47 @@
                                     <constraint firstAttribute="width" constant="419" id="iPM-te-Azq"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plantö에 오신 걸 보니," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxe-7e-g3d">
-                                <rect key="frame" x="20" y="94" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물을 키우고 계신가봐요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdX-Wr-p7K">
-                                <rect key="frame" x="20" y="136" width="414" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저한테 그 친구," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OQ-o7-rUb">
-                                <rect key="frame" x="20" y="188" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보여주실 수 있으신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-O2-Aig">
-                                <rect key="frame" x="20" y="230" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제가 누군지 맞춰볼게요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kc-R0-81o">
-                                <rect key="frame" x="20" y="272" width="374" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-KE-BPm" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="30" y="750" width="354" height="60"/>
-                                <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="odJ-nQ-i8w"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="안될 건 없지!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bMd-MJ-I7i" kind="show" id="mGe-TV-PLd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8j-UV-5xV">
-                                <rect key="frame" x="30" y="820" width="354" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="지금은 별로">
-                                    <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnDecline:" destination="0rU-pS-qBZ" eventType="touchUpInside" id="lKn-Mc-CgI"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VRu-yf-WE2">
+                                <rect key="frame" x="20" y="750" width="374" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-KE-BPm" customClass="WideButton" customModule="Planto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="odJ-nQ-i8w"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="안될 건 없지!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="bMd-MJ-I7i" kind="show" id="mGe-TV-PLd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8j-UV-5xV">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="지금은 별로">
+                                            <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDecline:" destination="0rU-pS-qBZ" eventType="touchUpInside" id="lKn-Mc-CgI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wdX-Wr-p7K" firstAttribute="trailing" secondItem="yNE-29-nwY" secondAttribute="trailing" constant="20" id="1Jx-iF-cjq"/>
-                            <constraint firstItem="cJf-O2-Aig" firstAttribute="top" secondItem="6OQ-o7-rUb" secondAttribute="bottom" constant="15" id="1gv-oP-TXa"/>
-                            <constraint firstItem="7Kc-R0-81o" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="6XU-wJ-GLP"/>
-                            <constraint firstItem="y8j-UV-5xV" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="30" id="BWB-D7-9PO"/>
-                            <constraint firstItem="wdX-Wr-p7K" firstAttribute="top" secondItem="Gxe-7e-g3d" secondAttribute="bottom" constant="15" id="Flc-j0-8lY"/>
-                            <constraint firstItem="y8j-UV-5xV" firstAttribute="top" secondItem="JfK-KE-BPm" secondAttribute="bottom" constant="10" id="MXd-fa-aze"/>
-                            <constraint firstItem="6OQ-o7-rUb" firstAttribute="top" secondItem="wdX-Wr-p7K" secondAttribute="bottom" constant="25" id="ORX-5Y-5na"/>
-                            <constraint firstItem="yNE-29-nwY" firstAttribute="trailing" secondItem="6OQ-o7-rUb" secondAttribute="trailing" constant="20" id="TDz-ip-LF5"/>
-                            <constraint firstItem="cJf-O2-Aig" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="Uoz-v7-G5p"/>
-                            <constraint firstItem="Gxe-7e-g3d" firstAttribute="top" secondItem="yNE-29-nwY" secondAttribute="top" constant="50" id="Vk1-a8-mue"/>
-                            <constraint firstItem="yNE-29-nwY" firstAttribute="trailing" secondItem="JfK-KE-BPm" secondAttribute="trailing" constant="30" id="WiQ-Y4-2ml"/>
-                            <constraint firstItem="yNE-29-nwY" firstAttribute="bottom" secondItem="y8j-UV-5xV" secondAttribute="bottom" constant="10" id="ZPd-cE-HWP"/>
-                            <constraint firstItem="7Kc-R0-81o" firstAttribute="top" secondItem="cJf-O2-Aig" secondAttribute="bottom" constant="15" id="cOx-zp-XSq"/>
-                            <constraint firstItem="yNE-29-nwY" firstAttribute="trailing" secondItem="cJf-O2-Aig" secondAttribute="trailing" constant="20" id="eVO-Tp-QBV"/>
+                            <constraint firstItem="yNE-29-nwY" firstAttribute="bottom" secondItem="VRu-yf-WE2" secondAttribute="bottom" constant="10" id="Fww-M2-pfD"/>
+                            <constraint firstItem="K98-wy-7MV" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="ITv-Gq-m5Y"/>
+                            <constraint firstItem="qOW-TL-dID" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="VKm-Hc-miW"/>
+                            <constraint firstItem="yNE-29-nwY" firstAttribute="trailing" secondItem="VRu-yf-WE2" secondAttribute="trailing" constant="20" id="ao0-2V-OEf"/>
+                            <constraint firstItem="VRu-yf-WE2" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="eVp-2o-6Xp"/>
                             <constraint firstItem="yNE-29-nwY" firstAttribute="bottom" secondItem="pqQ-BN-2A4" secondAttribute="bottom" id="f6w-GX-rXa"/>
-                            <constraint firstItem="yNE-29-nwY" firstAttribute="trailing" secondItem="y8j-UV-5xV" secondAttribute="trailing" constant="30" id="fam-l5-WvR"/>
-                            <constraint firstItem="yNE-29-nwY" firstAttribute="trailing" secondItem="Gxe-7e-g3d" secondAttribute="trailing" constant="20" id="fuI-7t-qV9"/>
                             <constraint firstAttribute="trailing" secondItem="pqQ-BN-2A4" secondAttribute="trailing" constant="-120" id="h4E-PL-fHn"/>
-                            <constraint firstItem="wdX-Wr-p7K" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="jKX-Zh-gR8"/>
-                            <constraint firstItem="Gxe-7e-g3d" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="jtv-MM-5xm"/>
-                            <constraint firstItem="6OQ-o7-rUb" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="20" id="n2F-Qx-cgz"/>
-                            <constraint firstItem="yNE-29-nwY" firstAttribute="trailing" secondItem="7Kc-R0-81o" secondAttribute="trailing" constant="20" id="y7k-xn-iYi"/>
-                            <constraint firstItem="JfK-KE-BPm" firstAttribute="leading" secondItem="yNE-29-nwY" secondAttribute="leading" constant="30" id="yF6-Zc-v0X"/>
+                            <constraint firstItem="qOW-TL-dID" firstAttribute="top" secondItem="K98-wy-7MV" secondAttribute="bottom" constant="25" id="mfT-FJ-hom"/>
+                            <constraint firstItem="K98-wy-7MV" firstAttribute="top" secondItem="yNE-29-nwY" secondAttribute="top" constant="50" id="vlo-Pb-oHm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yNE-29-nwY"/>
                     </view>
@@ -760,6 +748,10 @@
                                 <state key="normal" title="멋진 이름이지?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="gotoNextPressed:" destination="7mN-sf-Lct" eventType="touchUpInside" id="t0Z-Ej-hEy"/>
+                                    <segue destination="DyA-rk-Twm" kind="show" id="50M-cr-lIl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9X-qn-Mmu">
                                 <rect key="frame" x="30" y="820" width="354" height="32"/>
@@ -802,7 +794,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHA-Ad-IZk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6478" y="138"/>
+            <point key="canvasLocation" x="5636" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zbq-OO-e2m">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="DyA-rk-Twm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kjb-Wf-i13">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1Dg-Lc-kEQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zMv-rW-dXd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3w-Mf-Pex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6387" y="138"/>
         </scene>
     </scenes>
     <resources>
