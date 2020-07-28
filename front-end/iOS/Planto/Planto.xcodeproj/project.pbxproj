@@ -25,6 +25,8 @@
 		A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B31B9224CCA2D100E58386 /* Buttons.swift */; };
 		B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */; };
 		B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79D24CED89300BFE2E3 /* Constants.swift */; };
+		B4DEFAFA24D05D8900855551 /* BeforeManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DEFAF924D05D8900855551 /* BeforeManagementViewController.swift */; };
+		B4DEFAFC24D061CE00855551 /* HowToManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DEFAFB24D061CE00855551 /* HowToManageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		A4B31B9224CCA2D100E58386 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNameViewController.swift; sourceTree = "<group>"; };
 		B4ACB79D24CED89300BFE2E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4DEFAF924D05D8900855551 /* BeforeManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeManagementViewController.swift; sourceTree = "<group>"; };
+		B4DEFAFB24D061CE00855551 /* HowToManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToManageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */,
 				A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */,
 				B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */,
+				B4DEFAF924D05D8900855551 /* BeforeManagementViewController.swift */,
+				B4DEFAFB24D061CE00855551 /* HowToManageViewController.swift */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */,
 				A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */,
 				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
+				B4DEFAFC24D061CE00855551 /* HowToManageViewController.swift in Sources */,
 				A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */,
 				A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */,
 				B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */,
@@ -212,6 +219,7 @@
 				A46E3AC424CDA29E005037C6 /* ConfirmPlantViewController.swift in Sources */,
 				A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */,
 				A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */,
+				B4DEFAFA24D05D8900855551 /* BeforeManagementViewController.swift in Sources */,
 				A46B3ED524CFEEED000C652F /* OtherPlantsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
