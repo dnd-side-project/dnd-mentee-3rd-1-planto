@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FirstIntroViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-ix-Wuh">
-                                <rect key="frame" x="20" y="94" width="170.5" height="192.5"/>
+                                <rect key="frame" x="20" y="50" width="170.5" height="192.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-4M-bqE">
                                         <rect key="frame" x="0.0" y="0.0" width="170.5" height="26.5"/>
@@ -51,7 +52,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGh-6s-cKQ" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="30" y="782" width="354" height="60"/>
+                                <rect key="frame" x="30" y="587" width="315" height="60"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YJg-Hn-HFV"/>
@@ -85,11 +86,18 @@
             <objects>
                 <viewController storyboardIdentifier="SecondIntro" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="MfQ-2q-ZYC" customClass="SecondIntroViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pjR-Bx-FZO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TO-OH_1" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-pg-Pg2">
+                                <rect key="frame" x="-16" y="219" width="461" height="478"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="478" id="dFr-BQ-XjF"/>
+                                    <constraint firstAttribute="width" constant="461" id="iK2-70-bl2"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wnc-nI-1tb">
-                                <rect key="frame" x="20" y="94" width="186" height="151"/>
+                                <rect key="frame" x="20" y="50" width="186" height="151"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저는 앞으로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC4-VP-r7n">
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="26.5"/>
@@ -117,15 +125,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TO-OH_1" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-pg-Pg2">
-                                <rect key="frame" x="23" y="414" width="461" height="478"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="478" id="dFr-BQ-XjF"/>
-                                    <constraint firstAttribute="width" constant="461" id="iK2-70-bl2"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agR-LG-kbk" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="30" y="782" width="354" height="60"/>
+                                <rect key="frame" x="30" y="587" width="315" height="60"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YDa-vq-zB6"/>
@@ -166,11 +167,18 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="0rU-pS-qBZ" customClass="ThirdIntroViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eee-Xa-e4c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TO-OH_2" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-BN-2A4">
+                                <rect key="frame" x="76" y="232" width="419" height="435"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="435" id="hzX-83-Lfg"/>
+                                    <constraint firstAttribute="width" constant="419" id="iPM-te-Azq"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="K98-wy-7MV">
-                                <rect key="frame" x="20" y="94" width="226.5" height="68"/>
+                                <rect key="frame" x="20" y="50" width="226.5" height="68"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plantö에 오신 걸 보니," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxe-7e-g3d">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="26.5"/>
@@ -187,7 +195,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-TL-dID">
-                                <rect key="frame" x="20" y="187" width="211.5" height="109.5"/>
+                                <rect key="frame" x="20" y="143" width="211.5" height="109.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저한테 그 친구," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OQ-o7-rUb">
                                         <rect key="frame" x="0.0" y="0.0" width="211.5" height="26.5"/>
@@ -209,18 +217,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TO-OH_2" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-BN-2A4">
-                                <rect key="frame" x="115" y="427" width="419" height="435"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="435" id="hzX-83-Lfg"/>
-                                    <constraint firstAttribute="width" constant="419" id="iPM-te-Azq"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VRu-yf-WE2">
-                                <rect key="frame" x="20" y="750" width="374" height="102"/>
+                                <rect key="frame" x="20" y="555" width="335" height="102"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-KE-BPm" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
                                         <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="odJ-nQ-i8w"/>
@@ -234,7 +235,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8j-UV-5xV">
-                                        <rect key="frame" x="0.0" y="70" width="374" height="32"/>
+                                        <rect key="frame" x="0.0" y="70" width="335" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="지금은 별로">
                                             <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -274,11 +275,11 @@
             <objects>
                 <viewController storyboardIdentifier="TakePictureVC" modalPresentationStyle="fullScreen" id="bMd-MJ-I7i" customClass="TakePictureViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ma-GV-g2g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr4-dY-buh" customClass="CircleButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="182" y="792" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="597" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Maz-IP-VfX"/>
@@ -299,13 +300,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jaL-2T-kqb">
-                                <rect key="frame" x="0.0" y="216" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jaL-2T-kqb" secondAttribute="height" multiplier="1:1" id="Qyg-KI-CCb"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvI-Qm-IQ2" customClass="CircleButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="20" y="792" width="50" height="50"/>
+                                <rect key="frame" x="20" y="597" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="rob-mZ-33Y"/>
@@ -320,7 +321,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfM-TP-42z" customClass="CircleButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="344" y="792" width="50" height="50"/>
+                                <rect key="frame" x="305" y="597" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="2xS-yv-OKt"/>
@@ -366,23 +367,23 @@
             <objects>
                 <viewController storyboardIdentifier="FindPlantViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="IKo-D1-b3I" customClass="FindPlantViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a2X-eW-kf0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9H8-mH-OeI">
-                                <rect key="frame" x="0.0" y="216" width="414" height="414"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9H8-mH-OeI" secondAttribute="height" multiplier="1:1" id="Ssf-pu-a1V"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="열심히 찾고 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suN-ZM-1dL">
-                                <rect key="frame" x="141" y="821" width="132" height="21"/>
+                                <rect key="frame" x="121.5" y="626" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Svn-Gg-NNg">
-                                <rect key="frame" x="182" y="761" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="566" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Svn-Gg-NNg" secondAttribute="height" multiplier="1:1" id="0kk-j0-ag7"/>
                                     <constraint firstAttribute="width" constant="50" id="dS0-OG-i9f"/>
@@ -417,18 +418,18 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="0BT-je-wtz" customClass="PlantFoundViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zUm-9d-lCz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_logo" translatesAutoresizingMaskIntoConstraints="NO" id="SoL-P3-8MA">
-                                <rect key="frame" x="182" y="398" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="278.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Bw5-d5-XiB"/>
                                     <constraint firstAttribute="width" secondItem="SoL-P3-8MA" secondAttribute="height" multiplier="1:1" id="SZ4-wJ-t7C"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="찾았다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9E-lO-dTE">
-                                <rect key="frame" x="171" y="478" width="72" height="30"/>
+                                <rect key="frame" x="151.5" y="358.5" width="72" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -457,17 +458,17 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="Blz-BO-wn8" customClass="CheckPlantViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XP2-Rl-0Md">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOz-Xg-Qqm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xc7-Yw-8GL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="818"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olb-y1-WjY">
-                                                <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                                <rect key="frame" x="20" y="20" width="335" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="hQZ-EF-Nre"/>
                                                 </constraints>
@@ -476,7 +477,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제가 보기에, 이 친구는 스투키 같네요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfa-ix-mW4">
-                                                <rect key="frame" x="20" y="80" width="374" height="23"/>
+                                                <rect key="frame" x="20" y="80" width="335" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="iuV-X5-xYQ"/>
                                                 </constraints>
@@ -485,41 +486,41 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kF-uD-5XF">
-                                                <rect key="frame" x="0.0" y="123" width="414" height="695"/>
+                                                <rect key="frame" x="0.0" y="123" width="375" height="695"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스투키" translatesAutoresizingMaskIntoConstraints="NO" id="VsY-2V-XeC">
-                                                        <rect key="frame" x="107" y="20" width="200" height="200"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스투키" translatesAutoresizingMaskIntoConstraints="NO" id="VsY-2V-XeC">
+                                                        <rect key="frame" x="87.5" y="20" width="200" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="FcP-OS-kO2"/>
                                                             <constraint firstAttribute="width" secondItem="VsY-2V-XeC" secondAttribute="height" multiplier="1:1" id="sG5-Im-vTQ"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="산세베리아 스투키" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4I-7h-oRC">
-                                                        <rect key="frame" x="139" y="250" width="136.5" height="23"/>
+                                                        <rect key="frame" x="20" y="250" width="335" height="23"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                         <color key="textColor" red="0.33333333333333331" green="0.56470588235294117" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sanseveria Stuckyi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ady-EG-hla">
-                                                        <rect key="frame" x="135" y="283" width="144.5" height="21"/>
+                                                        <rect key="frame" x="20" y="283" width="335" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과가 맞나요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elw-by-06w">
-                                                        <rect key="frame" x="132" y="415" width="150.5" height="23"/>
+                                                        <rect key="frame" x="20" y="435.5" width="335" height="23"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스투키(Sansevieria stuckyi 또는 Diocletian's spear)는 적도 아프리카에 자생하는 놀리나아과 식물의 다육 식물의 하나로, 경작이 쉬운 편이다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMV-RZ-M66">
-                                                        <rect key="frame" x="30" y="324" width="354" height="61"/>
+                                                        <rect key="frame" x="30" y="324" width="315" height="81.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhH-3G-3qE" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                                        <rect key="frame" x="50" y="458" width="314" height="60"/>
+                                                        <rect key="frame" x="50" y="478.5" width="275" height="60"/>
                                                         <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="U5U-bf-MlF"/>
@@ -533,7 +534,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmi-ZA-vcu" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                                        <rect key="frame" x="50" y="538" width="314" height="60"/>
+                                                        <rect key="frame" x="50" y="558.5" width="275" height="60"/>
                                                         <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="EXn-EG-DUD"/>
@@ -543,7 +544,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="btnCancel:" destination="Blz-BO-wn8" eventType="touchUpInside" id="gU6-in-Fm6"/>
+                                                            <segue destination="jhC-2R-Qcb" kind="show" identifier="OtherPlants" id="T6o-e3-aDJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -551,9 +552,14 @@
                                                 <constraints>
                                                     <constraint firstItem="RhH-3G-3qE" firstAttribute="centerX" secondItem="elw-by-06w" secondAttribute="centerX" id="1HA-ol-YEb"/>
                                                     <constraint firstItem="elw-by-06w" firstAttribute="centerX" secondItem="dMV-RZ-M66" secondAttribute="centerX" id="4eo-Uq-C2Q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ady-EG-hla" secondAttribute="trailing" constant="20" id="64u-Mq-t1k"/>
                                                     <constraint firstItem="gmi-ZA-vcu" firstAttribute="top" secondItem="RhH-3G-3qE" secondAttribute="bottom" constant="20" id="96w-7i-Bq3"/>
                                                     <constraint firstAttribute="trailing" secondItem="RhH-3G-3qE" secondAttribute="trailing" constant="50" id="9Wi-f2-QGD"/>
+                                                    <constraint firstItem="m4I-7h-oRC" firstAttribute="leading" secondItem="0kF-uD-5XF" secondAttribute="leading" constant="20" id="A6E-h3-mfW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="elw-by-06w" secondAttribute="trailing" constant="20" id="HF6-h0-HDR"/>
+                                                    <constraint firstItem="elw-by-06w" firstAttribute="leading" secondItem="0kF-uD-5XF" secondAttribute="leading" constant="20" id="Het-eE-2O2"/>
                                                     <constraint firstAttribute="trailing" secondItem="gmi-ZA-vcu" secondAttribute="trailing" constant="50" id="ITs-gk-TGy"/>
+                                                    <constraint firstItem="ady-EG-hla" firstAttribute="leading" secondItem="0kF-uD-5XF" secondAttribute="leading" constant="20" id="IYF-0s-HHu"/>
                                                     <constraint firstItem="elw-by-06w" firstAttribute="top" secondItem="dMV-RZ-M66" secondAttribute="bottom" constant="30" id="IjV-J8-8i8"/>
                                                     <constraint firstItem="dMV-RZ-M66" firstAttribute="leading" secondItem="0kF-uD-5XF" secondAttribute="leading" constant="30" id="LJg-Ut-NXH"/>
                                                     <constraint firstItem="RhH-3G-3qE" firstAttribute="leading" secondItem="0kF-uD-5XF" secondAttribute="leading" constant="50" id="RsD-gb-Z39"/>
@@ -563,6 +569,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="dMV-RZ-M66" secondAttribute="trailing" constant="30" id="cx3-ei-fEm"/>
                                                     <constraint firstItem="ady-EG-hla" firstAttribute="top" secondItem="m4I-7h-oRC" secondAttribute="bottom" constant="10" id="f7p-bo-n4w"/>
                                                     <constraint firstItem="VsY-2V-XeC" firstAttribute="centerX" secondItem="0kF-uD-5XF" secondAttribute="centerX" id="fLm-7L-9mx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="m4I-7h-oRC" secondAttribute="trailing" constant="20" id="hoN-1v-0af"/>
                                                     <constraint firstItem="RhH-3G-3qE" firstAttribute="top" secondItem="elw-by-06w" secondAttribute="bottom" constant="20" id="idh-AE-p9U"/>
                                                     <constraint firstItem="gmi-ZA-vcu" firstAttribute="centerX" secondItem="RhH-3G-3qE" secondAttribute="centerX" id="irj-wL-vG5"/>
                                                     <constraint firstItem="dMV-RZ-M66" firstAttribute="top" secondItem="ady-EG-hla" secondAttribute="bottom" constant="20" id="jat-wY-VGL"/>
@@ -620,34 +627,211 @@
             </objects>
             <point key="canvasLocation" x="4889.8550724637689" y="137.94642857142856"/>
         </scene>
+        <!--Other Plants View Controller-->
+        <scene sceneID="bYi-3v-fky">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="jhC-2R-Qcb" customClass="OtherPlantsViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fIv-rO-BKa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzy-9F-jPi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAw-iG-ddl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WQE-xs-1G1">
+                                                <rect key="frame" x="20" y="50" width="267" height="46"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스투키와 비슷한 다른 식물들이예요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISW-eM-LFc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 중 일치하는 것을 눌러주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbf-d6-kCN">
+                                                        <rect key="frame" x="0.0" y="23" width="267" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2On-Em-2BD">
+                                                <rect key="frame" x="0.0" y="126" width="375" height="692"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kix-GO-9bw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="kix-GO-9bw" secondAttribute="height" multiplier="1:1" id="NaG-jN-7YM"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wba-Ci-LXF">
+                                                            <size key="itemSize" width="300" height="300"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OtherPlants" id="mCT-aS-6MF" customClass="GridCell" customModule="Planto" customModuleProvider="target">
+                                                                <rect key="frame" x="37.5" y="0.0" width="300" height="300"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WiI-D5-J0l">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스투키" translatesAutoresizingMaskIntoConstraints="NO" id="mnG-sc-loY">
+                                                                            <rect key="frame" x="66.5" y="20" width="167" height="166.5"/>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스투키" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0n-eq-XAg">
+                                                                            <rect key="frame" x="125.5" y="226.5" width="49.5" height="23"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stuckyi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uor-3T-P7I">
+                                                                            <rect key="frame" x="122" y="259.5" width="56.5" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="x0n-eq-XAg" firstAttribute="centerX" secondItem="WiI-D5-J0l" secondAttribute="centerX" id="A15-Qa-ReS"/>
+                                                                        <constraint firstItem="mnG-sc-loY" firstAttribute="centerX" secondItem="WiI-D5-J0l" secondAttribute="centerX" id="hbs-Cj-odY"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="uor-3T-P7I" secondAttribute="bottom" constant="20" id="rmZ-np-oSU"/>
+                                                                        <constraint firstItem="mnG-sc-loY" firstAttribute="top" secondItem="WiI-D5-J0l" secondAttribute="top" constant="20" id="taT-s1-lRQ"/>
+                                                                        <constraint firstItem="uor-3T-P7I" firstAttribute="top" secondItem="x0n-eq-XAg" secondAttribute="bottom" constant="10" id="tf8-HU-GPr"/>
+                                                                        <constraint firstItem="uor-3T-P7I" firstAttribute="centerX" secondItem="WiI-D5-J0l" secondAttribute="centerX" id="zg9-hw-cEJ"/>
+                                                                    </constraints>
+                                                                </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="imgView" destination="mnG-sc-loY" id="3E3-IO-3hJ"/>
+                                                                    <outlet property="lblName" destination="x0n-eq-XAg" id="xQf-qA-RDP"/>
+                                                                    <outlet property="lblNameEN" destination="uor-3T-P7I" id="6Q3-AT-gO2"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="jhC-2R-Qcb" id="b2n-mQ-vGZ"/>
+                                                            <outlet property="delegate" destination="jhC-2R-Qcb" id="wmA-nR-RbS"/>
+                                                        </connections>
+                                                    </collectionView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jQ0-lP-rbO">
+                                                        <rect key="frame" x="162.5" y="405" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="jQ0-lP-rbO" secondAttribute="height" multiplier="1:1" id="oNw-kI-K10"/>
+                                                            <constraint firstAttribute="width" constant="50" id="y8W-E5-geZ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일치하는 식물이 없나요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wI-5f-7gt">
+                                                        <rect key="frame" x="20" y="475" width="335" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82F-nC-Ei0" customClass="WideButton" customModule="Planto" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="528" width="275" height="60"/>
+                                                        <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="QsU-Cs-wwp"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="목록에서 선택하기">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="goToList:" destination="jhC-2R-Qcb" eventType="touchUpInside" id="FcR-kL-r7G"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="692" id="4RU-Jh-B82"/>
+                                                    <constraint firstItem="jQ0-lP-rbO" firstAttribute="top" secondItem="kix-GO-9bw" secondAttribute="bottom" constant="30" id="Ccx-fp-wpe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9wI-5f-7gt" secondAttribute="trailing" constant="20" id="NwE-dm-DY8"/>
+                                                    <constraint firstItem="82F-nC-Ei0" firstAttribute="top" secondItem="9wI-5f-7gt" secondAttribute="bottom" constant="30" id="OBM-B4-bf7"/>
+                                                    <constraint firstItem="kix-GO-9bw" firstAttribute="leading" secondItem="2On-Em-2BD" secondAttribute="leading" id="Rfc-hh-sKe"/>
+                                                    <constraint firstItem="jQ0-lP-rbO" firstAttribute="centerX" secondItem="2On-Em-2BD" secondAttribute="centerX" id="Skl-WZ-Tab"/>
+                                                    <constraint firstItem="9wI-5f-7gt" firstAttribute="leading" secondItem="2On-Em-2BD" secondAttribute="leading" constant="20" id="VaN-Wc-qsQ"/>
+                                                    <constraint firstItem="9wI-5f-7gt" firstAttribute="top" secondItem="jQ0-lP-rbO" secondAttribute="bottom" constant="20" id="X3T-0N-lbD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kix-GO-9bw" secondAttribute="trailing" id="bju-yd-C5G"/>
+                                                    <constraint firstAttribute="trailing" secondItem="82F-nC-Ei0" secondAttribute="trailing" constant="50" id="dAa-7V-6gX"/>
+                                                    <constraint firstItem="kix-GO-9bw" firstAttribute="top" secondItem="2On-Em-2BD" secondAttribute="top" id="jlt-AG-iSQ"/>
+                                                    <constraint firstItem="82F-nC-Ei0" firstAttribute="centerX" secondItem="2On-Em-2BD" secondAttribute="centerX" id="khr-A9-Aiv"/>
+                                                    <constraint firstItem="82F-nC-Ei0" firstAttribute="leading" secondItem="2On-Em-2BD" secondAttribute="leading" constant="50" id="mKL-0Y-BQw"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2On-Em-2BD" firstAttribute="top" secondItem="WQE-xs-1G1" secondAttribute="bottom" constant="30" id="3bw-qq-bUU"/>
+                                            <constraint firstItem="WQE-xs-1G1" firstAttribute="top" secondItem="GAw-iG-ddl" secondAttribute="top" constant="50" id="DgR-to-6q8"/>
+                                            <constraint firstItem="2On-Em-2BD" firstAttribute="leading" secondItem="GAw-iG-ddl" secondAttribute="leading" id="I46-1d-z7S"/>
+                                            <constraint firstAttribute="bottom" secondItem="2On-Em-2BD" secondAttribute="bottom" id="eic-0v-v8v"/>
+                                            <constraint firstAttribute="trailing" secondItem="2On-Em-2BD" secondAttribute="trailing" id="vaG-yq-2oP"/>
+                                            <constraint firstItem="WQE-xs-1G1" firstAttribute="leading" secondItem="GAw-iG-ddl" secondAttribute="leading" constant="20" id="zyl-ge-kRf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GAw-iG-ddl" firstAttribute="height" secondItem="Hzy-9F-jPi" secondAttribute="height" priority="250" id="0yc-F9-MDi"/>
+                                    <constraint firstAttribute="bottom" secondItem="GAw-iG-ddl" secondAttribute="bottom" id="1oA-fh-oYJ"/>
+                                    <constraint firstItem="GAw-iG-ddl" firstAttribute="width" secondItem="Hzy-9F-jPi" secondAttribute="width" id="9nQ-wM-myY"/>
+                                    <constraint firstItem="GAw-iG-ddl" firstAttribute="top" secondItem="Hzy-9F-jPi" secondAttribute="top" id="APJ-vq-5Ub"/>
+                                    <constraint firstItem="GAw-iG-ddl" firstAttribute="leading" secondItem="Hzy-9F-jPi" secondAttribute="leading" id="T3m-QB-vtU"/>
+                                    <constraint firstAttribute="trailing" secondItem="GAw-iG-ddl" secondAttribute="trailing" id="iBf-7z-Lm0"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hzy-9F-jPi" firstAttribute="leading" secondItem="bji-83-0pu" secondAttribute="leading" id="O8i-fE-jdp"/>
+                            <constraint firstItem="Hzy-9F-jPi" firstAttribute="top" secondItem="bji-83-0pu" secondAttribute="top" id="TEi-Zz-bUG"/>
+                            <constraint firstItem="bji-83-0pu" firstAttribute="bottom" secondItem="Hzy-9F-jPi" secondAttribute="bottom" id="Tia-Ka-43d"/>
+                            <constraint firstItem="bji-83-0pu" firstAttribute="trailing" secondItem="Hzy-9F-jPi" secondAttribute="trailing" id="cx6-80-dUa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bji-83-0pu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WuZ-k0-3e8"/>
+                    <connections>
+                        <outlet property="lblWithName" destination="ISW-eM-LFc" id="QNw-Gt-JkG"/>
+                        <segue destination="Blz-BO-wn8" kind="show" identifier="SelectPlant" id="QsT-YO-Ldu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Um-XT-LWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4889.8550724637689" y="825"/>
+        </scene>
         <!--Confirm Plant View Controller-->
         <scene sceneID="sjn-2O-dY2">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="092-eJ-ez0" customClass="ConfirmPlantViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lJi-gr-xVp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음, 스투키와" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x3-X2-Udy">
-                                <rect key="frame" x="20" y="94" width="374" height="27"/>
+                                <rect key="frame" x="20" y="50" width="335" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 하고 계시는군요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc6-YN-Vf2">
-                                <rect key="frame" x="20" y="136" width="374" height="27"/>
+                                <rect key="frame" x="20" y="92" width="335" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스투키는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMD-e0-jnp">
-                                <rect key="frame" x="20" y="188" width="374" height="27"/>
+                                <rect key="frame" x="20" y="144" width="335" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RN-Jl-lg6" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="30" y="750" width="354" height="60"/>
+                                <rect key="frame" x="30" y="555" width="315" height="60"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="D4B-cn-Sku"/>
@@ -661,7 +845,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGb-nf-hNQ">
-                                <rect key="frame" x="30" y="820" width="354" height="32"/>
+                                <rect key="frame" x="30" y="625" width="315" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="그 식물 아니야 다시 고를래">
                                     <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -706,40 +890,40 @@
             <objects>
                 <viewController storyboardIdentifier="PlantFoundVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="7mN-sf-Lct" customClass="NamePlantViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wtx-Jj-Xjf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물 친구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwk-vQ-fgH">
-                                <rect key="frame" x="20" y="94" width="374" height="27"/>
+                                <rect key="frame" x="20" y="50" width="335" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름이 뭐예요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXo-Wq-gdJ">
-                                <rect key="frame" x="20" y="136" width="374" height="27"/>
+                                <rect key="frame" x="20" y="92" width="335" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 식물 이름은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-JZ-CEE">
-                                <rect key="frame" x="20" y="369.5" width="374" height="27"/>
+                                <rect key="frame" x="20" y="250" width="335" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="야!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWo-VW-EV7">
-                                <rect key="frame" x="338.5" y="439.5" width="25.5" height="27"/>
+                                <rect key="frame" x="299.5" y="320" width="25.5" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.33463859559999998" green="0.56616377829999998" blue="0.47450006010000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YhS-0o-V0j">
-                                <rect key="frame" x="20" y="436" width="298.5" height="34"/>
+                                <rect key="frame" x="20" y="316.5" width="259.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="name"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRt-v4-OHp" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                <rect key="frame" x="30" y="750" width="354" height="60"/>
+                                <rect key="frame" x="30" y="555" width="315" height="60"/>
                                 <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="sgP-5g-w8U"/>
@@ -750,11 +934,10 @@
                                 </state>
                                 <connections>
                                     <action selector="gotoNextPressed:" destination="7mN-sf-Lct" eventType="touchUpInside" id="t0Z-Ej-hEy"/>
-                                    <segue destination="DyA-rk-Twm" kind="show" identifier="ConfirmName" id="50M-cr-lIl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9X-qn-Mmu">
-                                <rect key="frame" x="30" y="820" width="354" height="32"/>
+                                <rect key="frame" x="30" y="625" width="315" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="그냥 다음에 지을래">
                                     <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -762,6 +945,7 @@
                                 <connections>
                                     <action selector="btnDecline:" destination="0rU-pS-qBZ" eventType="touchUpInside" id="aeM-G6-PQo"/>
                                     <action selector="btnDismiss:" destination="092-eJ-ez0" eventType="touchUpInside" id="PlQ-Yc-Oe0"/>
+                                    <action selector="nextTimePressed:" destination="7mN-sf-Lct" eventType="touchUpInside" id="WVx-no-raR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -793,6 +977,7 @@
                     <navigationItem key="navigationItem" id="duj-VR-rbo"/>
                     <connections>
                         <outlet property="customName" destination="YhS-0o-V0j" id="xFA-4W-RWL"/>
+                        <segue destination="DyA-rk-Twm" kind="show" identifier="ConfirmName" id="S0V-lG-6hC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHA-Ad-IZk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -804,11 +989,11 @@
             <objects>
                 <viewController storyboardIdentifier="ConfirmNameVC" modalPresentationStyle="fullScreen" id="DyA-rk-Twm" customClass="ConfirmNameViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kjb-Wf-i13">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1tx-Zh-z52">
-                                <rect key="frame" x="20" y="94" width="161.5" height="68"/>
+                                <rect key="frame" x="20" y="50" width="161.5" height="68"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDH-ls-Hhm">
                                         <rect key="frame" x="0.0" y="0.0" width="161.5" height="26.5"/>
@@ -825,10 +1010,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DdF-HU-oW6">
-                                <rect key="frame" x="30" y="760" width="354" height="92"/>
+                                <rect key="frame" x="30" y="565" width="315" height="92"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-M2-0NK" customClass="WideButton" customModule="Planto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
                                         <color key="backgroundColor" red="0.42111679909999999" green="0.70385545490000001" blue="0.58430063720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="lZc-VX-s1g"/>
@@ -842,7 +1027,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ML-hm-N05">
-                                        <rect key="frame" x="0.0" y="60" width="354" height="32"/>
+                                        <rect key="frame" x="0.0" y="60" width="315" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="그 이름 아니야">
                                             <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -876,6 +1061,10 @@
             <point key="canvasLocation" x="6387" y="138"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T6o-e3-aDJ"/>
+        <segue reference="QsT-YO-Ldu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="TO-OH_1" width="442.66665649414062" height="545.33331298828125"/>
         <image name="TO-OH_2" width="254.66667175292969" height="477.33334350585938"/>
@@ -883,6 +1072,6 @@
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="square.split.2x2" catalog="system" width="128" height="114"/>
         <image name="transparent_logo" width="83.333335876464844" height="83.333335876464844"/>
-        <image name="스투키" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="스투키" width="166.66667175292969" height="166.66667175292969"/>
     </resources>
 </document>

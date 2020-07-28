@@ -10,6 +10,7 @@ import UIKit
 
 class SecondIntroViewController: UIViewController {
 
+    // - MARK: IBOutlets
     @IBOutlet weak var lblGreetingWithName: UILabel!    // 토오라고 해요!
     @IBOutlet weak var imgView: UIImageView!
     

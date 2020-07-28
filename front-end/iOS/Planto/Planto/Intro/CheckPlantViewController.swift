@@ -13,8 +13,6 @@ class CheckPlantViewController: UIViewController {
     var plantName: String!
     var plantNameEN: String!
     
-    let greenColor = UIColor(red: 85/255, green: 144/255, blue: 121/255, alpha: 1)
-    
     @IBOutlet weak var lblResult: UILabel!      // 검색 결과
     @IBOutlet weak var imgView: UIImageView!        // 이미지
     @IBOutlet weak var lblPlantNameKR: UILabel!     // 한글이름
@@ -24,11 +22,10 @@ class CheckPlantViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let resultText = "제가 보기에, 이 친구는 \(plantName!) 같네요!"
-        
         // 이름 부분 Bold 및 색상 적용
+        let resultText = "제가 보기에, 이 친구는 \(plantName!) 같네요!"
         let attribute = NSMutableAttributedString(string: resultText)
-        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: greenColor,
+        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: Constants.Color.greenColor,
                                range: (resultText as NSString).range(of:plantName))
         attribute.addAttribute(NSAttributedString.Key.init(kCTFontAttributeName as String),
                                value: UIFont.systemFont(ofSize: 19, weight: UIFont.Weight.bold),
@@ -53,24 +50,14 @@ class CheckPlantViewController: UIViewController {
             nextVc.plantName = plantName
             nextVc.plantNameEN = plantNameEN
         }
-    }
-    
-    
-    @IBAction func btnCancel(_ sender: UIButton) {
-        let alert = UIAlertController(title: "To Do",
-                                      message: "식물 목록 생성 후 보여주는 창 호출",
-                                      preferredStyle: .alert)
-        let confirmAction = UIAlertAction(title: "산 넘어",
-                                          style: .default,
-                                          handler: nil)
-        let cancelAction = UIAlertAction(title: "산",
-                                         style: .default,
-                                         handler: nil)
-        
-        alert.addAction(confirmAction)
-        alert.addAction(cancelAction)
-        
-        self.present(alert, animated: true, completion: nil)
+        // To Do: 비슷한 식물 도출 후 결과 전송
+        if (segue.identifier == "OtherPlants") {
+            guard let nextVc = segue.destination as? OtherPlantsViewController else { return }
+            nextVc.plantName = plantName
+            nextVc.plantNameEN = plantNameEN
+            nextVc.similarPlants = ["스투키", "스투키", "스투키", "스투키"]
+            nextVc.similarPlantsEN = ["Stuckyi1", "Stuckyi2", "Stuckyi3", "Stuckyi4"]
+        }
     }
     
 }

@@ -13,6 +13,7 @@ class ConfirmPlantViewController: UIViewController {
     var plantName: String!
     var plantNameEN: String!
     
+    // - MARK: IBOutlets
     @IBOutlet weak var lblPlantName: UILabel!
     
     override func viewDidLoad() {
@@ -26,8 +27,6 @@ class ConfirmPlantViewController: UIViewController {
                                value: UIFont.systemFont(ofSize: 22, weight: UIFont.Weight.bold),
                                range: (lblPlantName.text! as NSString).range(of: plantName!))
         lblPlantName.attributedText = attribute
-        
-        print(plantName!, plantNameEN!)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,10 +38,11 @@ class ConfirmPlantViewController: UIViewController {
         }
     }
     
+    // - MARK: IBActions
     // 다시 고르기 버튼 클릭
     @IBAction func btnDismiss(_ sender: UIButton) {
         let alert = UIAlertController(title: "다시 고르기",
-                                      message: "사진을 잘못 찍거나 선택하셨나요?",
+                                      message: "사진을 잘못 찍거나 잘못 선택하셨나요?",
                                       preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "응, 다시 고를래", style: .default, handler: {action in
             // TakePictureVC로 이동
