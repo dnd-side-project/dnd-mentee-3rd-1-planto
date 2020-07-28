@@ -14,6 +14,7 @@
 		A44FD2F024C42F5100037F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2EE24C42F5100037F7A /* Main.storyboard */; };
 		A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F124C42F5200037F7A /* Assets.xcassets */; };
 		A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */; };
+		A46B3ED524CFEEED000C652F /* OtherPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */; };
 		A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */; };
 		A46E3AC424CDA29E005037C6 /* ConfirmPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */; };
 		A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */; };
@@ -36,6 +37,7 @@
 		A44FD2F124C42F5200037F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44FD2F424C42F5200037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44FD2F624C42F5200037F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPlantsViewController.swift; sourceTree = "<group>"; };
 		A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantFoundViewController.swift; sourceTree = "<group>"; };
 		A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPlantViewController.swift; sourceTree = "<group>"; };
 		A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePlantViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				A420434724CD7EA0008A5278 /* FindPlantViewController.swift */,
 				A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */,
 				A47F318924CE72F200B36072 /* CheckPlantViewController.swift */,
+				A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */,
 				A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */,
 				A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */,
 				B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */,
@@ -209,6 +212,7 @@
 				A46E3AC424CDA29E005037C6 /* ConfirmPlantViewController.swift in Sources */,
 				A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */,
 				A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */,
+				A46B3ED524CFEEED000C652F /* OtherPlantsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

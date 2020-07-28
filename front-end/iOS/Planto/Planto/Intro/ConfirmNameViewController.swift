@@ -20,6 +20,8 @@ class ConfirmNameViewController: UIViewController {
         // Do any additional setup after loading the view.
         plantName.text = "\(customName ?? "")!"
     }
+    
+    // - MARK: IBActions
     @IBAction func renamePressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "이 이름이 아니야?",
                                       message: "이름을 다시 지으시겠어요?", preferredStyle: .alert)
@@ -30,7 +32,7 @@ class ConfirmNameViewController: UIViewController {
             }
             self.present(vc, animated: true)
         })
-        let cancelAction = UIAlertAction(title: "아니!", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "아니", style: .default, handler: nil)
         
         alert.addAction(confirmAction)
         alert.addAction(cancelAction)

@@ -10,6 +10,7 @@ import UIKit
 
 class FindPlantViewController: UIViewController {
     
+    // - MARK: IBOutlets
     @IBOutlet weak var imgView: UIImageView!
     
     var image: UIImage! // UIImage 변수
