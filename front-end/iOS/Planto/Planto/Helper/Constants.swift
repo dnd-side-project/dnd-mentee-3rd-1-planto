@@ -10,6 +10,8 @@ class Constants {
         static let selectPlant = "SelectPlant"
         static let namePlant = "NamePlant"
         static let confirmName = "ConfirmName"
+        static let beforeManage = "beforeManage"
+        static let howtoManage = "howToManage"
     }
     
     struct Color {

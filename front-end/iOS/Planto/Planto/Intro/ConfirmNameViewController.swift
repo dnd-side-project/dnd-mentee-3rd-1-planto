@@ -21,6 +21,18 @@ class ConfirmNameViewController: UIViewController {
         plantName.text = "\(customName ?? "")!"
     }
     
+    //BeforeManage로 식물이름 넘겨주기
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let des = segue.destination
+        
+        guard let nextVC = des as? BeforeManagementViewController else {
+            return
+        }
+        
+        nextVC.myPlantName = customName ?? ""
+    }
+    
+    
     // - MARK: IBActions
     @IBAction func renamePressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "이 이름이 아니야?",
