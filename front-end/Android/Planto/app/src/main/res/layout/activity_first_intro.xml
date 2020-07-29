@@ -4,28 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FirstIntroActivity">
 
     <TextView
-        android:id="@+id/greetings"
+        android:id="@+id/textViewFirstIntro"
         style="@style/IntroTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="안녕하세요!\n식물과 함께하는\n즐거운 삶,\nPlantö에 오신 것을\n환영합니다!"
+        android:text="@string/txt_first_greeting"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:background="@drawable/intro_buttons"
-        android:id="@+id/button"
+        android:background="@drawable/intro_confirm_button"
+        android:id="@+id/buttonFirstIntroConfirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:text="다음"
+        android:layout_marginBottom="20dp"
+        android:text="@string/button_first_confirm"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

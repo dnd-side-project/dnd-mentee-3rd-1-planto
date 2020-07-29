@@ -1,20 +1,20 @@
 package com.example.planto
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.SpannableStringBuilder
-import androidx.core.text.bold
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_first_intro.*
 
-class MainActivity : AppCompatActivity() {
+class FirstIntroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_first_intro)
 
-        val title = SpannableStringBuilder()
-            .append("안녕하세요!\n식물과 함께하는\n즐거운 삶,\n")
-            .bold { append("Plantö에 오신 것을\n환영합니다!") }
-
-        greetings.text = title
+        // 다음 버튼 클릭
+        buttonFirstIntroConfirm.setOnClickListener {
+            // 뷰 전환
+            val intent = Intent(this, SecondIntroActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
