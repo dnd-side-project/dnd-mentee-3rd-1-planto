@@ -7,32 +7,27 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="0dp"
+        android:id="@+id/greetings"
+        style="@style/IntroTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Hello, Plantö."
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_green_light"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="안녕하세요!\n식물과 함께하는\n즐거운 삶,\nPlantö에 오신 것을\n환영합니다!"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnContinue"
-        android:layout_width="wrap_content"
+        android:background="@drawable/intro_buttons"
+        android:id="@+id/button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:background="#00FFFFFF"
-        android:text="Continue"
-        android:textColor="@android:color/holo_orange_dark"
+        android:text="다음"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
