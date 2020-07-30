@@ -11,6 +11,13 @@ class ThirdIntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third_intro)
 
+        // 이미지 왼쪽으로 15도 회전
+        secondImageView.rotation = -15f
+
+        // 이미지 스케일 조절
+        secondImageView.scaleX = 0.95f
+        secondImageView.scaleY = 0.95f
+
         // 다음 버튼 클릭
         buttonThirdIntroConfirm.setOnClickListener {
             // To Do: next view(takePicture) 이동
