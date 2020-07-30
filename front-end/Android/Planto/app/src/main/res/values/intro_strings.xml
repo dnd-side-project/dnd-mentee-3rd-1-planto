@@ -13,4 +13,6 @@
     <string name="txt_third_greeting2">저한테 그 친구,\n보여주실 수 있으신가요?\n<b>제가 누군지 맞춰볼게요!</b></string>
     <string name="button_third_confirm">안될 건 없지!</string>
     <string name="button_third_cancel">지금은 별로</string>
+    <string name="to_oh_surprised">to_oh_surprised</string>
+    <string name="to_oh_greetings">to_oh_greetings</string>
 </resources>

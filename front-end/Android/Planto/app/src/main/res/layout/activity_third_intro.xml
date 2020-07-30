@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ThirdIntroActivity">
 
+    <ImageView
+        android:id="@+id/secondImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/to_oh_surprised"
+        android:translationX="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/to_oh_surprised" />
+
     <TextView
         android:id="@+id/textViewThirdIntroFirst"
         style="@style/IntroTextView"
@@ -49,11 +59,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:background="@android:color/transparent"
         android:text="@string/button_third_cancel"
         android:textColor="#A7A7A7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
