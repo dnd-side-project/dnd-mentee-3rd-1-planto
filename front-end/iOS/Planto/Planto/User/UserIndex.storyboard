@@ -59,30 +59,41 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bNv-RG-mYM">
-                                <rect key="frame" x="256" y="226" width="142" height="53"/>
+                                <rect key="frame" x="256" y="226" width="142" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WqE-MI-THb">
-                                        <rect key="frame" x="0.0" y="0.0" width="142" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-XZ-e5R">
-                                                <rect key="frame" x="0.0" y="0.0" width="68" height="18"/>
+                                                <rect key="frame" x="0.0" y="5.5" width="68" height="19"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="19" id="9Fa-Ig-Z0l"/>
+                                                    <constraint firstAttribute="width" constant="68" id="vb6-sk-XAu"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="checkmark" catalog="system">
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="circle" catalog="system">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <state key="selected" image="checkmark" catalog="system"/>
+                                                <state key="selected" image="checkmark.circle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="toggleAutoLogin:" destination="sXe-WO-x0n" eventType="touchUpInside" id="men-Ig-ai2"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동 로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-Vg-Cni">
-                                                <rect key="frame" x="73" y="0.0" width="69" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-yj-30I">
+                                                <rect key="frame" x="73" y="0.0" width="69" height="30"/>
+                                                <state key="normal" title="자동 로그인">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleAutoLoginText:" destination="sXe-WO-x0n" eventType="touchUpInside" id="8bi-0h-whY"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNV-dS-pWN">
-                                        <rect key="frame" x="0.0" y="23" width="142" height="30"/>
+                                        <rect key="frame" x="0.0" y="35" width="142" height="30"/>
                                         <state key="normal" title="비밀번호를 잊으셨나요?">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -90,7 +101,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yi8-wi-kaD">
-                                <rect key="frame" x="30" y="329" width="354" height="140"/>
+                                <rect key="frame" x="30" y="341" width="354" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXR-73-869" customClass="WideButton" customModule="Planto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
@@ -132,6 +143,9 @@
                         <viewLayoutGuide key="safeArea" id="ePg-gB-EzV"/>
                     </view>
                     <navigationItem key="navigationItem" title="로그인" largeTitleDisplayMode="never" id="h5D-65-0QW"/>
+                    <connections>
+                        <outlet property="btnAutoLogin" destination="QgS-XZ-e5R" id="Xnk-gg-Auy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="511-A1-45v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +154,6 @@
         <!--회원가입-->
         <scene sceneID="w1R-vd-4ac">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cB5-NW-Zhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="AFx-Qx-dH1" customClass="JoinViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oc5-0P-tIq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -251,6 +264,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="회원가입" largeTitleDisplayMode="never" id="4Ll-K1-8rw"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cB5-NW-Zhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="996" y="921"/>
         </scene>
@@ -274,6 +288,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
