@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- Loading: SplashScreenActivity -->
         <activity
             android:name=".SplashScreenActivity"
@@ -19,13 +20,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- First Intro -->
-        <activity android:name=".FirstIntroActivity" />
-        <!-- Second Intro -->
-        <activity android:name=".SecondIntroActivity" />
-        <!-- Third Intro -->
+        </activity> <!-- First Intro -->
+        <activity android:name=".FirstIntroActivity" /> <!-- Second Intro -->
+        <activity android:name=".SecondIntroActivity" /> <!-- Third Intro -->
         <activity android:name=".ThirdIntroActivity" />
+        <activity
+            android:name=".LogInActivity"
+            android:theme="@style/LogInTheme" />
+        <activity
+            android:name=".JoinActivity"
+            android:theme="@style/LogInTheme"
+            android:parentActivityName=".LogInActivity"/>
     </application>
 
 </manifest>

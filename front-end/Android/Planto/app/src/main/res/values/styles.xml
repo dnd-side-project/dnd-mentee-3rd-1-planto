@@ -21,4 +21,18 @@
         <item name="android:lineSpacingExtra">10sp</item>
     </style>
 
+    <!-- 로그인 및 가입 텍스트뷰 테마 -->
+    <style name="LogInTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">#429278</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+    </style>
+
+    <style name="LogInTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4FB693</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>
