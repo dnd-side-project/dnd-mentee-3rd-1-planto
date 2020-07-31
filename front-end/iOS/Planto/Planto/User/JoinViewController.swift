@@ -1,5 +1,5 @@
 //
-//  LogInViewController.swift
+//  JoinViewController.swift
 //  Planto
 //
 //  Created by Aaron Lee on 7/31/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class JoinViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +16,4 @@ class LogInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
 }
