@@ -1,37 +1,37 @@
-import "reflect-metadata";
-import { createConnection } from "typeorm";
 import * as express from "express";
-import * as bodyParser from "body-parser";
 import { Request, Response } from "express";
-import { Routes } from "./routes";
+import { createConnection } from "typeorm";
+import { User } from "./entity/User";
 
 createConnection()
-  .then(async (connection) => {
+  .then((connection) => {
+    const userRepository = connection.getRepository(User);
+
     // create express app
     const app = express();
-    app.use(bodyParser.json());
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
 
-    // register express routes from defined application routes
-    Routes.forEach((route) => {
-      (app as any)[route.method](
-        route.route,
-        (req: Request, res: Response, next: Function) => {
-          const result = new (route.controller as any)()[route.action](
-            req,
-            res,
-            next
-          );
-          if (result instanceof Promise) {
-            result.then((result) =>
-              result !== null && result !== undefined
-                ? res.send(result)
-                : undefined
-            );
-          } else if (result !== null && result !== undefined) {
-            res.json(result);
-          }
-        }
-      );
+    // register express routes
+    app.get("/users", async (req: Request, res: Response) => {
+      const users = await userRepository.find();
+      res.json(users);
+    });
+
+    app.get("/users/:id", async (req: Request, res: Response) => {
+      const user = await userRepository.findOne(req.params.id);
+      res.send(user);
+    });
+
+    app.post("/users", async (req: Request, res: Response) => {
+      const user = await userRepository.create(req.body);
+      const result = await userRepository.save(user);
+      res.send(result);
+    });
+
+    app.delete("/users/:id", async (req: Request, res: Response) => {
+      const result = await userRepository.delete(req.params.id);
+      res.send(result);
     });
 
     // setup express app here
