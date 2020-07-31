@@ -10,7 +10,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    // MARK: - Mutable Variables
+    // MARK: - Variables
     var isAutoLogin: Bool = false
     
     // MARK: - IBOutlets
@@ -50,6 +50,5 @@ extension LogInViewController {
         } else {
             isAutoLogin = false
         }
-        print(isAutoLogin)
     }
 }
