@@ -3,24 +3,27 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run dev",
+    "start": "ts-node src/index.ts",
     "test": "jest",
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node ./bin/www",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node ./bin/www"
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
-    "express": "~4.16.1",
+    "express": "^4.15.4",
     "mariadb": "^2.4.1",
     "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.10",
+    "typeorm": "^0.2.25",
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^8.0.29",
     "cross-env": "^7.0.2",
-    "jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "ts-node": "3.3.0",
+    "typescript": "3.3.3333"
   }
 }

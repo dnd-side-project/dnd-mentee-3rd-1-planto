@@ -1,14 +1,21 @@
 # Back-end
 
-## Project Structure
+## Directory Structure
 
 ```shell
 .
-+-- bin        # Scripts
-|   +-- www    # Default entry point
-+-- models
-+-- public     # Static files
-+-- routes
-+-- .env       # Environment variable
-+-- app.js
+├── bin               # Deprecated
+├── config
+├── models            # Deprecated
+├── public            # Deprecated
+├── routes            # Deprecated
+├── src
+│   ├── entity        # Models
+│   ├── migration     # Database migrations
+│   ├── index.ts      # Entry point
+│   └── routes.ts     # Routes
+├── tests             # Unit tests
+├── .env              # Environment variable
+├── app.js            # Deprecated
+└── ormconfig.json    # Default TypeORM configuration
 ```
