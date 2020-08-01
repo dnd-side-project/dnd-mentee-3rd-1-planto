@@ -28,7 +28,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextJoinEmail"
+            android:id="@+id/editTextJoinEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -61,7 +61,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextJoinNickName"
+            android:id="@+id/editTextJoinNickName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -94,7 +94,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextJoinPassword"
+            android:id="@+id/editTextJoinPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -127,7 +127,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextJoinConfirmPassword"
+            android:id="@+id/editTextJoinConfirmPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
