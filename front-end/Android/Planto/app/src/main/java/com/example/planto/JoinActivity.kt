@@ -19,6 +19,7 @@ class JoinActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar!!.title = "회원 가입"
 
+        // Test Save Info on Device
         testSave()
 
         // Join Button on Click Listener
@@ -35,16 +36,24 @@ class JoinActivity : AppCompatActivity() {
 
     private fun checkRequires(email: String, nickName: String, password: String, confirmPassword: String) {
         if (email == "" || nickName == "" || password == "" || confirmPassword == "") {
+            // Check Empty EditText
             val toast = Toast.makeText(this@JoinActivity,
                 "모든 정보를 입력해주세요", Toast.LENGTH_LONG)
             toast.show()
         } else if (password != confirmPassword) {
+            // Check Password
             val toast = Toast.makeText(this@JoinActivity,
                 "비밀번호가 일치하지 않아요", Toast.LENGTH_LONG)
             toast.show()
         } else if (!isValidEmail(email)) {
+            // Check Email Form
             val toast = Toast.makeText(this@JoinActivity,
                 "이메일 형식을 확인해주세요", Toast.LENGTH_LONG)
+            toast.show()
+        } else if (isExistingEmail(email)) {
+            // Check Existing Email
+            val toast = Toast.makeText(this@JoinActivity,
+                "존재하는 이메일입니다", Toast.LENGTH_LONG)
             toast.show()
         } else {
             // Request Join & Login
@@ -59,6 +68,7 @@ class JoinActivity : AppCompatActivity() {
 
     // Request Join
     private fun requestJoin(email: String, nickName: String, password: String) {
+        // To Do: Request Join & Log the User In
         var responseCode = 200
 
         if (responseCode == 200) {
@@ -77,13 +87,34 @@ class JoinActivity : AppCompatActivity() {
         }
     }
 
-    // Save User Info on Local Device
+    private fun isExistingEmail(email: String): Boolean {
+        // Temporary Users
+        val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
+        val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
+        val allUsers = listOf(testUser, adminUser)
+
+        // Existing User Flag
+        var isExisting: Boolean = false
+
+        // To Do: Find a User by Email on DB
+        for (user in allUsers) {
+            if (user["email"] == email) {
+                isExisting = true
+            }
+        }
+
+        return isExisting
+    }
+
+    // Save User Info on Device
     private fun saveUserInfo(email: String, nickName: String, password: String) {
+        // To Do: Save Token Key
         MyApplication.prefs.setString("email", email)
         MyApplication.prefs.setString("nickName", nickName)
         MyApplication.prefs.setString("password", password)
     }
 
+    // Test Save Info
     private fun testSave() {
         val email = MyApplication.prefs.getString("email", "")
         val nickName = MyApplication.prefs.getString("nickName", "")
