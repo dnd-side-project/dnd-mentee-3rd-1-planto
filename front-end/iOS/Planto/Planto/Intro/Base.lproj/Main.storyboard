@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="piz-H2-JEj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,49 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Develop View Controller-->
-        <scene sceneID="NQp-30-U3l">
-            <objects>
-                <viewController id="piz-H2-JEj" customClass="DevelopViewController" customModule="Planto" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LSi-xs-qT5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="voD-xI-Khp">
-                                <rect key="frame" x="16" y="287.5" width="343" height="92"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oc-wV-tqT">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Intro"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="i5I-Fd-Rqe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqV-WO-imS">
-                                        <rect key="frame" x="0.0" y="56" width="343" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="User"/>
-                                        <connections>
-                                            <segue destination="xCZ-Sb-9Ta" kind="show" id="QV1-cF-j3u"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="voD-xI-Khp" firstAttribute="leading" secondItem="kU8-oE-5Au" secondAttribute="leading" constant="16" id="5Vs-Bd-5JJ"/>
-                            <constraint firstItem="voD-xI-Khp" firstAttribute="centerY" secondItem="kU8-oE-5Au" secondAttribute="centerY" id="PLz-k8-seC"/>
-                            <constraint firstItem="kU8-oE-5Au" firstAttribute="trailing" secondItem="voD-xI-Khp" secondAttribute="trailing" constant="16" id="cW0-46-ESU"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="kU8-oE-5Au"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="div-gC-bmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-783" y="136"/>
-        </scene>
         <!--First Intro View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -1262,16 +1219,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC6-1j-Am4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7972" y="139.880059970015"/>
-        </scene>
-        <!--UserIndex-->
-        <scene sceneID="Lf8-j6-QoX">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UserIndex" id="xCZ-Sb-9Ta" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Y10-mk-WdX"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oPm-Hl-GGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-783" y="922"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

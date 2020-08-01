@@ -10,8 +10,7 @@ import UIKit
 
 class JoinViewController: UIViewController {
     // MARK: - To Do:
-    // ---> iCloud KeyChain
-    // ---> Request creating a user to DB
+    // ---> Request Creating a User to DB
     
     // MARK: - Variables
     var isAuthenticated = false
@@ -65,10 +64,18 @@ extension JoinViewController {
 extension JoinViewController {
     // Show Alert Function
     func alert(title: String, message: String) {
-      let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-      let OKAction = UIAlertAction(title: "알겠어", style: .default, handler: nil)
-      alertController.addAction(OKAction)
-      self.present(alertController, animated: true, completion: nil)
+        let seconds: Double = 1.5
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.view.backgroundColor = UIColor.lightGray
+        alertController.view.alpha = 0.5
+        alertController.view.layer.cornerRadius = 15
+        self.present(alertController, animated: true, completion: nil)
+        
+        // Dismiss Automatically
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
+            alertController.dismiss(animated: true, completion: nil)
+        })
     }
     
     // Email Form Regex Check
@@ -95,13 +102,25 @@ extension JoinViewController {
     
     // To Do: Request creating a user on DB, and Log Them in
     func requestJoin() {
+        var responseCode = 200
+        
+        if (responseCode == 200) {
+            // Save Authentication Info on the Device
+            saveUserInfo()
+            
+            // To Do: Request Log the Created User In
+            testSave()
+        } else {
+            alert(title: "서버에 문제가 있어요", message: "관리자에게 문의해주세요")
+        }
+    }
+    
+    func saveUserInfo() {
         // Save Authentication Info on the Device using UserDefaults
         UserDefaults.standard.set(true, forKey: Constants.User.Info.Authenticated.rawValue)
         UserDefaults.standard.set(true, forKey: Constants.User.Info.AutoLogIn.rawValue)
         UserDefaults.standard.set(txtEmail.text, forKey: Constants.User.Info.Email.rawValue)
         UserDefaults.standard.set(txtPassword.text, forKey: Constants.User.Info.Password.rawValue)
-        
-        // To Do: 보안 대책 찾기(Password)
     }
     
     func testSave() {

@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A406CE3A24D3F57100ECD2A1 /* UserIndex.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406CE3924D3F57100ECD2A1 /* UserIndex.storyboard */; };
-		A406CE3C24D3F58E00ECD2A1 /* DevelopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406CE3B24D3F58E00ECD2A1 /* DevelopViewController.swift */; };
+		A406CE3A24D3F57100ECD2A1 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406CE3924D3F57100ECD2A1 /* User.storyboard */; };
 		A406CE3E24D3F5C300ECD2A1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406CE3D24D3F5C300ECD2A1 /* LogInViewController.swift */; };
 		A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420434724CD7EA0008A5278 /* FindPlantViewController.swift */; };
 		A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */; };
@@ -35,8 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A406CE3924D3F57100ECD2A1 /* UserIndex.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserIndex.storyboard; sourceTree = "<group>"; };
-		A406CE3B24D3F58E00ECD2A1 /* DevelopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DevelopViewController.swift; path = Planto/DevelopViewController.swift; sourceTree = SOURCE_ROOT; };
+		A406CE3924D3F57100ECD2A1 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		A406CE3D24D3F5C300ECD2A1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		A420434724CD7EA0008A5278 /* FindPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlantViewController.swift; sourceTree = "<group>"; };
 		A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +76,7 @@
 		A406CE3824D3F53000ECD2A1 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				A406CE3924D3F57100ECD2A1 /* UserIndex.storyboard */,
+				A406CE3924D3F57100ECD2A1 /* User.storyboard */,
 				A406CE3D24D3F5C300ECD2A1 /* LogInViewController.swift */,
 				A438D26E24D4007900F25C90 /* JoinViewController.swift */,
 				A470F04924D42E8200B1EC07 /* TempUsers.swift */,
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				A44FD2EE24C42F5100037F7A /* Main.storyboard */,
-				A406CE3B24D3F58E00ECD2A1 /* DevelopViewController.swift */,
 				A492684624CD4D9300AE038D /* FirstIntroViewController.swift */,
 				A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */,
 				A492684424CD48E800AE038D /* ThirdIntroViewController.swift */,
@@ -216,7 +213,7 @@
 			files = (
 				A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */,
 				A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */,
-				A406CE3A24D3F57100ECD2A1 /* UserIndex.storyboard in Resources */,
+				A406CE3A24D3F57100ECD2A1 /* User.storyboard in Resources */,
 				A44FD2F024C42F5100037F7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +229,6 @@
 				A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */,
 				A47F318A24CE72F200B36072 /* CheckPlantViewController.swift in Sources */,
 				A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */,
-				A406CE3C24D3F58E00ECD2A1 /* DevelopViewController.swift in Sources */,
 				A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */,
 				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
 				B4DEFAFC24D061CE00855551 /* HowToManageViewController.swift in Sources */,
