@@ -4,7 +4,7 @@ import { createConnection } from "typeorm";
 import { Plant } from "./entity/Plant";
 
 createConnection()
-  .then((connection) => {
+  .then(() => {
     // create express app
     const app = express();
     app.use(express.json());
@@ -13,7 +13,7 @@ createConnection()
     // register express routes
     app.get("/plants", async (req: Request, res: Response) => {
       const plants = await Plant.find();
-      res.json(plants);
+      res.status(200).json(plants);
     });
 
     // setup express app here
