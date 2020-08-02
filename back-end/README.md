@@ -20,3 +20,13 @@
 ```shell
 npm install
 ```
+
+## Migration
+
+```shell
+# Run migration
+npm run typeorm migration:run
+
+# Revert migration
+npm run typeorm migration:revert
+```
