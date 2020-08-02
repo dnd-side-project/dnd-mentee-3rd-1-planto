@@ -14,3 +14,9 @@
 ├── .env              # Environment variable
 └── ormconfig.json    # Default TypeORM configuration
 ```
+
+## Installation
+
+```shell
+npm install
+```
