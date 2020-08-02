@@ -1,7 +1,7 @@
 import { getConnection, MigrationInterface, QueryRunner } from "typeorm";
-import { Plant } from "./../entity/Plant";
+import { Plant } from "../entity/Plant";
 
-export class PlantDataMigration1596212463846 implements MigrationInterface {
+export class PlantSeed1596382214094 implements MigrationInterface {
   private readonly plants: Array<Object> = [
     { name: "마리모", water: "일주일에 한 번씩 갈아주세요." },
     { name: "틸란드시아", water: "2~3일에 한 번씩 분무기로 뿌려주세요." },
