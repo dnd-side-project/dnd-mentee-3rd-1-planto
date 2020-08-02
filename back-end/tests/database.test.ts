@@ -1,5 +1,5 @@
 import { Connection, createConnection, Repository } from "typeorm";
-import { Plant } from "./../src/entity/Plant";
+import { Plant } from "../src/entity/Plant";
 
 describe("Database", () => {
   let connection: Connection;
