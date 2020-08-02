@@ -7,7 +7,7 @@
     "username": "user",
     "password": "user",
     "database": "default",
-    "synchronize": true,
+    "synchronize": false,
     "logging": true,
     "extra": {
       "charset": "utf8mb4_unicode_ci"
