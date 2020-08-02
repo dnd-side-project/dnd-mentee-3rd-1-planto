@@ -8,10 +8,9 @@
 ├── src
 │   ├── entity        # Models
 │   ├── migration     # Database migrations
-│   ├── index.ts      # Entry point
-│   └── routes.ts     # Routes
+│   └── index.ts      # Entry point
 ├── tests             # Unit tests
-├── .env              # Environment variable
+├── .env.example      # Environment variable example for production
 └── ormconfig.json    # Default TypeORM configuration
 ```
 
