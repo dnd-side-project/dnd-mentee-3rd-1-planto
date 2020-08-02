@@ -30,3 +30,15 @@ npm run typeorm migration:run
 # Revert migration
 npm run typeorm migration:revert
 ```
+
+## Endpoints
+
+### Plant
+
+#### `GET` /plants
+
+> Responses
+
+| Code | Return         |
+| ---- | -------------- |
+| 200  | `Array<Plant>` |
