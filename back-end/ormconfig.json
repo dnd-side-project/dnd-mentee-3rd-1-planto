@@ -1,24 +1,47 @@
-{
-  "type": "mariadb",
-  "host": "localhost",
-  "port": 3306,
-  "username": "test",
-  "password": "test",
-  "database": "test",
-  "synchronize": true,
-  "logging": false,
-  "entities": [
-    "src/entity/**/*.ts"
-  ],
-  "migrations": [
-    "src/migration/**/*.ts"
-  ],
-  "subscribers": [
-    "src/subscriber/**/*.ts"
-  ],
-  "cli": {
-    "entitiesDir": "src/entity",
-    "migrationsDir": "src/migration",
-    "subscribersDir": "src/subscriber"
+[
+  {
+    "name": "default",
+    "type": "mariadb",
+    "host": "localhost",
+    "port": 3306,
+    "username": "user",
+    "password": "user",
+    "database": "default",
+    "synchronize": true,
+    "logging": true,
+    "extra": {
+      "charset": "utf8mb4_unicode_ci"
+    },
+    "entities": ["src/entity/**/*.ts"],
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+    }
+  },
+  {
+    "name": "test",
+    "type": "mariadb",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "root",
+    "database": "test",
+    "dropSchema": true,
+    "synchronize": true,
+    "logging": false,
+    "extra": {
+      "charset": "utf8mb4_unicode_ci"
+    },
+    "entities": ["src/entity/**/*.ts"],
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+    }
   }
-}
+]
