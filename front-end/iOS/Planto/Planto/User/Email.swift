@@ -30,4 +30,34 @@ class Email {
         
         return isExisting
     }
+    
+    // Check Email & Password
+    func checkUser(email: String, password: String) -> Bool {
+        let users = TempUsers().users
+        var isCorrect: Bool = false
+        
+        for user in users {
+            if (user["email"] == email && user["password"] == password) {
+                isCorrect = true
+            }
+        }
+        
+        return isCorrect
+    }
+    
+    func testSave() {
+        let userDefaults = UserDefaults.standard
+        if let authenticated = userDefaults.value(forKey: Constants.User.Info.Authenticated.rawValue),
+            let autoLogin = userDefaults.value(forKey: Constants.User.Info.AutoLogIn.rawValue),
+            let email = userDefaults.value(forKey: Constants.User.Info.Email.rawValue),
+            let password = userDefaults.value(forKey: Constants.User.Info.Password.rawValue){
+            print("---> Here starts")
+            print("---> authenticated: \(authenticated as! Bool)")
+            print("---> autologin: \(autoLogin as! Bool)")
+            print("---> email: \(email as! String)")
+            print("---> password: \(password as! String)")
+            print("---> Here ended")
+            print("--------------------")
+        }
+    }
 }

@@ -112,6 +112,9 @@
                                         <state key="normal" title="로그인">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnLogin:" destination="sXe-WO-x0n" eventType="touchUpInside" id="623-Bf-Mjq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luQ-q2-ZhG" customClass="WideButton" customModule="Planto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="354" height="60"/>
@@ -145,6 +148,8 @@
                     <navigationItem key="navigationItem" title="로그인" largeTitleDisplayMode="never" id="h5D-65-0QW"/>
                     <connections>
                         <outlet property="btnAutoLogin" destination="QgS-XZ-e5R" id="Xnk-gg-Auy"/>
+                        <outlet property="txtEmail" destination="HOM-OK-ajp" id="Fwd-wG-xae"/>
+                        <outlet property="txtPassword" destination="nls-9t-hwg" id="jRt-dB-S61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="511-A1-45v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -25,7 +25,7 @@ class JoinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testSave()
+        Email().testSave()
     }
     
     
@@ -87,7 +87,7 @@ extension JoinViewController {
             saveUserInfo()
             
             // To Do: Request Log the Created User In
-            testSave()
+            Email().testSave()
         } else {
             alert(title: "서버에 문제가 있어요", message: "관리자에게 문의해주세요")
         }
@@ -101,18 +101,18 @@ extension JoinViewController {
         UserDefaults.standard.set(txtPassword.text, forKey: Constants.User.Info.Password.rawValue)
     }
     
-    func testSave() {
-        let userDefaults = UserDefaults.standard
-        if let authenticated = userDefaults.value(forKey: Constants.User.Info.Authenticated.rawValue),
-            let autoLogin = userDefaults.value(forKey: Constants.User.Info.AutoLogIn.rawValue),
-            let email = userDefaults.value(forKey: Constants.User.Info.Email.rawValue),
-            let password = userDefaults.value(forKey: Constants.User.Info.Password.rawValue){
-            print("---> Here starts")
-            print("---> authenticated: \(authenticated as! Bool)")
-            print("---> autologin: \(autoLogin as! Bool)")
-            print("---> email: \(email as! String)")
-            print("---> password: \(password as! String)")
-            print("---> Here ended")
-        }
-    }
+//    func testSave() {
+//        let userDefaults = UserDefaults.standard
+//        if let authenticated = userDefaults.value(forKey: Constants.User.Info.Authenticated.rawValue),
+//            let autoLogin = userDefaults.value(forKey: Constants.User.Info.AutoLogIn.rawValue),
+//            let email = userDefaults.value(forKey: Constants.User.Info.Email.rawValue),
+//            let password = userDefaults.value(forKey: Constants.User.Info.Password.rawValue){
+//            print("---> Here starts")
+//            print("---> authenticated: \(authenticated as! Bool)")
+//            print("---> autologin: \(autoLogin as! Bool)")
+//            print("---> email: \(email as! String)")
+//            print("---> password: \(password as! String)")
+//            print("---> Here ended")
+//        }
+//    }
 }
