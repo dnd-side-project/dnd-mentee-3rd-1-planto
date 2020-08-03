@@ -34,8 +34,8 @@ class JoinViewController: UIViewController {
 // MARK: - IBActions
 extension JoinViewController {
     @IBAction func btnSubmit(_ sender: UIButton) {
-        // txtEmail Correction Default Keyboard 에러로 인해 => None 처리
-        
+        let email = Email()
+       
         if (txtEmail.text == "" || txtNickName.text == "" || txtPassword.text == "" || txtConfirmPassword.text == "") {
             // Check Empty Text Field
             alert(title: "입력하신 정보를 확인해주세요", message: "입력하시지 않은 정보가 있는지 확인해주세요")
@@ -44,11 +44,11 @@ extension JoinViewController {
             // Check Passwords
             self.alert(title: "비밀번호를 확인해주세요", message: "입력하신 비밀번호가 일치하는지 확인해주세요.")
             
-        } else if (!isValidEmail(email: txtEmail.text ?? "")) {
+        } else if (!email.isValidEmail(email: txtEmail.text ?? "")) {
             // Check Email Form
             self.alert(title: "이메일을 형식을 확인해주세요", message: "올바른 이메일이 맞는지 확인해주세요")
             
-        } else if (isExistingEmail(email: txtEmail.text ?? "")) {
+        } else if (email.isExistingEmail(email: txtEmail.text ?? "")) {
             // Check Existing Email
             self.alert(title: "존재하는 이메일입니다", message: "다른 이메일로 가입을 진행해주세요")
             
@@ -76,28 +76,6 @@ extension JoinViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
             alertController.dismiss(animated: true, completion: nil)
         })
-    }
-    
-    // Email Form Regex Check
-    func isValidEmail(email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
-    }
-    
-    // Check Existing Email
-    func isExistingEmail(email: String) -> Bool {
-        let users = TempUsers().users
-        let email = email
-        var isExisting: Bool = false
-        
-        for user in users {
-            if (email == user["email"]!) {
-                isExisting = true
-            }
-        }
-        
-        return isExisting
     }
     
     // To Do: Request creating a user on DB, and Log Them in
