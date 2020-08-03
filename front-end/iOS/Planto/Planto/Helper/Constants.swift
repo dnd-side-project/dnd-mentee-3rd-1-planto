@@ -23,6 +23,7 @@ class Constants {
             case Authenticated
             case AutoLogIn
             case Email
+            case NickName
             case Password
         }
     }

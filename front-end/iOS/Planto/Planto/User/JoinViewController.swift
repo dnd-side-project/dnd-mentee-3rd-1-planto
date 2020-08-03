@@ -96,6 +96,7 @@ extension JoinViewController {
         UserDefaults.standard.set(true, forKey: Constants.User.Info.Authenticated.rawValue)
         UserDefaults.standard.set(true, forKey: Constants.User.Info.AutoLogIn.rawValue)
         UserDefaults.standard.set(txtEmail.text, forKey: Constants.User.Info.Email.rawValue)
+        UserDefaults.standard.set(txtNickName.text, forKey: Constants.User.Info.NickName.rawValue)
         UserDefaults.standard.set(txtPassword.text, forKey: Constants.User.Info.Password.rawValue)
     }
 }

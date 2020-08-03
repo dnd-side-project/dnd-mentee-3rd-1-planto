@@ -50,11 +50,13 @@ class Email {
         if let authenticated = userDefaults.value(forKey: Constants.User.Info.Authenticated.rawValue),
             let autoLogin = userDefaults.value(forKey: Constants.User.Info.AutoLogIn.rawValue),
             let email = userDefaults.value(forKey: Constants.User.Info.Email.rawValue),
+            let nickname = userDefaults.value(forKey: Constants.User.Info.NickName.rawValue),
             let password = userDefaults.value(forKey: Constants.User.Info.Password.rawValue){
             print("---> Here starts")
             print("---> authenticated: \(authenticated as! Bool)")
             print("---> autologin: \(autoLogin as! Bool)")
             print("---> email: \(email as! String)")
+            print("---> nickname: \(nickname as! String)")
             print("---> password: \(password as! String)")
             print("---> Here ended")
             print("--------------------")
