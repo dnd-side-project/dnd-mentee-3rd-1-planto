@@ -3,6 +3,7 @@ package com.example.planto
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.planto.user.LogInActivity
 import java.lang.Exception
 
 class SplashScreenActivity : AppCompatActivity() {

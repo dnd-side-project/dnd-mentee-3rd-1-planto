@@ -1,15 +1,26 @@
-package com.example.planto
+package com.example.planto.user
 
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.planto.MyApplication
+import com.example.planto.R
 import kotlinx.android.synthetic.main.activity_join.*
 
 class JoinActivity : AppCompatActivity() {
     // To Do
     // ---> Request Creating a user to DB
+    var isAuthenticated = false
+    var autoLoginFlag = false
+
+    private val prefsAuth = "isAuthenticated"
+    private val prefsAutoLogin = "autoLoginFlag"
+    private val prefsEmail = "email"
+    private val prefsNickName = "nickName"
+    private val prefsPassword = "password"
+    private val defValue = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,6 +84,8 @@ class JoinActivity : AppCompatActivity() {
 
         if (responseCode == 200) {
             // Save Authentication Info on the Device
+            isAuthenticated = true
+            autoLoginFlag = true
             saveUserInfo(email, nickName, password)
 
             // To Do: Request Log the Created User In
@@ -109,21 +122,25 @@ class JoinActivity : AppCompatActivity() {
     // Save User Info on Device
     private fun saveUserInfo(email: String, nickName: String, password: String) {
         // To Do: Save Token Key
-        MyApplication.prefs.setString("email", email)
-        MyApplication.prefs.setString("nickName", nickName)
-        MyApplication.prefs.setString("password", password)
+        MyApplication.prefs.setString(prefsAuth, isAuthenticated.toString())
+        MyApplication.prefs.setString(prefsAutoLogin, autoLoginFlag.toString())
+        MyApplication.prefs.setString(prefsEmail, email)
+        MyApplication.prefs.setString(prefsNickName, nickName)
+        MyApplication.prefs.setString(prefsPassword, password)
     }
 
     // Test Save Info
     private fun testSave() {
-        val email = MyApplication.prefs.getString("email", "")
-        val nickName = MyApplication.prefs.getString("nickName", "")
-        val password = MyApplication.prefs.getString("password", "")
+        val authFlag = MyApplication.prefs.getString(prefsAuth, defValue)
+        val autoLogin = MyApplication.prefs.getString(prefsAutoLogin, defValue)
+        val email = MyApplication.prefs.getString(prefsEmail, defValue)
+        val nickName = MyApplication.prefs.getString(prefsNickName, defValue)
+        val password = MyApplication.prefs.getString(prefsPassword, defValue)
 
         if (email != "" || nickName != "" || password != "") {
             val alertBuilder = AlertDialog.Builder(this)
             alertBuilder.setTitle("values")
-            alertBuilder.setMessage("email: $email\nnickName: $nickName\npassword: $password")
+            alertBuilder.setMessage("authFlag: $authFlag\nautoLogin: $autoLogin\nemail: $email\nnickName: $nickName\npassword: $password")
             alertBuilder.setPositiveButton("알겠어!", DialogInterface.OnClickListener { _, _ ->
                 return@OnClickListener
             })

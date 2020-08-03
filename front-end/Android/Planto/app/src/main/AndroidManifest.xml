@@ -26,12 +26,12 @@
         <activity android:name=".SecondIntroActivity" /> <!-- Third Intro -->
         <activity android:name=".ThirdIntroActivity" />
         <activity
-            android:name=".LogInActivity"
+            android:name=".user.LogInActivity"
             android:theme="@style/LogInTheme" />
         <activity
-            android:name=".JoinActivity"
+            android:name=".user.JoinActivity"
             android:theme="@style/LogInTheme"
-            android:parentActivityName=".LogInActivity"/>
+            android:parentActivityName=".user.LogInActivity"/>
     </application>
 
 </manifest>
