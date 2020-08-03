@@ -35,6 +35,24 @@ class Email {
         return isExisting
     }
 
+    fun checkUser(email: String, password: String): Boolean {
+        // Temporary Users
+        val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
+        val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
+        val allUsers = listOf(testUser, adminUser)
+
+        // Existing User Flag
+        var isCorrect: Boolean = false
+
+        // To Do: Find a User by Email on DB
+        for (user in allUsers) {
+            if (user["email"] == email && user["password"] == password) {
+                isCorrect = true
+            }
+        }
+        return isCorrect
+    }
+
     // To Do: Remove This Method
     fun testSave() {
         val authFlag = MyApplication.prefs.getString(prefsAuth, defValue)

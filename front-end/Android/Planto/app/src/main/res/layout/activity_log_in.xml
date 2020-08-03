@@ -56,7 +56,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextLoginEmail"
+            android:id="@+id/editTextLoginEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -89,7 +89,7 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextLoginPassword"
+            android:id="@+id/editTextLoginPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
