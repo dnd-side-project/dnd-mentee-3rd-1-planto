@@ -50,6 +50,7 @@ extension LogInViewController {
         } else if (!email.isValidEmail(email: txtEmail.text ?? "")) {
             alert(title: "이메일을 형식을 확인해주세요", message: "올바른 이메일이 맞는지 확인해주세요")
         } else if (!email.checkUser(email: txtEmail.text ?? "", password: txtPassword.text ?? "")) {
+            // To Do: Request to Check User Info
             alert(title: "입력하신 정보를 확인해주세요", message: "입력하신 정보가 올바른지 확인해주세요")
         } else {
             // Set Flag

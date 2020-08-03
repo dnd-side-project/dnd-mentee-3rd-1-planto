@@ -27,12 +27,12 @@ class Email {
                 isExisting = true
             }
         }
-        
         return isExisting
     }
     
     // Check Email & Password
     func checkUser(email: String, password: String) -> Bool {
+        // To Do: Request
         let users = TempUsers().users
         var isCorrect: Bool = false
         
@@ -41,10 +41,10 @@ class Email {
                 isCorrect = true
             }
         }
-        
         return isCorrect
     }
     
+    // To Do: Remove This Function
     func testSave() {
         let userDefaults = UserDefaults.standard
         if let authenticated = userDefaults.value(forKey: Constants.User.Info.Authenticated.rawValue),
