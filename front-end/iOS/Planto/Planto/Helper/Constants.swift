@@ -17,4 +17,13 @@ class Constants {
     struct Color {
         static let greenColor = UIColor(red: 85/255, green: 144/255, blue: 121/255, alpha: 1)
     }
+    
+    struct User {
+        enum Info: String {
+            case Authenticated
+            case AutoLogIn
+            case Email
+            case Password
+        }
+    }
 }
