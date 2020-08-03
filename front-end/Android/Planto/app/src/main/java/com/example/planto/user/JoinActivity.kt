@@ -10,17 +10,14 @@ import com.example.planto.R
 import kotlinx.android.synthetic.main.activity_join.*
 
 class JoinActivity : AppCompatActivity() {
-    // To Do
-    // ---> Request Creating a user to DB
-    var isAuthenticated = false
-    var autoLoginFlag = false
-
+    // Variables
+    private var isAuthenticated = false
+    private var autoLoginFlag = false
     private val prefsAuth = "isAuthenticated"
     private val prefsAutoLogin = "autoLoginFlag"
     private val prefsEmail = "email"
     private val prefsNickName = "nickName"
     private val prefsPassword = "password"
-    private val defValue = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +28,7 @@ class JoinActivity : AppCompatActivity() {
         actionBar!!.title = "회원 가입"
 
         // Test Save Info on Device
-        testSave()
+        Email().testSave()
 
         // Join Button on Click Listener
         buttonJoin.setOnClickListener {
@@ -56,12 +53,12 @@ class JoinActivity : AppCompatActivity() {
             val toast = Toast.makeText(this@JoinActivity,
                 "비밀번호가 일치하지 않아요", Toast.LENGTH_LONG)
             toast.show()
-        } else if (!isValidEmail(email)) {
+        } else if (!Email().isValidEmail(email)) {
             // Check Email Form
             val toast = Toast.makeText(this@JoinActivity,
                 "이메일 형식을 확인해주세요", Toast.LENGTH_LONG)
             toast.show()
-        } else if (isExistingEmail(email)) {
+        } else if (Email().isExistingEmail(email)) {
             // Check Existing Email
             val toast = Toast.makeText(this@JoinActivity,
                 "존재하는 이메일입니다", Toast.LENGTH_LONG)
@@ -70,11 +67,6 @@ class JoinActivity : AppCompatActivity() {
             // Request Join & Login
             requestJoin(email, nickName, password)
         }
-    }
-
-    // Email Form Validator
-    private fun isValidEmail(email: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     // Request Join
@@ -100,25 +92,6 @@ class JoinActivity : AppCompatActivity() {
         }
     }
 
-    private fun isExistingEmail(email: String): Boolean {
-        // Temporary Users
-        val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
-        val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
-        val allUsers = listOf(testUser, adminUser)
-
-        // Existing User Flag
-        var isExisting: Boolean = false
-
-        // To Do: Find a User by Email on DB
-        for (user in allUsers) {
-            if (user["email"] == email) {
-                isExisting = true
-            }
-        }
-
-        return isExisting
-    }
-
     // Save User Info on Device
     private fun saveUserInfo(email: String, nickName: String, password: String) {
         // To Do: Save Token Key
@@ -127,25 +100,5 @@ class JoinActivity : AppCompatActivity() {
         MyApplication.prefs.setString(prefsEmail, email)
         MyApplication.prefs.setString(prefsNickName, nickName)
         MyApplication.prefs.setString(prefsPassword, password)
-    }
-
-    // Test Save Info
-    private fun testSave() {
-        val authFlag = MyApplication.prefs.getString(prefsAuth, defValue)
-        val autoLogin = MyApplication.prefs.getString(prefsAutoLogin, defValue)
-        val email = MyApplication.prefs.getString(prefsEmail, defValue)
-        val nickName = MyApplication.prefs.getString(prefsNickName, defValue)
-        val password = MyApplication.prefs.getString(prefsPassword, defValue)
-
-        if (email != "" || nickName != "" || password != "") {
-            val alertBuilder = AlertDialog.Builder(this)
-            alertBuilder.setTitle("values")
-            alertBuilder.setMessage("authFlag: $authFlag\nautoLogin: $autoLogin\nemail: $email\nnickName: $nickName\npassword: $password")
-            alertBuilder.setPositiveButton("알겠어!", DialogInterface.OnClickListener { _, _ ->
-                return@OnClickListener
-            })
-
-            alertBuilder.show()
-        }
     }
 }
