@@ -27,8 +27,6 @@ class JoinViewController: UIViewController {
         
         Email().testSave()
     }
-    
-    
 }
 
 // MARK: - IBActions
@@ -100,19 +98,4 @@ extension JoinViewController {
         UserDefaults.standard.set(txtEmail.text, forKey: Constants.User.Info.Email.rawValue)
         UserDefaults.standard.set(txtPassword.text, forKey: Constants.User.Info.Password.rawValue)
     }
-    
-//    func testSave() {
-//        let userDefaults = UserDefaults.standard
-//        if let authenticated = userDefaults.value(forKey: Constants.User.Info.Authenticated.rawValue),
-//            let autoLogin = userDefaults.value(forKey: Constants.User.Info.AutoLogIn.rawValue),
-//            let email = userDefaults.value(forKey: Constants.User.Info.Email.rawValue),
-//            let password = userDefaults.value(forKey: Constants.User.Info.Password.rawValue){
-//            print("---> Here starts")
-//            print("---> authenticated: \(authenticated as! Bool)")
-//            print("---> autologin: \(autoLogin as! Bool)")
-//            print("---> email: \(email as! String)")
-//            print("---> password: \(password as! String)")
-//            print("---> Here ended")
-//        }
-//    }
 }
