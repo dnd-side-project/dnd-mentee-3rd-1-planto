@@ -28,11 +28,4 @@
         <item name="android:lineSpacingExtra">10sp</item>
     </style>
 
-    <style name="LogInTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">#4FB693</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
 </resources>

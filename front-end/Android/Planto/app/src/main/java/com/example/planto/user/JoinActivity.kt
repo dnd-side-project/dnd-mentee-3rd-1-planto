@@ -1,10 +1,8 @@
 package com.example.planto.user
 
-import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.example.planto.MyApplication
 import com.example.planto.R
 import kotlinx.android.synthetic.main.activity_join.*
@@ -22,10 +20,6 @@ class JoinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
-
-        // Action Bar
-        val actionBar = supportActionBar
-        actionBar!!.title = "회원 가입"
 
         // Test Save Info on Device
         Email().testSave()
