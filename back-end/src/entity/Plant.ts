@@ -3,9 +3,11 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
+import { UserPlant } from "./UserPlant";
 
 @Entity()
 export class Plant extends BaseEntity {
@@ -17,6 +19,9 @@ export class Plant extends BaseEntity {
 
   @Column()
   water: string;
+
+  @OneToMany((type) => UserPlant, (userPlant) => userPlant.plant)
+  userPlants: UserPlant[];
 
   @CreateDateColumn()
   created: Date;
