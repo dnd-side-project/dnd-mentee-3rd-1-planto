@@ -3,6 +3,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -18,7 +19,8 @@ export class UserPlant extends BaseEntity {
   // @ManyToOne()
   // user: User;
 
-  @ManyToOne((type) => Plant, (plant) => plant.id)
+  @ManyToOne((type) => Plant)
+  @JoinColumn({ name: "plant_id" })
   plant: Plant;
 
   @Column()
