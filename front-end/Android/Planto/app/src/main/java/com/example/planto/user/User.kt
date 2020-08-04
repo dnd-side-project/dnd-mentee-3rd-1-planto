@@ -3,30 +3,26 @@ package com.example.planto.user
 import android.util.Log
 import com.example.planto.MyApplication
 
-class Email {
-    private val prefsAuth = "isAuthenticated"
-    private val prefsAutoLogin = "autoLoginFlag"
-    private val prefsEmail = "email"
-    private val prefsNickName = "nickName"
-    private val prefsPassword = "password"
+class User {
+    val prefsAuth = "isAuthenticated"
+    val prefsAutoLogin = "isAutoLogin"
+    val prefsEmail = "email"
+    val prefsNickName = "nickName"
+    val prefsPassword = "password"
+
     private val defValue = ""
 
-    // Email Form Regex Check
     fun isValidEmail(email: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    // Check Existing Email
     fun isExistingEmail(email: String): Boolean {
-        // Temporary Users
         val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
         val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
         val allUsers = listOf(testUser, adminUser)
 
-        // Existing User Flag
         var isExisting: Boolean = false
 
-        // To Do: Find a User by Email on DB
         for (user in allUsers) {
             if (user["email"] == email) {
                 isExisting = true
@@ -36,12 +32,10 @@ class Email {
     }
 
     fun checkUser(email: String, password: String): Boolean {
-        // Temporary Users
         val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
         val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
         val allUsers = listOf(testUser, adminUser)
 
-        // Existing User Flag
         var isCorrect: Boolean = false
 
         // To Do: Find a User by Email on DB
@@ -53,7 +47,6 @@ class Email {
         return isCorrect
     }
 
-    // To Do: Remove This Method
     fun testSave() {
         val authFlag = MyApplication.prefs.getString(prefsAuth, defValue)
         val autoLogin = MyApplication.prefs.getString(prefsAutoLogin, defValue)
