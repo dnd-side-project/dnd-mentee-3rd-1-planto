@@ -9,22 +9,21 @@ class User {
     val prefsEmail = "email"
     val prefsNickName = "nickName"
     val prefsPassword = "password"
-
     private val defValue = ""
+
+    private val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
+    private val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
+    private val allUsers = listOf(testUser, adminUser)
 
     fun isValidEmail(email: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     fun isExistingEmail(email: String): Boolean {
-        val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
-        val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
-        val allUsers = listOf(testUser, adminUser)
-
         var isExisting: Boolean = false
-
+        // To Do: Check Existing User
         for (user in allUsers) {
-            if (user["email"] == email) {
+            if (user[prefsEmail] == email) {
                 isExisting = true
             }
         }
@@ -32,15 +31,10 @@ class User {
     }
 
     fun checkUser(email: String, password: String): Boolean {
-        val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
-        val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
-        val allUsers = listOf(testUser, adminUser)
-
         var isCorrect: Boolean = false
-
         // To Do: Find a User by Email on DB
         for (user in allUsers) {
-            if (user["email"] == email && user["password"] == password) {
+            if (user[prefsEmail] == email && user[prefsPassword] == password) {
                 isCorrect = true
             }
         }

@@ -38,14 +38,14 @@ class LogInActivity : AppCompatActivity() {
     private fun checkInfo(email: String, password: String) {
         if (email == "" || password == "") {
             showToast("모든 정보를 입력해주세요")
-        } else if (!User().isValidEmail(email)) {
+        } else if (!user.isValidEmail(email)) {
             showToast("이메일 형식을 확인해주세요")
-        } else if (!User().checkUser(email, password)) {
+        } else if (!user.checkUser(email, password)) {
             showToast("입력하신 정보가 올바른지 확인해주세요")
         } else {
             isAuthenticated = true
             saveUserInfo(email, password)
-            User().testSave()
+            user.testSave()
         }
     }
 
