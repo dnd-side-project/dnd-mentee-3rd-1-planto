@@ -1,5 +1,5 @@
 //
-//  Email.swift
+//  User.swift
 //  Planto
 //
 //  Created by Aaron Lee on 8/3/20.
@@ -8,15 +8,13 @@
 
 import Foundation
 
-class Email {
-    // Email Form Regex Check
+class User {
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
     
-    // Check Existing Email
     func isExistingEmail(email: String) -> Bool {
         let users = TempUsers().users
         let email = email
@@ -30,7 +28,6 @@ class Email {
         return isExisting
     }
     
-    // Check Email & Password
     func checkUser(email: String, password: String) -> Bool {
         // To Do: Request
         let users = TempUsers().users
@@ -44,7 +41,6 @@ class Email {
         return isCorrect
     }
     
-    // To Do: Remove This Function
     func testSave() {
         let userDefaults = UserDefaults.standard
         if let authenticated = userDefaults.value(forKey: Constants.User.Info.Authenticated.rawValue),

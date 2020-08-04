@@ -8,16 +8,6 @@
 
 import Foundation
 
-//
-//  TempUser.swift
-//  Planto
-//
-//  Created by Aaron Lee on 7/31/20.
-//  Copyright © 2020 D&D. All rights reserved.
-//
-
-import Foundation
-
 class TempUsers {
     
         let users = [
