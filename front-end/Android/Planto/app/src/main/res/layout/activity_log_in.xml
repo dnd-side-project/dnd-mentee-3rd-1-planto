@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".user.LogInActivity">
 
     <Button
         android:id="@+id/buttonLogIn"
@@ -14,7 +14,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/intro_confirm_button"
-        android:text="로그인"
+        android:text="@string/login"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/intro_confirm_button"
-        android:text="회원 가입"
+        android:text="@string/join_button"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,12 +39,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle">
 
         <TextView
             android:id="@+id/textViewLogInEmail"
@@ -52,19 +52,19 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="이메일"
+            android:text="@string/email"
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextLoginEmail"
+            android:id="@+id/editTextLoginEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="planto@planto.com"
-            android:textSize="15dp"
-            android:inputType="textEmailAddress" />
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -85,19 +85,19 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="비밀번호"
+            android:text="@string/password"
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/editTextTextLoginPassword"
+            android:id="@+id/editTextLoginPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="비밀번호"
-            android:textSize="15dp"
-            android:inputType="textEmailAddress" />
+            android:hint="@string/password"
+            android:textSize="15sp"
+            android:inputType="textNoSuggestions|textPassword" />
     </LinearLayout>
 
     <CheckBox
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:text="자동 로그인"
+        android:text="@string/auto_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogInPassword" />
 
@@ -117,8 +117,21 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
-        android:text="비밀번호를 잊으셨나요?"
+        android:text="@string/forgot_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxAutoLogin" />
+
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/login"
+        android:textColor="@color/colorGreen"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

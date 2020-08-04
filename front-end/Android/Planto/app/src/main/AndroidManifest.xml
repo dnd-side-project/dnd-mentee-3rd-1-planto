@@ -11,7 +11,6 @@
         android:theme="@style/AppTheme"
         android:name="com.example.planto.MyApplication">
 
-        <!-- Loading: SplashScreenActivity -->
         <activity
             android:name=".SplashScreenActivity"
             android:noHistory="true"
@@ -21,17 +20,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- First Intro -->
-        <activity android:name=".FirstIntroActivity" /> <!-- Second Intro -->
-        <activity android:name=".SecondIntroActivity" /> <!-- Third Intro -->
+        </activity>
+        <activity android:name=".FirstIntroActivity" />
+        <activity android:name=".SecondIntroActivity" />
         <activity android:name=".ThirdIntroActivity" />
-        <activity
-            android:name=".LogInActivity"
-            android:theme="@style/LogInTheme" />
-        <activity
-            android:name=".JoinActivity"
-            android:theme="@style/LogInTheme"
-            android:parentActivityName=".LogInActivity"/>
+        <activity android:name=".user.LogInActivity" />
+        <activity android:name=".user.JoinActivity" />
     </application>
 
 </manifest>

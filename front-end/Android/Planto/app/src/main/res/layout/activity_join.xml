@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JoinActivity">
+    tools:context=".user.JoinActivity">
 
     <LinearLayout
         android:id="@+id/linearLayoutJoinEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/joinTitle">
 
         <TextView
             android:id="@+id/textViewJoinEmail"
@@ -24,7 +24,7 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="이메일"
+            android:text="@string/email"
             android:textAlignment="center" />
 
         <EditText
@@ -34,9 +34,9 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="planto@planto.com"
+            android:hint="@string/email_hint"
             android:inputType="textEmailAddress"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,7 +57,7 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="닉네임"
+            android:text="@string/nickname"
             android:textAlignment="center" />
 
         <EditText
@@ -67,9 +67,9 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="닉네임"
+            android:hint="@string/nickname"
             android:inputType="textNoSuggestions"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,7 +90,7 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="비밀번호"
+            android:text="@string/password"
             android:textAlignment="center" />
 
         <EditText
@@ -100,9 +100,9 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="비밀번호"
+            android:hint="@string/password"
             android:inputType="textNoSuggestions|textPassword"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -123,7 +123,7 @@
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="비밀번호 확인"
+            android:text="@string/confirm_password"
             android:textAlignment="center" />
 
         <EditText
@@ -133,9 +133,9 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="비밀번호인 확인"
+            android:hint="@string/confirm_password"
             android:inputType="textNoSuggestions|textPassword"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <Button
@@ -146,11 +146,24 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/intro_confirm_button"
-        android:text="가입하기"
+        android:text="@string/join"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutJoinConfirmPassword" />
+
+    <TextView
+        android:id="@+id/joinTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/join"
+        android:textColor="@color/colorGreen"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
