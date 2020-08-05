@@ -3,25 +3,28 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  OneToMany,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
-import { UserPlant } from "./UserPlant";
+import { Plant } from "./Plant";
 
 @Entity()
-export class Plant extends BaseEntity {
+export class UserPlant extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column()
-  name: string;
+  // STUB User Relation
+  // @ManyToOne()
+  // user: User;
+
+  @ManyToOne((type) => Plant)
+  @JoinColumn({ name: "plant_id" })
+  plant: Plant;
 
   @Column()
   water: string;
-
-  @OneToMany((type) => UserPlant, (userPlant) => userPlant.plant)
-  userPlants: UserPlant[];
 
   @CreateDateColumn()
   created: Date;
