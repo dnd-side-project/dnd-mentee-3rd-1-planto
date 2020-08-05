@@ -1,6 +1,7 @@
 import * as express from "express";
 import { createConnection } from "typeorm";
 import plantsRouter from "./routes/plants";
+import userPlantsRouter from "./routes/userPlants";
 
 createConnection()
   .then(() => {
@@ -11,6 +12,7 @@ createConnection()
 
     // register express routes
     app.use("/plants", plantsRouter);
+    app.use("/user-plants", userPlantsRouter);
 
     // setup express app here
     // ...
