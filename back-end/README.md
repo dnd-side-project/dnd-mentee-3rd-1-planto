@@ -65,3 +65,4 @@ npm run typeorm migration:revert
 | Code | Return      | Description            |
 | ---- | ----------- | ---------------------- |
 | 200  | `UserPlant` | id값과 일치하는 데이터 |
+| 404  | Not Found   | 일치하는 데이터 없음   |

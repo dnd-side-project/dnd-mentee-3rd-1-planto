@@ -20,6 +20,9 @@ router.post("/", async (request: Request, response: Response) => {
 
 router.get("/:id", async (request: Request, response: Response) => {
   const userPlant = await UserPlant.findOne(request.params.id);
+  if (!userPlant) {
+    response.sendStatus(404);
+  }
   response.status(200).json(userPlant);
 });
 
