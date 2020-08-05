@@ -41,3 +41,27 @@ npm run typeorm migration:revert
 | Code | Return         |
 | ---- | -------------- |
 | 200  | `Array<Plant>` |
+
+### UserPlant
+
+#### `GET` /user-plants
+
+> Responses
+
+| Code | Return             | Description    |
+| ---- | ------------------ | -------------- |
+| 200  | `Array<UserPlant>` | UserPlant 전체 |
+
+#### `GET` /user-plants/:id
+
+> Parameters
+
+| Key | Value          | Description  |
+| --- | -------------- | ------------ |
+| id  | `string(uuid)` | UserPlant id |
+
+> Responses
+
+| Code | Return      | Description            |
+| ---- | ----------- | ---------------------- |
+| 200  | `UserPlant` | id값과 일치하는 데이터 |
