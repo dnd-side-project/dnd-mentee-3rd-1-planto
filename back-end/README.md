@@ -36,6 +36,12 @@ npm run typeorm migration:revert
 
 #### `GET` /plants
 
+> Query Parameters
+
+| Key  | Value    | Description                                  |
+| ---- | -------- | -------------------------------------------- |
+| name | `string` | _Optional_ 검색하려는 이름을 포함하는 문자열 |
+
 > Responses
 
 | Code | Return         |
