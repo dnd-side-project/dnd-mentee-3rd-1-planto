@@ -32,6 +32,8 @@ npm run typeorm migration:revert
 
 ## Endpoints
 
+Description에 Optional 키워드가 없다면 Required를 전제로 함.
+
 ### Plant
 
 #### `GET` /plants
@@ -60,7 +62,7 @@ npm run typeorm migration:revert
 
 #### `GET` /user-plants/:id
 
-> Parameters
+> Path Parameters
 
 | Key | Value          | Description  |
 | --- | -------------- | ------------ |
