@@ -27,4 +27,25 @@
     <string name="join_button">회원 가입</string>
     <string name="auto_login">자동 로그인</string>
     <string name="forgot_password">비밀번호를 잊으셨나요?</string>
+
+    <!-- Plant Search -->
+    <string name="txt_plant_search_greeting1">Plantö에 오신 걸 보니,\n<b>식물을 키우고 계신가봐요!</b></string>
+    <string name="txt_plant_search_greeting2">그 친구가 어떤 친구인지,\n알려주실 수 있으신가요?</string>
+    <string name="txt_plant_search_greeting3"><b>내 친구</b>는...</string>
+    <string name="txt_get_plant_variety">품종을 입력해 주세요! (예 : 스투키)</string>
+    <string name="button_plant_search_confirm">(이)에요!</string>
+    <string name="button_plant_search_cancel">안알랴줌</string>
+
+    <!-- Plant Confirm -->
+    <string name="txt_plant_confirm">음, <b>검색된 식물 이름</b>와(과)\n함께 하고 계시군요!</string><!-- todo : 검색된 식물이름 기입 -->
+    <string name="button_plant_confirm_confirm">맞아!</string>
+    <string name="button_plant_confirm_cancel">그 식물 아니야 다시 찾을래</string>
+
+    <!-- Plant Naming -->
+    <string name="txt_plant_naming1">식물친구\n<b>이름이 뭐예요?</b></string>
+    <string name="txt_plant_naming2">내 식물 이름은</string>
+    <string name="txt_get_plant_name">식물의 이름(별명)을 입력하세요!</string>
+    <string name="txt_plant_naming3">야!</string>
+    <string name="button_plant_name_confirm">멋진 이름이지?</string>
+    <string name="button_plant_name_cancel">그냥 다음에 지을래</string>
 </resources>
