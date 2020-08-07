@@ -1,7 +1,7 @@
 import * as express from "express";
-import { Request, Response } from "express";
 import { createConnection } from "typeorm";
-import { Plant } from "./entity/Plant";
+import plantsRouter from "./routes/plants";
+import userPlantsRouter from "./routes/userPlants";
 
 createConnection()
   .then(() => {
@@ -11,10 +11,8 @@ createConnection()
     app.use(express.urlencoded({ extended: false }));
 
     // register express routes
-    app.get("/plants", async (req: Request, res: Response) => {
-      const plants = await Plant.find();
-      res.status(200).json(plants);
-    });
+    app.use("/plants", plantsRouter);
+    app.use("/user-plants", userPlantsRouter);
 
     // setup express app here
     // ...
