@@ -19,7 +19,6 @@
 		A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F124C42F5200037F7A /* Assets.xcassets */; };
 		A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */; };
 		A46B3ED524CFEEED000C652F /* OtherPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */; };
-		A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */; };
 		A46E3AC424CDA29E005037C6 /* ConfirmPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */; };
 		A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */; };
 		A470F04A24D42E8200B1EC07 /* TempUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470F04924D42E8200B1EC07 /* TempUsers.swift */; };
@@ -28,8 +27,10 @@
 		A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684624CD4D9300AE038D /* FirstIntroViewController.swift */; };
 		A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684824CD508400AE038D /* TakePictureViewController.swift */; };
 		A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B31B9224CCA2D100E58386 /* Buttons.swift */; };
-		B4696BA024DACFFC00CD7AE9 /* WhatKindofPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4696B9F24DACFFC00CD7AE9 /* WhatKindofPlantViewController.swift */; };
-		B4696BA224DAD5A700CD7AE9 /* DetailKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4696BA124DAD5A700CD7AE9 /* DetailKindViewController.swift */; };
+		B43A105324DDA487000A8FC1 /* AddPlant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43A105224DDA487000A8FC1 /* AddPlant.storyboard */; };
+		B43A105524DDA69C000A8FC1 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A105424DDA69C000A8FC1 /* AddPlantViewController.swift */; };
+		B43A105724DDA6B8000A8FC1 /* RegisterKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A105624DDA6B8000A8FC1 /* RegisterKindViewController.swift */; };
+		B43A105924DDA6C6000A8FC1 /* RegisterPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43A105824DDA6C6000A8FC1 /* RegisterPhotoViewController.swift */; };
 		B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */; };
 		B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79D24CED89300BFE2E3 /* Constants.swift */; };
 		B4DEFAFA24D05D8900855551 /* BeforeManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DEFAF924D05D8900855551 /* BeforeManagementViewController.swift */; };
@@ -51,7 +52,6 @@
 		A44FD2F424C42F5200037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44FD2F624C42F5200037F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPlantsViewController.swift; sourceTree = "<group>"; };
-		A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantFoundViewController.swift; sourceTree = "<group>"; };
 		A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPlantViewController.swift; sourceTree = "<group>"; };
 		A46E3AC524CDA801005037C6 /* NamePlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePlantViewController.swift; sourceTree = "<group>"; };
 		A470F04924D42E8200B1EC07 /* TempUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUsers.swift; sourceTree = "<group>"; };
@@ -60,8 +60,10 @@
 		A492684624CD4D9300AE038D /* FirstIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
 		A492684824CD508400AE038D /* TakePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
 		A4B31B9224CCA2D100E58386 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		B4696B9F24DACFFC00CD7AE9 /* WhatKindofPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatKindofPlantViewController.swift; sourceTree = "<group>"; };
-		B4696BA124DAD5A700CD7AE9 /* DetailKindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKindViewController.swift; sourceTree = "<group>"; };
+		B43A105224DDA487000A8FC1 /* AddPlant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlant.storyboard; sourceTree = "<group>"; };
+		B43A105424DDA69C000A8FC1 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
+		B43A105624DDA6B8000A8FC1 /* RegisterKindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterKindViewController.swift; sourceTree = "<group>"; };
+		B43A105824DDA6C6000A8FC1 /* RegisterPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhotoViewController.swift; sourceTree = "<group>"; };
 		B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNameViewController.swift; sourceTree = "<group>"; };
 		B4ACB79D24CED89300BFE2E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4DEFAF924D05D8900855551 /* BeforeManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeManagementViewController.swift; sourceTree = "<group>"; };
@@ -98,11 +100,8 @@
 				A492684624CD4D9300AE038D /* FirstIntroViewController.swift */,
 				A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */,
 				A492684424CD48E800AE038D /* ThirdIntroViewController.swift */,
-				B4696B9F24DACFFC00CD7AE9 /* WhatKindofPlantViewController.swift */,
-				B4696BA124DAD5A700CD7AE9 /* DetailKindViewController.swift */,
 				A492684824CD508400AE038D /* TakePictureViewController.swift */,
 				A420434724CD7EA0008A5278 /* FindPlantViewController.swift */,
-				A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */,
 				A47F318924CE72F200B36072 /* CheckPlantViewController.swift */,
 				A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */,
 				A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */,
@@ -135,6 +134,7 @@
 			children = (
 				B4ACB79C24CED88300BFE2E3 /* Helper */,
 				A42AD62C24CC988900B07566 /* Intro */,
+				B43A105124DDA1FE000A8FC1 /* AddPlant */,
 				A406CE3824D3F53000ECD2A1 /* User */,
 				A492684A24CD526200AE038D /* Resources */,
 				A44FD2E824C42F5100037F7A /* AppDelegate.swift */,
@@ -152,6 +152,17 @@
 				A4B31B9224CCA2D100E58386 /* Buttons.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B43A105124DDA1FE000A8FC1 /* AddPlant */ = {
+			isa = PBXGroup;
+			children = (
+				B43A105224DDA487000A8FC1 /* AddPlant.storyboard */,
+				B43A105424DDA69C000A8FC1 /* AddPlantViewController.swift */,
+				B43A105624DDA6B8000A8FC1 /* RegisterKindViewController.swift */,
+				B43A105824DDA6C6000A8FC1 /* RegisterPhotoViewController.swift */,
+			);
+			path = AddPlant;
 			sourceTree = "<group>";
 		};
 		B4ACB79C24CED88300BFE2E3 /* Helper */ = {
@@ -220,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43A105324DDA487000A8FC1 /* AddPlant.storyboard in Resources */,
 				A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */,
 				A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */,
 				A406CE3A24D3F57100ECD2A1 /* User.storyboard in Resources */,
@@ -235,12 +247,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */,
-				B4696BA024DACFFC00CD7AE9 /* WhatKindofPlantViewController.swift in Sources */,
 				A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */,
 				A47F318A24CE72F200B36072 /* CheckPlantViewController.swift in Sources */,
-				A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */,
+				B43A105724DDA6B8000A8FC1 /* RegisterKindViewController.swift in Sources */,
 				A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */,
-				B4696BA224DAD5A700CD7AE9 /* DetailKindViewController.swift in Sources */,
+				B43A105524DDA69C000A8FC1 /* AddPlantViewController.swift in Sources */,
 				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
 				B4DEFAFC24D061CE00855551 /* HowToManageViewController.swift in Sources */,
 				A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */,
@@ -254,6 +265,7 @@
 				A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */,
 				B4DEFAFA24D05D8900855551 /* BeforeManagementViewController.swift in Sources */,
 				A406CE3E24D3F5C300ECD2A1 /* LogInViewController.swift in Sources */,
+				B43A105924DDA6C6000A8FC1 /* RegisterPhotoViewController.swift in Sources */,
 				A470F04A24D42E8200B1EC07 /* TempUsers.swift in Sources */,
 				A438D26F24D4007900F25C90 /* JoinViewController.swift in Sources */,
 				A46B3ED524CFEEED000C652F /* OtherPlantsViewController.swift in Sources */,

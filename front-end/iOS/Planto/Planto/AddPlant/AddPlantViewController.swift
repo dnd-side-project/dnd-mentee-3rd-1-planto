@@ -1,20 +1,18 @@
 //
-//  DetailKindViewController.swift
+//  AddPlantViewController.swift
 //  Planto
 //
-//  Created by 김호준 on 2020/08/05.
+//  Created by 김호준 on 2020/08/08.
 //  Copyright © 2020 D&D. All rights reserved.
 //
 
 import UIKit
 
-class DetailKindViewController: UIViewController {
-    
-    var plant: String = ""
-    
+class AddPlantViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
