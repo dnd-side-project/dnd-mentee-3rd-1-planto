@@ -23,44 +23,47 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         
         btnAutoLogin.isSelected = false
-        User().testSave()
     }
-}
-
-// MARK: - IBActions
-extension LogInViewController {
-    @IBAction func toggleAutoLogin(_ sender: UIButton) {
+    
+    // MARK: - IBActions
+    
+    @IBAction func buttonToggleAutoLoginDidTap(_ sender: UIButton) {
         autoLoginToggle()
     }
     
-    @IBAction func toggleAutoLoginText(_ sender: UIButton) {
+    @IBAction func buttonToggleAutoLoginTextDidTap(_ sender: UIButton) {
         autoLoginToggle()
     }
     
-    @IBAction func btnLogin(_ sender: UIButton) {
+    @IBAction func buttonLoginDidTap(_ sender: UIButton) {
         let user = User()
         
-        if (txtEmail.text == "" || txtPassword.text == "") {
+        let email = txtEmail?.text ?? ""
+        let password = txtPassword?.text ?? ""
+        
+        if (email == "" || password == "") {
             alert(message: "입력하시지 않은 정보가 있는지 확인해주세요")
-        } else if (!user.isValidEmail(email: txtEmail.text ?? "")) {
+        } else if (!user.isValidEmail(email: email)) {
             alert(message: "올바른 이메일이 맞는지 확인해주세요")
-        } else if (!user.checkUser(email: txtEmail.text ?? "", password: txtPassword.text ?? "")) {
+        } else if (!user.checkUser(email: email, password: password)) {
             // To Do: Request to Check User Info
             alert(message: "입력하신 정보가 올바른지 확인해주세요")
         } else {
             isAuthenticated = true
-            saveUserInfo(authenticatedFlag: isAuthenticated,
-                         autoLoginFlag: isAutoLogin,
-                         email: txtEmail.text ?? "",
-                         password: txtPassword.text ?? "")
             
-            // To Do: Request Log In & Go to Prev VC
-            user.testSave()
+            // To Do: Request Log In & Go to Prev VC or User Detail VC
+            guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
+                else { return }
+            self.present(nextVC, animated: true) {
+                self.saveUserInfo(authenticatedFlag: self.isAuthenticated,
+                                  autoLoginFlag: self.isAutoLogin,
+                                  email: email, password: password)
+            }
         }
     }
 }
 
-// MARK: - Functions
+// MARK: - Methods
 extension LogInViewController {
     func autoLoginToggle() {
         btnAutoLogin.isSelected = !btnAutoLogin.isSelected
@@ -78,7 +81,7 @@ extension LogInViewController {
         alertController.view.alpha = 0.5
         alertController.view.layer.cornerRadius = 15
         self.present(alertController, animated: true, completion: nil)
-
+        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
             alertController.dismiss(animated: true, completion: nil)
         })

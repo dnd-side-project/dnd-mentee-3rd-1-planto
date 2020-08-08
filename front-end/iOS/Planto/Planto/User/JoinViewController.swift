@@ -22,7 +22,6 @@ class JoinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        User().testSave()
     }
 }
 
@@ -55,7 +54,6 @@ extension JoinViewController {
             isAutoLogin = true
             saveUserInfo()
             // To Do: Request Log the Created User In
-            User().testSave()
         } else {
             alert(message: "입력하신 정보를 확인해주세요")
         }
