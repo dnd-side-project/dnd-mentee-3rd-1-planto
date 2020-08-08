@@ -17,8 +17,6 @@ class LogInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
 
-        user.testSave()
-
         buttonLogIn.setOnClickListener {
             val email = editTextLoginEmail.text.toString()
             val password = editTextLoginPassword.text.toString()
@@ -45,7 +43,8 @@ class LogInActivity : AppCompatActivity() {
         } else {
             isAuthenticated = true
             saveUserInfo(email, password)
-            user.testSave()
+            val intent = Intent(this, UserDetailActivity::class.java)
+            startActivity(intent)
         }
     }
 

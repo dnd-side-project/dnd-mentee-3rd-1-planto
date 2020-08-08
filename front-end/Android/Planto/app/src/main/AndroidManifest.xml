@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".myplant.ConfirmPlantVarietyActivity"></activity>
+        <activity android:name=".user.LeaveServiceActivity"></activity>
+        <activity android:name=".user.UserDetailActivity" />
+        <activity android:name=".myplant.ConfirmPlantVarietyActivity" />
         <activity android:name=".myplant.AddPlantActivity" />
         <activity android:name=".myplant.SearchPlantVarietyActivity" />
         <activity

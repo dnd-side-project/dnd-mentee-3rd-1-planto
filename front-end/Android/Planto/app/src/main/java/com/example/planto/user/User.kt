@@ -9,11 +9,11 @@ class User {
     val prefsEmail = "email"
     val prefsNickName = "nickName"
     val prefsPassword = "password"
-    private val defValue = ""
+    val defValue = ""
 
-    private val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
-    private val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
-    private val allUsers = listOf(testUser, adminUser)
+    val testUser = mapOf("email" to "test@test.test", "nickNmae" to "Test", "password" to "1")
+    val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
+    val allUsers = listOf(testUser, adminUser)
 
     fun isValidEmail(email: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
