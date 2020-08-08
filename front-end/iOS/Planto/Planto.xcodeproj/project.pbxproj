@@ -18,6 +18,8 @@
 		A44FD2F024C42F5100037F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2EE24C42F5100037F7A /* Main.storyboard */; };
 		A44FD2F224C42F5200037F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F124C42F5200037F7A /* Assets.xcassets */; };
 		A44FD2F524C42F5200037F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2F324C42F5200037F7A /* LaunchScreen.storyboard */; };
+		A46771AD24DE848700D6C6F8 /* LeaveServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46771AC24DE848700D6C6F8 /* LeaveServiceViewController.swift */; };
+		A46771AF24DE84B600D6C6F8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46771AE24DE84B600D6C6F8 /* UserDetailViewController.swift */; };
 		A46B3ED524CFEEED000C652F /* OtherPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */; };
 		A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */; };
 		A46E3AC424CDA29E005037C6 /* ConfirmPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */; };
@@ -48,6 +50,8 @@
 		A44FD2F124C42F5200037F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44FD2F424C42F5200037F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44FD2F624C42F5200037F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46771AC24DE848700D6C6F8 /* LeaveServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveServiceViewController.swift; sourceTree = "<group>"; };
+		A46771AE24DE84B600D6C6F8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		A46B3ED424CFEEED000C652F /* OtherPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPlantsViewController.swift; sourceTree = "<group>"; };
 		A46E3AC124CD9E26005037C6 /* PlantFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantFoundViewController.swift; sourceTree = "<group>"; };
 		A46E3AC324CDA29E005037C6 /* ConfirmPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPlantViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				A44339DC24D840E200660F61 /* User.swift */,
 				A406CE3D24D3F5C300ECD2A1 /* LogInViewController.swift */,
 				A438D26E24D4007900F25C90 /* JoinViewController.swift */,
+				A46771AE24DE84B600D6C6F8 /* UserDetailViewController.swift */,
+				A46771AC24DE848700D6C6F8 /* LeaveServiceViewController.swift */,
 				A470F04924D42E8200B1EC07 /* TempUsers.swift */,
 			);
 			path = User;
@@ -230,11 +236,13 @@
 			files = (
 				B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */,
 				A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */,
+				A46771AD24DE848700D6C6F8 /* LeaveServiceViewController.swift in Sources */,
 				A47F318A24CE72F200B36072 /* CheckPlantViewController.swift in Sources */,
 				A46E3AC224CD9E26005037C6 /* PlantFoundViewController.swift in Sources */,
 				A492684524CD48E800AE038D /* ThirdIntroViewController.swift in Sources */,
 				A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */,
 				B4DEFAFC24D061CE00855551 /* HowToManageViewController.swift in Sources */,
+				A46771AF24DE84B600D6C6F8 /* UserDetailViewController.swift in Sources */,
 				A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */,
 				A44339DD24D840E200660F61 /* User.swift in Sources */,
 				A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */,
