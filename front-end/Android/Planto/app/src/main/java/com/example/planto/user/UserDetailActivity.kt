@@ -19,6 +19,11 @@ class UserDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        buttonEditProfile.setOnClickListener {
+            val intent = Intent(this, EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onResume() {
