@@ -26,7 +26,6 @@ class EditProfileViewController: UIViewController {
         super.viewDidAppear(animated)
         
         loadAndShowUserDefaults()
-        UserUtill().testSaveUserDefaults()
     }
     
     // MARK: - IBActions
