@@ -9,7 +9,6 @@
 import Foundation
 
 class TempUsers {
-    
         let users = [
             ["email": "test@test.test", "userName": "Test", "password": "1"],
             ["email": "admin@admin.admin", "userName": "admin", "password": "1"]

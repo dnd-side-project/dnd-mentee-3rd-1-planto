@@ -38,8 +38,6 @@ class UserDetailViewController: UIViewController {
                 lblNickName.text = user["userName"]
             }
         }
-        
-        
     }
 
 }
