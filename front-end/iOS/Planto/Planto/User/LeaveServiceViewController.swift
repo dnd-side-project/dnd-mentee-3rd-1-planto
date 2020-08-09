@@ -35,6 +35,27 @@ class LeaveServiceViewController: UIViewController {
     
     // MARK: - Methods
     
+    func checkUserInfo(email: String, password: String) {
+        let users = TempUsers().users
+        
+        // To Do: Check whether User Information is correct
+        for user in users {
+            if email == user["email"] && password == user["password"] {  // if it is
+                showAlertAndMoveToIndex(message: "Success")
+                // To Do: Request Delete User
+            }
+        }
+    }
+    
+    
+    func moveToIndex() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let indexVC = storyboard.instantiateViewController(withIdentifier: "FirstGreetingVC")
+        
+        UserUtill().resetAllUserDefaults()
+        self.present(indexVC, animated: true)
+    }
+    
     func showConfirmAlert(title: String, message: String,
                           confirmTitle: String, cancelTitle: String,
                           confirmHandler: ((UIAlertAction) -> Void)?) {
@@ -50,18 +71,6 @@ class LeaveServiceViewController: UIViewController {
         alert.addAction(confirmAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: true)
-    }
-    
-    func checkUserInfo(email: String, password: String) {
-        let users = TempUsers().users
-        
-        // To Do: Check whether User Information is correct
-        for user in users {
-            if email == user["email"] && password == user["password"] {  // if it is
-                showAlertAndMoveToIndex(message: "Success")
-                // To Do: Request Delete User
-            }
-        }
     }
     
     func showAlertAndMoveToIndex(message: String) {
@@ -83,20 +92,5 @@ class LeaveServiceViewController: UIViewController {
         })
     }
     
-    func moveToIndex() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let indexVC = storyboard.instantiateViewController(withIdentifier: "FirstGreetingVC")
-        
-        resetUserDefaults()
-        self.present(indexVC, animated: true)
-    }
-    
-    func resetUserDefaults() {
-        UserDefaults.standard.set(false, forKey: Constants.User.Info.Authenticated.rawValue)
-        UserDefaults.standard.set(false, forKey: Constants.User.Info.AutoLogIn.rawValue)
-        UserDefaults.standard.set("", forKey: Constants.User.Info.Email.rawValue)
-        UserDefaults.standard.set("", forKey: Constants.User.Info.NickName.rawValue)
-        UserDefaults.standard.set("", forKey: Constants.User.Info.Password.rawValue)
-    }
     
 }

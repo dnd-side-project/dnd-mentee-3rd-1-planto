@@ -36,7 +36,7 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func buttonLoginDidTap(_ sender: UIButton) {
-        let user = User()
+        let user = UserUtill()
         
         let email = txtEmail?.text ?? ""
         let password = txtPassword?.text ?? ""
@@ -55,9 +55,10 @@ class LogInViewController: UIViewController {
             guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
                 else { return }
             self.present(nextVC, animated: true) {
-                self.saveUserInfo(authenticatedFlag: self.isAuthenticated,
-                                  autoLoginFlag: self.isAutoLogin,
-                                  email: email, password: password)
+                UserUtill().saveAllUserDefaults(authenticatedFlag: self.isAuthenticated,
+                                                autoLoginFlag: self.isAutoLogin,
+                                                email: email,
+                                                password: password)
             }
         }
     }
@@ -85,12 +86,5 @@ extension LogInViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
             alertController.dismiss(animated: true, completion: nil)
         })
-    }
-    
-    func saveUserInfo(authenticatedFlag: Bool, autoLoginFlag: Bool, email: String, password: String) {
-        UserDefaults.standard.set(authenticatedFlag, forKey: Constants.User.Info.Authenticated.rawValue)
-        UserDefaults.standard.set(autoLoginFlag, forKey: Constants.User.Info.AutoLogIn.rawValue)
-        UserDefaults.standard.set(email, forKey: Constants.User.Info.Email.rawValue)
-        UserDefaults.standard.set(password, forKey: Constants.User.Info.Password.rawValue)
     }
 }
