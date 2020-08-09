@@ -3,20 +3,17 @@ package com.example.planto.user
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.planto.MyApplication
 import com.example.planto.R
 import kotlinx.android.synthetic.main.activity_join.*
 
 class JoinActivity : AppCompatActivity() {
     private var isAuthenticated = false
     private var isAutoLogin = false
-    private val user = UserUtil()
+    private val userUtil = UserUtil()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
-
-        user.testSave()
 
         buttonJoin.setOnClickListener {
             val email = editTextJoinEmail.text.toString()
@@ -32,9 +29,9 @@ class JoinActivity : AppCompatActivity() {
             showToast("모든 정보를 입력해주세요")
         } else if (password != confirmPassword) {
             showToast("비밀번호가 일치하지 않아요")
-        } else if (!UserUtil().isValidEmail(email)) {
+        } else if (!userUtil.isValidEmail(email)) {
             showToast("이메일 형식을 확인해주세요")
-        } else if (UserUtil().isExistingEmail(email)) {
+        } else if (userUtil.isExistingEmail(email)) {
             showToast("존재하는 이메일입니다")
         } else {
             requestJoin(email, nickName, password)
@@ -58,11 +55,11 @@ class JoinActivity : AppCompatActivity() {
 
     private fun saveUserInfo(email: String, nickName: String, password: String) {
         // To Do: Save Token Key
-        MyApplication.prefs.setString(user.prefsAuth, isAuthenticated.toString())
-        MyApplication.prefs.setString(user.prefsAutoLogin, isAutoLogin.toString())
-        MyApplication.prefs.setString(user.prefsEmail, email)
-        MyApplication.prefs.setString(user.prefsNickName, nickName)
-        MyApplication.prefs.setString(user.prefsPassword, password)
+        userUtil.saveUserPref(userUtil.prefsAuth, isAuthenticated.toString())
+        userUtil.saveUserPref(userUtil.prefsAutoLogin, isAutoLogin.toString())
+        userUtil.saveUserPref(userUtil.prefsEmail, email)
+        userUtil.saveUserPref(userUtil.prefsNickName, nickName)
+        userUtil.saveUserPref(userUtil.prefsPassword, password)
     }
 
     private fun showToast(text: String) {

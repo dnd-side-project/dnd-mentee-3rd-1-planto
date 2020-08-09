@@ -38,7 +38,7 @@ class UserDetailActivity : AppCompatActivity() {
         val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
         val allUsers = listOf(testUser, adminUser)
 
-        val email = MyApplication.prefs.getString(UserUtil().prefsEmail, UserUtil().defValue)
+        val email = UserUtil().loadUserPref(UserUtil().prefsEmail)
 
         for (user in allUsers) {
             if (user[UserUtil().prefsEmail] == email) {

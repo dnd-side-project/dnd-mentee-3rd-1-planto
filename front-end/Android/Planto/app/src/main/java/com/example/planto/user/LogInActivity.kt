@@ -4,14 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.planto.MyApplication
 import com.example.planto.R
 import kotlinx.android.synthetic.main.activity_log_in.*
 
 class LogInActivity : AppCompatActivity() {
     private var isAutoLogin: Boolean = false
     private var isAuthenticated: Boolean = false
-    private val user = UserUtil()
+    private val userUtil = UserUtil()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +35,9 @@ class LogInActivity : AppCompatActivity() {
     private fun checkInfo(email: String, password: String) {
         if (email == "" || password == "") {
             showToast("모든 정보를 입력해주세요")
-        } else if (!user.isValidEmail(email)) {
+        } else if (!userUtil.isValidEmail(email)) {
             showToast("이메일 형식을 확인해주세요")
-        } else if (!user.checkUser(email, password)) {
+        } else if (!userUtil.checkUser(email, password)) {
             showToast("입력하신 정보가 올바른지 확인해주세요")
         } else {
             isAuthenticated = true
@@ -50,10 +49,10 @@ class LogInActivity : AppCompatActivity() {
 
     private fun saveUserInfo(email: String, password: String) {
         // To Do: Save Token Key
-        MyApplication.prefs.setString(user.prefsAuth, isAuthenticated.toString())
-        MyApplication.prefs.setString(user.prefsAutoLogin, isAutoLogin.toString())
-        MyApplication.prefs.setString(user.prefsEmail, email)
-        MyApplication.prefs.setString(user.prefsPassword, password)
+        userUtil.saveUserPref(userUtil.prefsAuth, isAuthenticated.toString())
+        userUtil.saveUserPref(userUtil.prefsAutoLogin, isAutoLogin.toString())
+        userUtil.saveUserPref(userUtil.prefsEmail, email)
+        userUtil.saveUserPref(userUtil.prefsPassword, password)
     }
 
     private fun showToast(text: String) {
