@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myplant.ConfirmMyPlantActivity">
+
+    <TextView
+        android:id="@+id/textViewConfirmMyPlant1"
+        style="@style/IntroTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/txt_my_plant_confirm1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMyPlantVariety"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txt_my_plant_variety"
+        android:textColor="#4D000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewConfirmMyPlant1" />
+
+    <TextView
+        android:id="@+id/textViewConfirmMyPlant2"
+        style="@style/IntroTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_my_plant_confirm2"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextMyPlantVariety"
+        app:layout_constraintStart_toEndOf="@+id/editTextMyPlantVariety"
+        app:layout_constraintTop_toTopOf="@+id/editTextMyPlantVariety" />
+
+    <EditText
+        android:id="@+id/editTextMyPlantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/txt_my_plant_name"
+        android:textColor="#4D000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMyPlantVariety" />
+
+    <TextView
+        android:id="@+id/textViewConfirmMyPlant3"
+        style="@style/IntroTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_my_plant_confirm3"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextMyPlantName"
+        app:layout_constraintStart_toEndOf="@+id/editTextMyPlantName"
+        app:layout_constraintTop_toTopOf="@+id/editTextMyPlantName" />
+
+    <ImageView
+        android:id="@+id/imageConfirmMyPlantPicture"
+        android:layout_width="296dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMyPlantName"
+        app:srcCompat="@drawable/to_oh_greetings" /><!--todo: 입력된 식물사진 출력-->
+
+    <TextView
+        android:id="@+id/textViewChangePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_my_plant_change_picture"
+        android:textColor="#4D000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imageConfirmMyPlantPicture"
+        app:layout_constraintEnd_toEndOf="@+id/imageConfirmMyPlantPicture"
+        app:layout_constraintStart_toStartOf="@+id/imageConfirmMyPlantPicture"
+        app:layout_constraintTop_toTopOf="@+id/imageConfirmMyPlantPicture" />
+
+    <Button
+        android:id="@+id/buttonGetMyPlantConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/intro_confirm_button"
+        android:text="@string/button_my_plant_confirm_confirm"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGetMyPlantCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGetMyPlantCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/transparent"
+        android:text="@string/button_my_plant_confirm_cancel"
+        android:textColor="#A7A7A7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

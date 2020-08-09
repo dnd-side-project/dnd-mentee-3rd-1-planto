@@ -3,6 +3,7 @@ package com.example.planto
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.planto.myplant.SearchPlantVarietyActivity
 import com.example.planto.user.EditProfileActivity
 import com.example.planto.user.LogInActivity
 import java.lang.Exception
@@ -18,7 +19,8 @@ class SplashScreenActivity : AppCompatActivity() {
                 try{
                     Thread.sleep(2000)
 
-                    val intent = Intent(baseContext, LogInActivity::class.java)
+                    //val intent = Intent(baseContext, LogInActivity::class.java)
+                    val intent = Intent(baseContext, SearchPlantVarietyActivity::class.java)
                     startActivity(intent)
                 }
                 catch (e: Exception) {

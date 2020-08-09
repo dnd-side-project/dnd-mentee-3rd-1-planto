@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".myplant.AddPlantActivity">
+    tools:context=".myplant.SetPlantNameActivity">
 
     <TextView
         android:id="@+id/textViewGetPlantName1"
@@ -37,7 +37,7 @@
         android:layout_marginEnd="100dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/txt_get_plant_name"
+        android:hint="@string/txt_get_plant_name"
         android:textColor="#4D000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

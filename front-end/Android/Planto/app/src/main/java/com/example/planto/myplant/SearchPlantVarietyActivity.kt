@@ -26,8 +26,7 @@ class SearchPlantVarietyActivity : AppCompatActivity() {
 
         // 취소 버튼 클릭
         buttonSearchPlantVarietyCancel.setOnClickListener {
-            val intent = Intent(baseContext, AddPlantActivity::class.java)
-            startActivity(intent)
+            //todo: 메인화면으로 이동
         }
     }
 }

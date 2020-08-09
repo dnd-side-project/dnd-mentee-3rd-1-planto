@@ -14,8 +14,10 @@
         <activity android:name=".user.LeaveServiceActivity" />
         <activity android:name=".user.UserDetailActivity" />
         <activity android:name=".myplant.ConfirmPlantVarietyActivity" />
-        <activity android:name=".myplant.AddPlantActivity" />
+        <activity android:name=".myplant.SetPlantNameActivity" />
         <activity android:name=".myplant.SearchPlantVarietyActivity" />
+        <activity android:name=".myplant.ConfirmMyPlantActivity" />
+        <activity android:name=".myplant.GetPlantPictureActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:noHistory="true"
