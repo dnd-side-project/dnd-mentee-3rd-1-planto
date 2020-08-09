@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_join.*
 class JoinActivity : AppCompatActivity() {
     private var isAuthenticated = false
     private var isAutoLogin = false
-    private val user = User()
+    private val user = UserUtil()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +32,9 @@ class JoinActivity : AppCompatActivity() {
             showToast("모든 정보를 입력해주세요")
         } else if (password != confirmPassword) {
             showToast("비밀번호가 일치하지 않아요")
-        } else if (!User().isValidEmail(email)) {
+        } else if (!UserUtil().isValidEmail(email)) {
             showToast("이메일 형식을 확인해주세요")
-        } else if (User().isExistingEmail(email)) {
+        } else if (UserUtil().isExistingEmail(email)) {
             showToast("존재하는 이메일입니다")
         } else {
             requestJoin(email, nickName, password)

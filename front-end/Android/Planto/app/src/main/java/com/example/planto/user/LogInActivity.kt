@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_log_in.*
 class LogInActivity : AppCompatActivity() {
     private var isAutoLogin: Boolean = false
     private var isAuthenticated: Boolean = false
-    private val user = User()
+    private val user = UserUtil()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

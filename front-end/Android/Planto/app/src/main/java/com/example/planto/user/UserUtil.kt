@@ -3,7 +3,7 @@ package com.example.planto.user
 import android.util.Log
 import com.example.planto.MyApplication
 
-class User {
+class UserUtil {
     val prefsAuth = "isAuthenticated"
     val prefsAutoLogin = "isAutoLogin"
     val prefsEmail = "email"

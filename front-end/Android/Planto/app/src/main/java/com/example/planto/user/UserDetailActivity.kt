@@ -33,12 +33,12 @@ class UserDetailActivity : AppCompatActivity() {
         val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
         val allUsers = listOf(testUser, adminUser)
 
-        val email = MyApplication.prefs.getString(User().prefsEmail, User().defValue)
+        val email = MyApplication.prefs.getString(UserUtil().prefsEmail, UserUtil().defValue)
 
         for (user in allUsers) {
-            if (user[User().prefsEmail] == email) {
-                tvUserEmail.text = user[User().prefsEmail]
-                tvUserNickName.text = user[User().prefsNickName]
+            if (user[UserUtil().prefsEmail] == email) {
+                tvUserEmail.text = user[UserUtil().prefsEmail]
+                tvUserNickName.text = user[UserUtil().prefsNickName]
             }
         }
     }
