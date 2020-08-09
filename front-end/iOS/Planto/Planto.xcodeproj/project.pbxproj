@@ -32,13 +32,9 @@
 		A492684924CD508400AE038D /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A492684824CD508400AE038D /* TakePictureViewController.swift */; };
 		A4B31B9324CCA2D100E58386 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B31B9224CCA2D100E58386 /* Buttons.swift */; };
 		B444A3E524DFE4E4003D5590 /* AddPlant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B444A3E424DFE4E4003D5590 /* AddPlant.storyboard */; };
-		B4ACB79B24CED75900BFE2E3 /* ConfirmNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */; };
-=======
-		B444A3E524DFE4E4003D5590 /* AddPlant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B444A3E424DFE4E4003D5590 /* AddPlant.storyboard */; };
 		B444A3E724DFE62B003D5590 /* MainAddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444A3E624DFE62B003D5590 /* MainAddPlantViewController.swift */; };
 		B444A3E924DFE645003D5590 /* RegisterPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444A3E824DFE645003D5590 /* RegisterPhotoViewController.swift */; };
 		B444A3EB24DFE650003D5590 /* SelectPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444A3EA24DFE650003D5590 /* SelectPlantViewController.swift */; };
->>>>>>> Intro Storyboard 정리 및 Add Plant Storyboard 구성
 		B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ACB79D24CED89300BFE2E3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,13 +66,9 @@
 		A492684824CD508400AE038D /* TakePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
 		A4B31B9224CCA2D100E58386 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		B444A3E424DFE4E4003D5590 /* AddPlant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlant.storyboard; sourceTree = "<group>"; };
-		B4ACB79A24CED75900BFE2E3 /* ConfirmNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNameViewController.swift; sourceTree = "<group>"; };
-=======
-		B444A3E424DFE4E4003D5590 /* AddPlant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlant.storyboard; sourceTree = "<group>"; };
 		B444A3E624DFE62B003D5590 /* MainAddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAddPlantViewController.swift; sourceTree = "<group>"; };
 		B444A3E824DFE645003D5590 /* RegisterPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhotoViewController.swift; sourceTree = "<group>"; };
 		B444A3EA24DFE650003D5590 /* SelectPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlantViewController.swift; sourceTree = "<group>"; };
->>>>>>> Intro Storyboard 정리 및 Add Plant Storyboard 구성
 		B4ACB79D24CED89300BFE2E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				B444A3E424DFE4E4003D5590 /* AddPlant.storyboard */,
+				B444A3E624DFE62B003D5590 /* MainAddPlantViewController.swift */,
+				B444A3EA24DFE650003D5590 /* SelectPlantViewController.swift */,
+				B444A3E824DFE645003D5590 /* RegisterPhotoViewController.swift */,
 			);
 			path = AddPlant;
 			sourceTree = "<group>";
