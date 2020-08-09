@@ -65,4 +65,18 @@ class UserUtill {
         UserDefaults.standard.set("", forKey: Constants.User.Info.Password.rawValue)
     }
     
+    func testSaveUserDefaults() {
+        let isAuthenticated = loadUserDefaults(forKey: Constants.User.Info.Authenticated.rawValue)
+        let isAutoLogIn = loadUserDefaults(forKey: Constants.User.Info.AutoLogIn.rawValue)
+        let email = loadUserDefaults(forKey: Constants.User.Info.Email.rawValue)
+        let nickName = loadUserDefaults(forKey: Constants.User.Info.NickName.rawValue)
+        let password = loadUserDefaults(forKey: Constants.User.Info.Password.rawValue)
+        
+        print("---> isAuthenticated: \(isAuthenticated)")
+        print("---> isAutoLogIn: \(isAutoLogIn)")
+        print("---> email: \(email)")
+        print("---> nickName: \(nickName)")
+        print("---> password: \(password)")
+    }
+    
 }

@@ -57,8 +57,7 @@ class LogInViewController: UIViewController {
             self.present(nextVC, animated: true) {
                 UserUtill().saveAllUserDefaults(authenticatedFlag: self.isAuthenticated,
                                                 autoLoginFlag: self.isAutoLogin,
-                                                email: email,
-                                                password: password)
+                                                email: email, password: password)
             }
         }
     }
@@ -87,4 +86,5 @@ extension LogInViewController {
             alertController.dismiss(animated: true, completion: nil)
         })
     }
+    
 }

@@ -57,9 +57,13 @@ extension JoinViewController {
                                             autoLoginFlag: isAutoLogin,
                                             email: txtEmail.text!,
                                             password: txtPassword.text!)
+            
+            guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
+                else { return }
+            self.present(nextVC, animated: true)
             // To Do: Request Log the Created User In
         } else {
-            alert(message: "입력하신 정보를 확인해주세요")
+            alert(message: "관리자에게 문의해주세요")
         }
     }
     
@@ -77,4 +81,5 @@ extension JoinViewController {
             alertController.dismiss(animated: true, completion: nil)
         })
     }
+    
 }
