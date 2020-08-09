@@ -28,7 +28,7 @@ class JoinViewController: UIViewController {
 // MARK: - IBActions
 extension JoinViewController {
     @IBAction func btnSubmit(_ sender: UIButton) {
-        let user = UserUtill()
+        let user = UserUtil()
         
         if (txtEmail.text == "" || txtNickName.text == "" || txtPassword.text == "" || txtConfirmPassword.text == "") {
             alert(message: "입력하시지 않은 정보가 있는지 확인해주세요")
@@ -53,7 +53,7 @@ extension JoinViewController {
             isAuthenticated = true
             isAutoLogin = true
             
-            UserUtill().saveAllUserDefaults(authenticatedFlag: isAuthenticated,
+            UserUtil().saveAllUserDefaults(authenticatedFlag: isAuthenticated,
                                             autoLoginFlag: isAutoLogin,
                                             email: txtEmail.text!,
                                             password: txtPassword.text!)

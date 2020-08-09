@@ -36,7 +36,7 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func buttonLoginDidTap(_ sender: UIButton) {
-        let user = UserUtill()
+        let user = UserUtil()
         
         let email = txtEmail?.text ?? ""
         let password = txtPassword?.text ?? ""
@@ -55,7 +55,7 @@ class LogInViewController: UIViewController {
             guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
                 else { return }
             self.present(nextVC, animated: true) {
-                UserUtill().saveAllUserDefaults(authenticatedFlag: self.isAuthenticated,
+                UserUtil().saveAllUserDefaults(authenticatedFlag: self.isAuthenticated,
                                                 autoLoginFlag: self.isAutoLogin,
                                                 email: email, password: password)
             }

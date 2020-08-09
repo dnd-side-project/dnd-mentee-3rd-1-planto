@@ -52,7 +52,7 @@ class LeaveServiceViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let indexVC = storyboard.instantiateViewController(withIdentifier: "FirstGreetingVC")
         
-        UserUtill().resetAllUserDefaults()
+        UserUtil().resetAllUserDefaults()
         self.present(indexVC, animated: true)
     }
     

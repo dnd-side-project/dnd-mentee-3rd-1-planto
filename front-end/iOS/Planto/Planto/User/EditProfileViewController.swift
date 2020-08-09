@@ -31,9 +31,9 @@ class EditProfileViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func btnConfirmDidTap(_ sender: UIButton) {
-        let user = UserUtill()
+        let user = UserUtil()
         
-        let currentEmail = UserUtill()
+        let currentEmail = UserUtil()
             .loadUserDefaults(forKey: Constants.User.Info.Email.rawValue) as! String
         
         if (txtEmail.text == "" || txtNickName.text == "" || txtPassword.text == "") {
@@ -54,8 +54,8 @@ class EditProfileViewController: UIViewController {
     // MARK: - Methods
     
     func loadAndShowUserDefaults() {
-        let email = UserUtill().loadUserDefaults(forKey: Constants.User.Info.Email.rawValue)
-        let nickName = UserUtill().loadUserDefaults(forKey: Constants.User.Info.NickName.rawValue)
+        let email = UserUtil().loadUserDefaults(forKey: Constants.User.Info.Email.rawValue)
+        let nickName = UserUtil().loadUserDefaults(forKey: Constants.User.Info.NickName.rawValue)
         
         txtEmail.text = email as? String
         txtNickName.text = nickName as? String
@@ -67,16 +67,16 @@ class EditProfileViewController: UIViewController {
         
         if status == 200 {
             // [Check New Email and Save]
-            if txtEmail.text != "" && UserUtill().isExistingEmail(email: txtEmail.text ?? "") {
+            if txtEmail.text != "" && UserUtil().isExistingEmail(email: txtEmail.text ?? "") {
                 checkEmailChangedAndChange(newEmail: txtEmail.text ?? "")
             }
             // [Check New Password and Save]
             if txtNewPassword.text != "" && txtVerifyNewPassword.text != "" {
-                UserUtill().saveUserDefaults(value: txtNewPassword.text ?? "",
+                UserUtil().saveUserDefaults(value: txtNewPassword.text ?? "",
                                              forKey: Constants.User.Info.Password.rawValue)
             }
             // [Save NickName]
-            UserUtill().saveUserDefaults(value: txtNickName.text ?? "",
+            UserUtil().saveUserDefaults(value: txtNickName.text ?? "",
                                          forKey: Constants.User.Info.NickName.rawValue)
             // [Save User Info & Go to UserDetail VC]
             self.navigationController?.popViewController(animated: true)
@@ -86,16 +86,16 @@ class EditProfileViewController: UIViewController {
     }
     
     func checkEmailChangedAndChange(newEmail: String) {
-        let userDefaultsEmail = UserUtill()
+        let userDefaultsEmail = UserUtil()
             .loadUserDefaults(forKey: Constants.User.Info.Email.rawValue) as! String
         
         if txtEmail.text != userDefaultsEmail {
-            let isExistingEmail = UserUtill().isExistingEmail(email: newEmail)
+            let isExistingEmail = UserUtil().isExistingEmail(email: newEmail)
             
             switch isExistingEmail {
             case false:
                 // To Do: Request Change Email
-                UserUtill().saveUserDefaults(value: newEmail,
+                UserUtil().saveUserDefaults(value: newEmail,
                                              forKey: Constants.User.Info.Email.rawValue)
             default:
                 alert(message: "이미 존재하는 이메일입니다")

@@ -13,7 +13,7 @@
 		A42AD62E24CC9A6400B07566 /* SecondIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */; };
 		A438D26F24D4007900F25C90 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438D26E24D4007900F25C90 /* JoinViewController.swift */; };
 		A440C3F624DFBE2C0095F165 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440C3F524DFBE2C0095F165 /* EditProfileViewController.swift */; };
-		A44339DD24D840E200660F61 /* UserUtill.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44339DC24D840E200660F61 /* UserUtill.swift */; };
+		A44339DD24D840E200660F61 /* UserUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44339DC24D840E200660F61 /* UserUtil.swift */; };
 		A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2E824C42F5100037F7A /* AppDelegate.swift */; };
 		A44FD2EB24C42F5100037F7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */; };
 		A44FD2F024C42F5100037F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44FD2EE24C42F5100037F7A /* Main.storyboard */; };
@@ -44,7 +44,7 @@
 		A42AD62D24CC9A6400B07566 /* SecondIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondIntroViewController.swift; sourceTree = "<group>"; };
 		A438D26E24D4007900F25C90 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		A440C3F524DFBE2C0095F165 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		A44339DC24D840E200660F61 /* UserUtill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUtill.swift; sourceTree = "<group>"; };
+		A44339DC24D840E200660F61 /* UserUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUtil.swift; sourceTree = "<group>"; };
 		A44FD2E524C42F5100037F7A /* Planto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44FD2E824C42F5100037F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44FD2EA24C42F5100037F7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				A406CE3924D3F57100ECD2A1 /* User.storyboard */,
-				A44339DC24D840E200660F61 /* UserUtill.swift */,
+				A44339DC24D840E200660F61 /* UserUtil.swift */,
 				A406CE3D24D3F5C300ECD2A1 /* LogInViewController.swift */,
 				A438D26E24D4007900F25C90 /* JoinViewController.swift */,
 				A46771AE24DE84B600D6C6F8 /* UserDetailViewController.swift */,
@@ -248,7 +248,7 @@
 				A440C3F624DFBE2C0095F165 /* EditProfileViewController.swift in Sources */,
 				A46771AF24DE84B600D6C6F8 /* UserDetailViewController.swift in Sources */,
 				A44FD2E924C42F5100037F7A /* AppDelegate.swift in Sources */,
-				A44339DD24D840E200660F61 /* UserUtill.swift in Sources */,
+				A44339DD24D840E200660F61 /* UserUtil.swift in Sources */,
 				A492684724CD4D9300AE038D /* FirstIntroViewController.swift in Sources */,
 				B4ACB79E24CED89300BFE2E3 /* Constants.swift in Sources */,
 				A46E3AC624CDA801005037C6 /* NamePlantViewController.swift in Sources */,
