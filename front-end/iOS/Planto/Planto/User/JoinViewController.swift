@@ -28,7 +28,7 @@ class JoinViewController: UIViewController {
 // MARK: - IBActions
 extension JoinViewController {
     @IBAction func btnSubmit(_ sender: UIButton) {
-        let user = User()
+        let user = UserUtil()
         
         if (txtEmail.text == "" || txtNickName.text == "" || txtPassword.text == "" || txtConfirmPassword.text == "") {
             alert(message: "입력하시지 않은 정보가 있는지 확인해주세요")
@@ -52,19 +52,19 @@ extension JoinViewController {
         if (responseCode == 200) {
             isAuthenticated = true
             isAutoLogin = true
-            saveUserInfo()
+            
+            UserUtil().saveAllUserDefaults(authenticatedFlag: isAuthenticated,
+                                            autoLoginFlag: isAutoLogin,
+                                            email: txtEmail.text!,
+                                            password: txtPassword.text!)
+            
+            guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
+                else { return }
+            self.present(nextVC, animated: true)
             // To Do: Request Log the Created User In
         } else {
-            alert(message: "입력하신 정보를 확인해주세요")
+            alert(message: "관리자에게 문의해주세요")
         }
-    }
-    
-    func saveUserInfo() {
-        UserDefaults.standard.set(isAuthenticated, forKey: Constants.User.Info.Authenticated.rawValue)
-        UserDefaults.standard.set(isAutoLogin, forKey: Constants.User.Info.AutoLogIn.rawValue)
-        UserDefaults.standard.set(txtEmail.text, forKey: Constants.User.Info.Email.rawValue)
-        UserDefaults.standard.set(txtNickName.text, forKey: Constants.User.Info.NickName.rawValue)
-        UserDefaults.standard.set(txtPassword.text, forKey: Constants.User.Info.Password.rawValue)
     }
     
     func alert(message: String) {
@@ -81,4 +81,5 @@ extension JoinViewController {
             alertController.dismiss(animated: true, completion: nil)
         })
     }
+    
 }
