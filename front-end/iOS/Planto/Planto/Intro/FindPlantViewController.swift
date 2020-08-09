@@ -33,13 +33,13 @@ class FindPlantViewController: UIViewController {
         }
     }
     
-    // To Do: 이미지 검색 및 결과 도출 후 화면 전환
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "PlantFound") {
-            guard let nextVc = segue.destination as? PlantFoundViewController else { return }
-            nextVc.plantName = "스투키"    // 임시 이름
-            nextVc.plantNameEN = "Stuckyi"    // 임시 이름
-        }
-    }
+//    // To Do: 이미지 검색 및 결과 도출 후 화면 전환
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "PlantFound") {
+//            guard let nextVc = segue.destination as? PlantFoundViewController else { return }
+//            nextVc.plantName = "스투키"    // 임시 이름
+//            nextVc.plantNameEN = "Stuckyi"    // 임시 이름
+//        }
+//    }
 
 }

@@ -42,22 +42,22 @@ class CheckPlantViewController: UIViewController {
         lblPlantDescription.text = "스투키(Sansevieria stuckyi 또는 Diocletian's spear)는 적도 아프리카에 자생하는 놀리나아과 식물의 다육 식물의 하나로, 경작이 쉬운 편이다."
         
     }
-    
-    // 식물 이름 다음 뷰 전달
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "ConfirmPlant") {
-            guard let nextVc = segue.destination as? ConfirmPlantViewController else { return }
-            nextVc.plantName = plantName
-            nextVc.plantNameEN = plantNameEN
-        }
-        // To Do: 비슷한 식물 도출 후 결과 전송
-        if (segue.identifier == "OtherPlants") {
-            guard let nextVc = segue.destination as? OtherPlantsViewController else { return }
-            nextVc.plantName = plantName
-            nextVc.plantNameEN = plantNameEN
-            nextVc.similarPlants = ["스투키", "스투키", "스투키", "스투키"]
-            nextVc.similarPlantsEN = ["Stuckyi1", "Stuckyi2", "Stuckyi3", "Stuckyi4"]
-        }
-    }
+//    
+//    // 식물 이름 다음 뷰 전달
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "ConfirmPlant") {
+//            guard let nextVc = segue.destination as? ConfirmPlantViewController else { return }
+//            nextVc.plantName = plantName
+//            nextVc.plantNameEN = plantNameEN
+//        }
+//        // To Do: 비슷한 식물 도출 후 결과 전송
+//        if (segue.identifier == "OtherPlants") {
+//            guard let nextVc = segue.destination as? OtherPlantsViewController else { return }
+//            nextVc.plantName = plantName
+//            nextVc.plantNameEN = plantNameEN
+//            nextVc.similarPlants = ["스투키", "스투키", "스투키", "스투키"]
+//            nextVc.similarPlantsEN = ["Stuckyi1", "Stuckyi2", "Stuckyi3", "Stuckyi4"]
+//        }
+//    }
     
 }

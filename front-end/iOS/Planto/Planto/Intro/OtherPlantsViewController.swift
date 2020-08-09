@@ -34,13 +34,13 @@ class OtherPlantsViewController: UIViewController {
         lblWithName.attributedText = attribute
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == Constants.SegueName.selectPlant) {
-            guard let nextVc = segue.destination as? CheckPlantViewController else { return }
-            nextVc.plantName = plantName
-            nextVc.plantNameEN = plantNameEN
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == Constants.SegueName.selectPlant) {
+//            guard let nextVc = segue.destination as? CheckPlantViewController else { return }
+//            nextVc.plantName = plantName
+//            nextVc.plantNameEN = plantNameEN
+//        }
+//    }
     
     // - Mark: IBActions
     @IBAction func goToList(_ sender: UIButton) {
