@@ -25,15 +25,15 @@ class NamePlantViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let des = segue.destination
-        
-        guard let nextVC = des as? ConfirmNameViewController else {
-            return
-        }
-        
-        (customName.text == "") ? (nextVC.customName = self.plantName ?? "") : (nextVC.customName = self.customName.text)
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let des = segue.destination
+//        
+//        guard let nextVC = des as? ConfirmNameViewController else {
+//            return
+//        }
+//        
+//        (customName.text == "") ? (nextVC.customName = self.plantName ?? "") : (nextVC.customName = self.customName.text)
+//    }
     
     // - MARK: IBActions
     @IBAction func gotoNextPressed(_ sender: UIButton) {

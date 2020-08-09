@@ -34,15 +34,15 @@ class TakePictureViewController: UIViewController {
         imgView.clipsToBounds = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // FindPlnat 세그웨이 실행 준비
-        if segue.identifier == "FindPlant" {
-            guard let nextVc = segue.destination as? FindPlantViewController else {
-                return
-            }
-            nextVc.image = captureImage
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // FindPlnat 세그웨이 실행 준비
+//        if segue.identifier == "FindPlant" {
+//            guard let nextVc = segue.destination as? FindPlantViewController else {
+//                return
+//            }
+//            nextVc.image = captureImage
+//        }
+//    }
     
     
     // - MARK: IBActions

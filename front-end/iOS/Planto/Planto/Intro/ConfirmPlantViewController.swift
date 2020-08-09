@@ -29,14 +29,14 @@ class ConfirmPlantViewController: UIViewController {
         lblPlantName.attributedText = attribute
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "NamePlant") {
-            guard let nextVc = segue.destination as? NamePlantViewController else {
-                return
-            }
-            nextVc.plantName = plantName
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "NamePlant") {
+//            guard let nextVc = segue.destination as? NamePlantViewController else {
+//                return
+//            }
+//            nextVc.plantName = plantName
+//        }
+//    }
     
     // - MARK: IBActions
     // 다시 고르기 버튼 클릭

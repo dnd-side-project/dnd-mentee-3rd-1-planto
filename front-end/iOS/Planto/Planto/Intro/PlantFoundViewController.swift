@@ -22,12 +22,12 @@ class PlantFoundViewController: UIViewController {
         }
     }
     
-    // 이름 다음 뷰로 전달
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "CheckPlant") {
-            guard let nextVc = segue.destination as? CheckPlantViewController else { return }
-            nextVc.plantName = plantName
-            nextVc.plantNameEN = plantNameEN
-        }
-    }
+//    // 이름 다음 뷰로 전달
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "CheckPlant") {
+//            guard let nextVc = segue.destination as? CheckPlantViewController else { return }
+//            nextVc.plantName = plantName
+//            nextVc.plantNameEN = plantNameEN
+//        }
+//    }
 }
