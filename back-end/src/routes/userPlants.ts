@@ -13,8 +13,8 @@ router.post("/", async (request: Request, response: Response) => {
   const userPlant = new UserPlant();
   const plant = await Plant.findOne(request.body.plant);
   userPlant.plant = plant;
-  userPlant.name = plant.name;
-  userPlant.water = plant.water;
+  userPlant.name = request.body.name || plant.name;
+  userPlant.water = request.body.water || plant.water;
   await userPlant.save();
   response.status(201).json(userPlant);
 });
