@@ -15,6 +15,9 @@ export class UserPlant extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
+  @Column()
+  name: string;
+
   // STUB User Relation
   // @ManyToOne()
   // user: User;
