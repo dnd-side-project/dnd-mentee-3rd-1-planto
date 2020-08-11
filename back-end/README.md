@@ -61,14 +61,6 @@ Description에 Optional 키워드가 없다면 Required를 전제로 함.
 
 ### UserPlant
 
-#### `GET` /user-plants
-
-> Responses
-
-| Code | Return             | Description    |
-| ---- | ------------------ | -------------- |
-| 200  | `Array<UserPlant>` | UserPlant 전체 |
-
 #### `POST` /user-plants
 
 > Body Paramerters
@@ -84,6 +76,14 @@ Description에 Optional 키워드가 없다면 Required를 전제로 함.
 | Code | Return      | Description           |
 | ---- | ----------- | --------------------- |
 | 201  | `UserPlant` | 생성된 UserPlant 객체 |
+
+#### `GET` /user-plants
+
+> Responses
+
+| Code | Return             | Description    |
+| ---- | ------------------ | -------------- |
+| 200  | `Array<UserPlant>` | UserPlant 전체 |
 
 #### `GET` /user-plants/:id
 
