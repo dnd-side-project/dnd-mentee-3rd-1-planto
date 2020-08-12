@@ -22,13 +22,16 @@ router.post("/", async (request: Request, response: Response) => {
 });
 
 router.get("/", async (request: Request, response: Response) => {
-  const userPlants = await UserPlant.find();
+  const userPlants = await UserPlant.find({ order: { created: "DESC" } });
 
   response.status(200).json(userPlants);
 });
 
 router.get("/:id", async (request: Request, response: Response) => {
-  const userPlant = await UserPlant.findOne(request.params.id);
+  const userPlant = await UserPlant.findOne({
+    where: { id: request.params.id },
+    order: { created: "DESC" },
+  });
 
   if (!userPlant) {
     response.sendStatus(404);
