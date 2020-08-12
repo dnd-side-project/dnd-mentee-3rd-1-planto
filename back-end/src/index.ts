@@ -2,6 +2,7 @@ import * as express from "express";
 import { createConnection } from "typeorm";
 import plantsRouter from "./routes/plants";
 import userPlantsRouter from "./routes/userPlants";
+import usersRouter from "./routes/users";
 
 createConnection()
   .then(() => {
@@ -11,6 +12,7 @@ createConnection()
     app.use(express.urlencoded({ extended: false }));
 
     // register express routes
+    app.use("/users", usersRouter);
     app.use("/plants", plantsRouter);
     app.use("/user-plants", userPlantsRouter);
 
