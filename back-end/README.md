@@ -34,6 +34,15 @@ npm run typeorm migration:revert
 
 Description에 Optional 키워드가 없다면 Required를 전제로 함.
 
+- 지원하는 엔드포인트 목록
+  - Plant
+    - [x] GET
+  - UserPlant
+    - [x] POST
+    - [x] GET
+    - [ ] PUT
+    - [ ] DELETE
+
 ### Plant
 
 #### `GET` /plants
@@ -51,6 +60,22 @@ Description에 Optional 키워드가 없다면 Required를 전제로 함.
 | 200  | `Array<Plant>` |
 
 ### UserPlant
+
+#### `POST` /user-plants
+
+> Body Paramerters
+
+| Key   | Value    | Description                                                  |
+| ----- | -------- | ------------------------------------------------------------ |
+| plant | `Plant`  | 반려 식물로 등록할 식물의 기본키 (Plant의 id)                |
+| name  | `string` | _Optional_ 반려 식물의 이름 (생략시 연관 식물의 기본값)      |
+| water | `string` | _Optional_ 반려 식물의 급수 주기 (생략시 연관 식물의 기본값) |
+
+> Responses
+
+| Code | Return      | Description           |
+| ---- | ----------- | --------------------- |
+| 201  | `UserPlant` | 생성된 UserPlant 객체 |
 
 #### `GET` /user-plants
 
