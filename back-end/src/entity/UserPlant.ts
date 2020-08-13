@@ -9,6 +9,7 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 import { Plant } from "./Plant";
+import { User } from "./User";
 
 @Entity()
 export class UserPlant extends BaseEntity {
@@ -18,9 +19,9 @@ export class UserPlant extends BaseEntity {
   @Column()
   name: string;
 
-  // STUB User Relation
-  // @ManyToOne()
-  // user: User;
+  @ManyToOne((type) => User)
+  @JoinColumn({ name: "user_id" })
+  user: User;
 
   @ManyToOne((type) => Plant)
   @JoinColumn({ name: "plant_id" })

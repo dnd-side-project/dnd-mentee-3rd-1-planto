@@ -67,6 +67,7 @@ Description에 Optional 키워드가 없다면 Required를 전제로 함.
 
 | Key   | Value    | Description                                                  |
 | ----- | -------- | ------------------------------------------------------------ |
+| user  | `User`   | 반려 식물을 등록할 유저의 기본키 (User의 id)                 |
 | plant | `Plant`  | 반려 식물로 등록할 식물의 기본키 (Plant의 id)                |
 | name  | `string` | _Optional_ 반려 식물의 이름 (생략시 연관 식물의 기본값)      |
 | water | `string` | _Optional_ 반려 식물의 급수 주기 (생략시 연관 식물의 기본값) |
