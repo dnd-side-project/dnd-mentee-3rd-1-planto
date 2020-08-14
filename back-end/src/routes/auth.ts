@@ -8,7 +8,7 @@ router.post(
   "/",
   passport.authenticate("local", { session: false }),
   async (req: Request, res: Response, next: NextFunction) => {
-    const token = jwt.sign(JSON.stringify(req.user), "test");
+    const token = jwt.sign(await req.user.toJson(), "test");
 
     return res.json({ token });
   }
