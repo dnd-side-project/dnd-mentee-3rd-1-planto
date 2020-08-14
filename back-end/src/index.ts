@@ -1,7 +1,9 @@
 import * as express from "express";
 import * as passport from "passport";
+import "reflect-metadata";
 import { createConnection } from "typeorm";
 import passportStrategy from "../config/passport";
+import authRouter from "./routes/auth";
 import plantsRouter from "./routes/plants";
 import userPlantsRouter from "./routes/userPlants";
 import usersRouter from "./routes/users";
@@ -19,6 +21,7 @@ createConnection()
     app.use("/users", usersRouter);
     app.use("/plants", plantsRouter);
     app.use("/user-plants", userPlantsRouter);
+    app.use("/auth", authRouter);
 
     // setup express app here
     // ...
