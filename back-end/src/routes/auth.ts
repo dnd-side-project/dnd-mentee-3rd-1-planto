@@ -1,13 +1,14 @@
 import { NextFunction, Request, Response, Router } from "express";
 import * as jwt from "jsonwebtoken";
 import * as passport from "passport";
+import { AuthRequest } from "../../@types/express";
 
 const router = Router();
 
 router.post(
   "/",
   passport.authenticate("local", { session: false }),
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: AuthRequest, res: Response, next: NextFunction) => {
     const token = jwt.sign(await req.user.toJson(), "test");
 
     return res.json({ token });
