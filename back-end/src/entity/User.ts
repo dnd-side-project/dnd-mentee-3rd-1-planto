@@ -35,6 +35,6 @@ export class User extends BaseEntity {
   async toJson() {
     const user = await User.findOne(this.id);
     delete user.password;
-    return JSON.stringify(user);
+    return user;
   }
 }
