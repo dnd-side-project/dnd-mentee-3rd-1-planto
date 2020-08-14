@@ -25,7 +25,7 @@ export default () => {
     new JwtStrategy(
       {
         jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-        secretOrKey: "test",
+        secretOrKey: "secret",
       },
       async (payload, done) => {
         const user = await User.findOne({ where: { id: payload.id } });
