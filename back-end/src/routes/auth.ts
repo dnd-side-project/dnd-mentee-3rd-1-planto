@@ -12,7 +12,7 @@ router.post(
     const user = req.user.getObject();
     const token = jwt.sign({ ...user }, "secret", { expiresIn: "4h" });
 
-    return res.json({ token });
+    return res.status(200).json({ token });
   }
 );
 
@@ -20,7 +20,7 @@ router.get(
   "/",
   passport.authenticate("jwt", { session: false }),
   async (req: Request, res: Response) => {
-    return res.send(req.user);
+    return res.status(200).send(req.user);
   }
 );
 
