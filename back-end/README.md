@@ -100,3 +100,35 @@ Description에 Optional 키워드가 없다면 Required를 전제로 함.
 | ---- | ----------- | ---------------------- |
 | 200  | `UserPlant` | id값과 일치하는 데이터 |
 | 404  | Not Found   | 일치하는 데이터 없음   |
+
+### Auth
+
+#### `POST` /auth
+
+> Body Parameters
+
+| Key      | Value    | Description   |
+| -------- | -------- | ------------- |
+| email    | `string` | User email    |
+| password | `string` | User password |
+
+> Responses
+
+| Code | Return          | Description   |
+| ---- | --------------- | ------------- |
+| 200  | `string(token)` | JWT 토큰      |
+| 401  | Unauthorized    | 비밀번호 오류 |
+
+#### `GET` /auth
+
+> Header Parameters
+
+| Key           | Value    | Description |
+| ------------- | -------- | ----------- |
+| Authorization | `string` | Bearer 토큰 |
+
+> Responses
+
+| Code | Return | Description             |
+| ---- | ------ | ----------------------- |
+| 200  | `User` | 토큰을 발급한 유저 정보 |
