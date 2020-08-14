@@ -48,15 +48,6 @@ npm run typeorm migration:revert
 
 Description에 Optional 키워드가 없다면 Required를 전제로 함.
 
-- 지원하는 엔드포인트 목록
-  - Plant
-    - [x] GET
-  - UserPlant
-    - [x] POST
-    - [x] GET
-    - [ ] PUT
-    - [ ] DELETE
-
 ### Plant
 
 #### `GET` /plants
