@@ -1,5 +1,19 @@
 # Back-end
 
+- [Directory Structure](#directory-structure)
+- [Installation](#installation)
+- [Migration](#migration)
+- [Endpoints](#endpoints)
+  - [Plant](#plant)
+    - [`GET` /plants](#get-plants)
+  - [UserPlant](#userplant)
+    - [`POST` /user-plants](#post-user-plants)
+    - [`GET` /user-plants](#get-user-plants)
+    - [`GET` /user-plants/:id](#get-user-plantsid)
+  - [Auth](#auth)
+    - [`POST` /auth](#post-auth)
+    - [`GET` /auth](#get-auth)
+
 ## Directory Structure
 
 ```shell
