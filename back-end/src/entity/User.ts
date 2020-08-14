@@ -32,8 +32,8 @@ export class User extends BaseEntity {
   @UpdateDateColumn()
   updated: Date;
 
-  async toJson() {
-    const user = await User.findOne(this.id);
+  getObject() {
+    const user = JSON.parse(JSON.stringify(this));
     delete user.password;
     return user;
   }
