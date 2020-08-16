@@ -31,4 +31,10 @@ export class User extends BaseEntity {
 
   @UpdateDateColumn()
   updated: Date;
+
+  getObject() {
+    const user = JSON.parse(JSON.stringify(this));
+    delete user.password;
+    return user;
+  }
 }
