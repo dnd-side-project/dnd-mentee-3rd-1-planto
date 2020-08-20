@@ -1,4 +1,7 @@
 import * as express from "express";
+import * as fs from "fs";
+import * as http from "http";
+import * as https from "https";
 import * as passport from "passport";
 import "reflect-metadata";
 import { createConnection } from "typeorm";
@@ -24,13 +27,27 @@ createConnection()
     app.use("/auth", authRouter);
 
     // setup express app here
-    // ...
+    const option =
+      process.env.NODE_ENV === "production"
+        ? {
+            ca: fs.readFileSync(
+              "/etc/letsencrypt/live/pers0n4.dev/fullchain.pem"
+            ),
+            cert: fs.readFileSync("/etc/letsencrypt/live/pers0n4.dev/cert.pem"),
+            key: fs.readFileSync(
+              "/etc/letsencrypt/live/pers0n4.dev/privkey.pem"
+            ),
+          }
+        : undefined;
 
     // start express server
-    app.listen(3000);
-
-    console.log(
-      "Express server has started on port 3000. Open http://localhost:3000/users to see results"
-    );
+    if (option) {
+      https.createServer(option, app).listen(443, () => {
+        console.log("Express server has started on port 443 on production");
+      });
+    }
+    http.createServer(app).listen(3000, () => {
+      console.log("Express server has started on port 3000 on development");
+    });
   })
   .catch((error) => console.log(error));
