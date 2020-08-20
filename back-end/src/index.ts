@@ -27,22 +27,22 @@ createConnection()
     app.use("/auth", authRouter);
 
     // setup express app here
-    const option =
+    const options: https.ServerOptions | undefined =
       process.env.NODE_ENV === "production"
         ? {
-            ca: fs.readFileSync(
-              "/etc/letsencrypt/live/pers0n4.dev/fullchain.pem"
-            ),
-            cert: fs.readFileSync("/etc/letsencrypt/live/pers0n4.dev/cert.pem"),
             key: fs.readFileSync(
               "/etc/letsencrypt/live/pers0n4.dev/privkey.pem"
+            ),
+            cert: fs.readFileSync("/etc/letsencrypt/live/pers0n4.dev/cert.pem"),
+            ca: fs.readFileSync(
+              "/etc/letsencrypt/live/pers0n4.dev/fullchain.pem"
             ),
           }
         : undefined;
 
     // start express server
-    if (option) {
-      https.createServer(option, app).listen(443, () => {
+    if (options) {
+      https.createServer(options, app).listen(443, () => {
         console.log("Express server has started on port 443 on production");
       });
     }
@@ -50,4 +50,4 @@ createConnection()
       console.log("Express server has started on port 3000 on development");
     });
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
