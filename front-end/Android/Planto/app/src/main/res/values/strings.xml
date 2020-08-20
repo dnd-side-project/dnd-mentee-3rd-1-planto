@@ -64,4 +64,9 @@
     <string name="txt_my_plant_change_picture">사진을 바꾸려면 터치하세요</string>
     <string name="button_my_plant_confirm_confirm">맞아!</string>
     <string name="button_my_plant_confirm_cancel">마음이 바꼈어, 등록 안할래</string>
+
+    <!-- Main : MyPlant List -->
+    <string name="txt_loaded_my_plant_name">반려식물1</string><!-- todo : 사용자가 지정한 식물이름 기입 -->
+    <string name="txt_loaded_my_plant_description">최근 급수일 : 1일 전\n급수 주기 : 흙을 만졌을 때 마른 느낌이 나면 주세요</string>
+
 </resources>

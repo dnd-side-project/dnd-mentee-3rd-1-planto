@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.planto.R
+import com.example.planto.main.MainActivity
 import kotlinx.android.synthetic.main.activity_confirm_my_plant.*
 
 class ConfirmMyPlantActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class ConfirmMyPlantActivity : AppCompatActivity() {
         }
         // 취소 버튼 클릭
         buttonGetMyPlantCancel.setOnClickListener {
-            val intent = Intent(baseContext, SetPlantNameActivity::class.java)  //todo: 메인화면으로 이동
+            val intent = Intent(baseContext, MainActivity::class.java)  //todo: 메인화면으로 이동
             startActivity(intent)
         }
     }
