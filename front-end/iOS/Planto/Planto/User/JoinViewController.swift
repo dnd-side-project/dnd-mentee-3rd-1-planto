@@ -59,7 +59,7 @@ extension JoinViewController {
             parameters: params,
             encoder: URLEncodedFormParameterEncoder(destination: .httpBody)
         ).response { (response) in
-            if !(response.error != nil) {  // success
+            if (response.error == nil) {  // success
                 self.alert(message: "가입 성공!") {
                     self.navigationController?.popViewController(animated: true)
                 }
