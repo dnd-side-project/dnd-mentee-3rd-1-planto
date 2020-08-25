@@ -46,28 +46,39 @@ class LogInViewController: UIViewController {
                 Constants.RestConfig.signInURL,
                 method: .post,
                 parameters: params,
-                encoder: URLEncodedFormParameterEncoder(destination: .httpBody)
-            ).response { (response) in
-                
+                encoding: JSONEncoding.default
+            ).responseJSON { (response) in
+                if (response.error == nil) {
+                    switch response.result {
+                    case .success(_):
+                        self.isAuthenticated = true
+                        if let json = response.value as? [String: String] {
+                            let token = json[Constants.User.token]
+                            // [Save Auth Info]
+                            UserUtil()
+                                .saveAllUserDefaults(
+                                    authenticatedFlag: self.isAuthenticated,
+                                    autoLoginFlag: self.isAutoLogin,
+                                    email: email,
+                                    token: token ?? ""
+                            )
+                            self.alert(message: "환영해요!")
+                        }
+                    case .failure(_):
+                        break
+                    }
+                } else {
+                    print("--->fail: \(response.error as Any)")
+                    self.alert(message: "입력하신 정보 확인 후 다시 시도해주세요.")
+                }
             }
-            
-//            isAuthenticated = true
-            
-            // To Do: Request Log In & Go to Prev VC or User Detail VC
-//            guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
-//                else { return }
-//            self.present(nextVC, animated: true) {
-//                UserUtil().saveAllUserDefaults(authenticatedFlag: self.isAuthenticated,
-//                                                autoLoginFlag: self.isAutoLogin,
-//                                                email: email, password: password)
-//            }
         }
     }
 }
 
 // MARK: - Methods
 extension LogInViewController {
-    func alert(message: String) {
+    func alert(message: String, completion: (() -> Void)? = nil) {
         let seconds: Double = 1.5
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alertController.view.backgroundColor = UIColor.lightGray
@@ -76,7 +87,7 @@ extension LogInViewController {
         self.present(alertController, animated: true, completion: nil)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
-            alertController.dismiss(animated: true, completion: nil)
+            alertController.dismiss(animated: true, completion: completion)
         })
     }
     

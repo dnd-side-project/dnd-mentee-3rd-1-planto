@@ -25,10 +25,12 @@ class Constants {
             case Email
             case NickName
             case Password
+            case Token
         }
         static let email = "email"
         static let username = "username"
         static let password = "password"
+        static let token = "token"
     }
     
     struct RestConfig {

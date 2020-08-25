@@ -50,11 +50,11 @@ class UserUtil {
         return UserDefaults.standard.value(forKey: forKey) ?? ""
     }
     
-    func saveAllUserDefaults(authenticatedFlag: Bool, autoLoginFlag: Bool, email: String, password: String) {
+    func saveAllUserDefaults(authenticatedFlag: Bool, autoLoginFlag: Bool, email: String, token: String) {
         UserDefaults.standard.set(authenticatedFlag, forKey: Constants.User.Info.Authenticated.rawValue)
         UserDefaults.standard.set(autoLoginFlag, forKey: Constants.User.Info.AutoLogIn.rawValue)
         UserDefaults.standard.set(email, forKey: Constants.User.Info.Email.rawValue)
-        UserDefaults.standard.set(password, forKey: Constants.User.Info.Password.rawValue)
+        UserDefaults.standard.set(token, forKey: Constants.User.Info.Token.rawValue)
     }
     
     func resetAllUserDefaults() {
@@ -70,13 +70,13 @@ class UserUtil {
         let isAutoLogIn = loadUserDefaults(forKey: Constants.User.Info.AutoLogIn.rawValue)
         let email = loadUserDefaults(forKey: Constants.User.Info.Email.rawValue)
         let nickName = loadUserDefaults(forKey: Constants.User.Info.NickName.rawValue)
-        let password = loadUserDefaults(forKey: Constants.User.Info.Password.rawValue)
+        let token = loadUserDefaults(forKey: Constants.User.Info.Token.rawValue)
         
         print("---> isAuthenticated: \(isAuthenticated)")
         print("---> isAutoLogIn: \(isAutoLogIn)")
         print("---> email: \(email)")
         print("---> nickName: \(nickName)")
-        print("---> password: \(password)")
+        print("---> token: \(token)")
     }
     
 }
