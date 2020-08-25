@@ -42,42 +42,52 @@ class LogInViewController: UIViewController {
                 Constants.User.email: txtEmail.text!,
                 Constants.User.password: txtPassword.text!
             ]
-            AF.request(
-                Constants.RestConfig.signInURL,
-                method: .post,
-                parameters: params,
-                encoding: JSONEncoding.default
-            ).responseJSON { (response) in
-                if (response.error == nil) {
-                    switch response.result {
-                    case .success(_):
-                        self.isAuthenticated = true
-                        if let json = response.value as? [String: String] {
-                            let token = json[Constants.User.token]
-                            // [Save Auth Info]
-                            UserUtil()
-                                .saveAllUserDefaults(
-                                    authenticatedFlag: self.isAuthenticated,
-                                    autoLoginFlag: self.isAutoLogin,
-                                    email: email,
-                                    token: token ?? ""
-                            )
-                            self.alert(message: "환영해요!")
-                        }
-                    case .failure(_):
-                        break
-                    }
-                } else {
-                    print("--->fail: \(response.error as Any)")
-                    self.alert(message: "입력하신 정보 확인 후 다시 시도해주세요.")
-                }
-            }
+            requestSignIn(params: params)
         }
     }
 }
 
 // MARK: - Methods
 extension LogInViewController {
+    func requestUserInfo(token : String) {
+        let headers: HTTPHeaders = [
+            "Authorization": token,
+        ]
+        AF.request(
+            Constants.RestConfig.signInURL,
+            method: .get,
+            parameters: nil,
+            encoding: URLEncoding.default,
+            headers: headers
+            ).validate().responseString { (response) in
+            print(response.value as Any)
+        }
+    }
+    func requestSignIn( params : [String: String]) {
+        AF.request(
+            Constants.RestConfig.signInURL,
+            method: .post,
+            parameters: params,
+            encoding: JSONEncoding.default
+        ).responseJSON { (response) in
+            if (response.error == nil) {
+                switch response.result {
+                case .success(_):
+                    self.isAuthenticated = true
+                    if let json = response.value as? [String: String] {
+                        let token = json[Constants.User.token]
+                        // [Get User Info]
+                        self.requestUserInfo(token: token ?? "")
+                    }
+                case .failure(_):
+                    break
+                }
+            } else {
+                print("--->fail: \(response.error as Any)")
+                self.alert(message: "입력하신 정보 확인 후 다시 시도해주세요.")
+            }
+        }
+    }
     func alert(message: String, completion: (() -> Void)? = nil) {
         let seconds: Double = 1.5
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
