@@ -22,6 +22,7 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateUI()
     }
     
     // MARK: - IBActions
@@ -49,43 +50,47 @@ class LogInViewController: UIViewController {
 
 // MARK: - Methods
 extension LogInViewController {
-//    func requestUserInfo(token : String) {
-//        let headers: HTTPHeaders = [
-//            "Authorization": "Bearer: \(token)",
-//            "Accept": "application/json"
-//        ]
-//        AF.request(
-//            Constants.RestConfig.signInURL,
-//            headers: ["Authorization": "Bearer: \(token)"]
-//            ).responseJSON { (response) in
-//                print(response as Any)
-//                print(response.value as Any)
-//        }
-//    }
+    func updateUI() {
+        let authFlag = UserUtil().loadUserDefaults(forKey: Constants.User.Info.Authenticated.rawValue)
+        if (authFlag as! Int == 1) {
+            guard let nextVC = self
+                .storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
+                else { return }
+            self.present(nextVC, animated: true)
+        }
+    }
     func requestSignIn( params : [String: String]) {
         AF.request(
             Constants.RestConfig.signInURL,
             method: .post,
             parameters: params,
-            encoding: JSONEncoding.default
-        ).responseJSON { (response) in
-            if (response.error == nil) {
-                switch response.result {
-                case .success(_):
-                    self.isAuthenticated = true
-                    if let json = response.value as? [String: String] {
-                        let token = json[Constants.User.token]
-                        
-                        // [Get User Info]
-//                        self.requestUserInfo(token: token ?? "")
+            encoding: JSONEncoding.default)
+            .responseJSON { (response) in
+                if (response.error == nil) {
+                    switch response.result {
+                    case .success(_):
+                        self.isAuthenticated = true
+                        if let json = response.value as? [String: String] {
+                            let token = json[Constants.User.token]
+                            // [Save User Info]
+                            UserUtil().saveAllUserDefaults(
+                                authenticatedFlag: self.isAuthenticated,
+                                autoLoginFlag: self.isAutoLogin,
+                                email: self.txtEmail.text ?? "",
+                                token: token ?? ""
+                            )
+                            // [Move to NextVC]
+                            guard let nextVC = self
+                                .storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
+                                else { return }
+                            self.present(nextVC, animated: true)
+                        }
+                    case .failure(_):
+                        break
                     }
-                case .failure(_):
-                    break
+                } else {  // error
+                    self.alert(message: "입력하신 정보 확인 후 다시 시도해주세요.")
                 }
-            } else {
-                print("--->fail: \(response.error as Any)")
-                self.alert(message: "입력하신 정보 확인 후 다시 시도해주세요.")
-            }
         }
     }
     func alert(message: String, completion: (() -> Void)? = nil) {
