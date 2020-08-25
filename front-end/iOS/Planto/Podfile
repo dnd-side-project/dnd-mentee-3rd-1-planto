@@ -6,6 +6,7 @@ target 'Planto' do
   use_frameworks!
 
   pod 'Alamofire', '~> 5.2'
+  pod 'JSONWebToken'
 
   # Pods for Planto
 

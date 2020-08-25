@@ -51,16 +51,15 @@ class LogInViewController: UIViewController {
 extension LogInViewController {
     func requestUserInfo(token : String) {
         let headers: HTTPHeaders = [
-            "Authorization": token,
+            "Authorization": "Bearer: \(token)",
+            "Accept": "application/json"
         ]
         AF.request(
             Constants.RestConfig.signInURL,
-            method: .get,
-            parameters: nil,
-            encoding: URLEncoding.default,
-            headers: headers
-            ).validate().responseString { (response) in
-            print(response.value as Any)
+            headers: ["Authorization": "Bearer: \(token)"]
+            ).responseJSON { (response) in
+                print(response as Any)
+                print(response.value as Any)
         }
     }
     func requestSignIn( params : [String: String]) {
