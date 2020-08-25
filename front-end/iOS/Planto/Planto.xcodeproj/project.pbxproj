@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7742897764E4103C0B8BDDC1 /* Pods_Planto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E00C861D86959CD42759AB /* Pods_Planto.framework */; };
 		A406CE3A24D3F57100ECD2A1 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406CE3924D3F57100ECD2A1 /* User.storyboard */; };
 		A406CE3E24D3F5C300ECD2A1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406CE3D24D3F5C300ECD2A1 /* LogInViewController.swift */; };
 		A420434824CD7EA0008A5278 /* FindPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420434724CD7EA0008A5278 /* FindPlantViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3123496C578C9AEA0D38D2E8 /* Pods-Planto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planto.release.xcconfig"; path = "Target Support Files/Pods-Planto/Pods-Planto.release.xcconfig"; sourceTree = "<group>"; };
 		A406CE3924D3F57100ECD2A1 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		A406CE3D24D3F5C300ECD2A1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		A420434724CD7EA0008A5278 /* FindPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlantViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,8 @@
 		B4ACB79D24CED89300BFE2E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4DEFAF924D05D8900855551 /* BeforeManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeManagementViewController.swift; sourceTree = "<group>"; };
 		B4DEFAFB24D061CE00855551 /* HowToManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToManageViewController.swift; sourceTree = "<group>"; };
+		B9E00C861D86959CD42759AB /* Pods_Planto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Planto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66DCFA9DC04CF144D7AC96C /* Pods-Planto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planto.debug.xcconfig"; path = "Target Support Files/Pods-Planto/Pods-Planto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +79,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7742897764E4103C0B8BDDC1 /* Pods_Planto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		299F812AD39631197743D602 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9E00C861D86959CD42759AB /* Pods_Planto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93B492B45CCA2DAD61177F90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C66DCFA9DC04CF144D7AC96C /* Pods-Planto.debug.xcconfig */,
+				3123496C578C9AEA0D38D2E8 /* Pods-Planto.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A406CE3824D3F53000ECD2A1 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,8 @@
 			children = (
 				A44FD2E724C42F5100037F7A /* Planto */,
 				A44FD2E624C42F5100037F7A /* Products */,
+				93B492B45CCA2DAD61177F90 /* Pods */,
+				299F812AD39631197743D602 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A44FD2F924C42F5200037F7A /* Build configuration list for PBXNativeTarget "Planto" */;
 			buildPhases = (
+				66C7238ADD821722A9C6DBB6 /* [CP] Check Pods Manifest.lock */,
 				A44FD2E124C42F5100037F7A /* Sources */,
 				A44FD2E224C42F5100037F7A /* Frameworks */,
 				A44FD2E324C42F5100037F7A /* Resources */,
+				BBABB444BB4EF08168139D97 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +258,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66C7238ADD821722A9C6DBB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Planto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBABB444BB4EF08168139D97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planto/Pods-Planto-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planto/Pods-Planto-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Planto/Pods-Planto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A44FD2E124C42F5100037F7A /* Sources */ = {
@@ -402,6 +471,7 @@
 		};
 		A44FD2FA24C42F5200037F7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66DCFA9DC04CF144D7AC96C /* Pods-Planto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -421,6 +491,7 @@
 		};
 		A44FD2FB24C42F5200037F7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3123496C578C9AEA0D38D2E8 /* Pods-Planto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
