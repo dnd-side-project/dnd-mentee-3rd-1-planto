@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class JoinViewController: UIViewController {
     
@@ -47,27 +48,28 @@ extension JoinViewController {
 // MARK: - Functions
 extension JoinViewController {
     func requestJoin() {
-        var responseCode = 200
-        
-        if (responseCode == 200) {
-            isAuthenticated = true
-            isAutoLogin = true
-            
-            UserUtil().saveAllUserDefaults(authenticatedFlag: isAuthenticated,
-                                            autoLoginFlag: isAutoLogin,
-                                            email: txtEmail.text!,
-                                            password: txtPassword.text!)
-            
-            guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
-                else { return }
-            self.present(nextVC, animated: true)
-            // To Do: Request Log the Created User In
-        } else {
-            alert(message: "관리자에게 문의해주세요")
+        let params: [String: String] = [
+            Constants.User.email: txtEmail.text!,
+            Constants.User.username: txtNickName.text!,
+            Constants.User.password: txtPassword.text!
+        ]
+        AF.request(
+            Constants.RestConfig.joinURL,
+            method: .post,
+            parameters: params,
+            encoder: URLEncodedFormParameterEncoder(destination: .httpBody)
+        ).response { (response) in
+            if !(response.error != nil) {  // success
+                self.alert(message: "가입 성공!") {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            } else {  // error
+                self.alert(message: "네트워크 상태를 확인 후 다시 시도해주세요.")
+            }
         }
     }
     
-    func alert(message: String) {
+    func alert(message: String, completion: (() -> Void)? = nil) {
         let seconds: Double = 1.5
         
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
@@ -78,7 +80,7 @@ extension JoinViewController {
         
         // Dismiss Automatically
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
-            alertController.dismiss(animated: true, completion: nil)
+            alertController.dismiss(animated: true, completion: completion)
         })
     }
     
