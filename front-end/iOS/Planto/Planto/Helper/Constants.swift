@@ -34,5 +34,6 @@ class Constants {
     struct RestConfig {
         static let baseURL = "https://pers0n4.dev/"
         static let joinURL = "\(RestConfig.baseURL)users"
+        static let signInURL = "\(RestConfig.baseURL)auth"
     }
 }
