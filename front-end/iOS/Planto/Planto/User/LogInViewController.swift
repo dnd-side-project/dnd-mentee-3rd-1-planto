@@ -49,19 +49,19 @@ class LogInViewController: UIViewController {
 
 // MARK: - Methods
 extension LogInViewController {
-    func requestUserInfo(token : String) {
-        let headers: HTTPHeaders = [
-            "Authorization": "Bearer: \(token)",
-            "Accept": "application/json"
-        ]
-        AF.request(
-            Constants.RestConfig.signInURL,
-            headers: ["Authorization": "Bearer: \(token)"]
-            ).responseJSON { (response) in
-                print(response as Any)
-                print(response.value as Any)
-        }
-    }
+//    func requestUserInfo(token : String) {
+//        let headers: HTTPHeaders = [
+//            "Authorization": "Bearer: \(token)",
+//            "Accept": "application/json"
+//        ]
+//        AF.request(
+//            Constants.RestConfig.signInURL,
+//            headers: ["Authorization": "Bearer: \(token)"]
+//            ).responseJSON { (response) in
+//                print(response as Any)
+//                print(response.value as Any)
+//        }
+//    }
     func requestSignIn( params : [String: String]) {
         AF.request(
             Constants.RestConfig.signInURL,
@@ -75,8 +75,9 @@ extension LogInViewController {
                     self.isAuthenticated = true
                     if let json = response.value as? [String: String] {
                         let token = json[Constants.User.token]
+                        
                         // [Get User Info]
-                        self.requestUserInfo(token: token ?? "")
+//                        self.requestUserInfo(token: token ?? "")
                     }
                 case .failure(_):
                     break
