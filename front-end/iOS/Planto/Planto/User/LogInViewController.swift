@@ -52,7 +52,7 @@ class LogInViewController: UIViewController {
 extension LogInViewController {
     func updateUI() {
         let authFlag = UserUtil().loadUserDefaults(forKey: Constants.User.Info.Authenticated.rawValue)
-        if (authFlag as! Int == 1) {
+        if (authFlag as? Int != nil && authFlag as! Int == 1) {
             guard let nextVC = self
                 .storyboard?.instantiateViewController(withIdentifier: "UserDetailVC")
                 else { return }
