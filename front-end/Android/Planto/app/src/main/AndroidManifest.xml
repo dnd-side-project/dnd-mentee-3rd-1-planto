@@ -35,5 +35,5 @@
         <activity android:name=".user.LogInActivity" />
         <activity android:name=".user.JoinActivity" />
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
