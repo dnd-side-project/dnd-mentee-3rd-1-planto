@@ -25,19 +25,27 @@ class UserDetailViewController: UIViewController {
         
         loadUserInformation()
     }
-    
     func loadUserInformation() {
-        // To Do: Request & Show User Information
-        let users = TempUsers().users
-        let userDefaults = UserDefaults.standard
-        let email = userDefaults.value(forKey: Constants.User.Info.Email.rawValue) as! String
-        
-        for user in users {
-            if user["email"] == email {
-                lblEmail.text = user["email"]
-                lblNickName.text = user["userName"]
-            }
+        let userToken = UserUtil().loadUserDefaults(forKey: Constants.User.Info.Token.rawValue)
+        let decodedToken = UserUtil().decode(userToken as! String)
+        if decodedToken != nil {
+            let email = decodedToken![Constants.User.email] as! String
+            let nickName = decodedToken![Constants.User.username] as! String
+            lblEmail.text = email
+            lblNickName.text = nickName
         }
+    }
+    func alert(message: String, completion: (() -> Void)? = nil) {
+        let seconds: Double = 1.5
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.view.backgroundColor = UIColor.lightGray
+        alertController.view.alpha = 0.5
+        alertController.view.layer.cornerRadius = 15
+        self.present(alertController, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
+            alertController.dismiss(animated: true, completion: completion)
+        })
     }
 
 }

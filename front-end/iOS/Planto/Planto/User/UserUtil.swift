@@ -29,6 +29,31 @@ class UserUtil {
         return isExisting
     }
     
+    func decode(_ token: String) -> [String: AnyObject]? {
+        let string = token.components(separatedBy: ".")
+        let toDecode = string[1] as String
+
+
+        var stringtoDecode: String = toDecode.replacingOccurrences(of: "-", with: "+") // 62nd char of encoding
+        stringtoDecode = stringtoDecode.replacingOccurrences(of: "_", with: "/") // 63rd char of encoding
+        switch (stringtoDecode.utf16.count % 4) {
+        case 2: stringtoDecode = "\(stringtoDecode)=="
+        case 3: stringtoDecode = "\(stringtoDecode)="
+        default: // nothing to do stringtoDecode can stay the same
+            print("")
+        }
+        let dataToDecode = Data(base64Encoded: stringtoDecode, options: [])
+        let base64DecodedString = NSString(data: dataToDecode!, encoding: String.Encoding.utf8.rawValue)
+
+        var values: [String: AnyObject]?
+        if let string = base64DecodedString {
+            if let data = string.data(using: String.Encoding.utf8.rawValue, allowLossyConversion: true) {
+                values = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : AnyObject]
+            }
+        }
+        return values
+    }
+    
     func checkUser(email: String, password: String) -> Bool {
         // To Do: Request
         let users = TempUsers().users
@@ -50,11 +75,11 @@ class UserUtil {
         return UserDefaults.standard.value(forKey: forKey) ?? ""
     }
     
-    func saveAllUserDefaults(authenticatedFlag: Bool, autoLoginFlag: Bool, email: String, password: String) {
+    func saveAllUserDefaults(authenticatedFlag: Bool, autoLoginFlag: Bool, email: String, token: String) {
         UserDefaults.standard.set(authenticatedFlag, forKey: Constants.User.Info.Authenticated.rawValue)
         UserDefaults.standard.set(autoLoginFlag, forKey: Constants.User.Info.AutoLogIn.rawValue)
         UserDefaults.standard.set(email, forKey: Constants.User.Info.Email.rawValue)
-        UserDefaults.standard.set(password, forKey: Constants.User.Info.Password.rawValue)
+        UserDefaults.standard.set(token, forKey: Constants.User.Info.Token.rawValue)
     }
     
     func resetAllUserDefaults() {
@@ -70,13 +95,13 @@ class UserUtil {
         let isAutoLogIn = loadUserDefaults(forKey: Constants.User.Info.AutoLogIn.rawValue)
         let email = loadUserDefaults(forKey: Constants.User.Info.Email.rawValue)
         let nickName = loadUserDefaults(forKey: Constants.User.Info.NickName.rawValue)
-        let password = loadUserDefaults(forKey: Constants.User.Info.Password.rawValue)
+        let token = loadUserDefaults(forKey: Constants.User.Info.Token.rawValue)
         
         print("---> isAuthenticated: \(isAuthenticated)")
         print("---> isAutoLogIn: \(isAutoLogIn)")
         print("---> email: \(email)")
         print("---> nickName: \(nickName)")
-        print("---> password: \(password)")
+        print("---> token: \(token)")
     }
     
 }
