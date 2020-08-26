@@ -26,5 +26,13 @@ class Constants {
             case NickName
             case Password
         }
+        static let email = "email"
+        static let username = "username"
+        static let password = "password"
+    }
+    
+    struct RestConfig {
+        static let baseURL = "https://pers0n4.dev/"
+        static let joinURL = "\(RestConfig.baseURL)users"
     }
 }
