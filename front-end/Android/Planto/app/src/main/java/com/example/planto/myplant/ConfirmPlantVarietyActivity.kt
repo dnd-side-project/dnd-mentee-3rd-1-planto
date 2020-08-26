@@ -17,7 +17,8 @@ class ConfirmPlantVarietyActivity : AppCompatActivity() {
 
         // 확인 버튼 클릭
         buttonConfirmPlantVarietyConfirm.setOnClickListener {
-            // To Do: next view(GetPlantNameActivity) 이동
+            val intent = Intent(baseContext, SetPlantNameActivity::class.java)
+            startActivity(intent)
         }
 
         // 취소 버튼 클릭
