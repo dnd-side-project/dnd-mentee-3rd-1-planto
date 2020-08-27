@@ -7,14 +7,26 @@ import com.example.planto.R
 import kotlinx.android.synthetic.main.activity_join.*
 
 class JoinActivity : AppCompatActivity() {
+
+    // ---> Instances
+
     private var isAuthenticated = false
     private var isAutoLogin = false
     private val userUtil = UserUtil()
+
+    // ---> Overrides
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
 
+        setOnClicks()
+    }
+
+    // ---> Methods
+
+    // Init OnClickListeners
+    private fun setOnClicks() {
         buttonJoin.setOnClickListener {
             val email = editTextJoinEmail.text.toString()
             val nickName = editTextJoinNickName.text.toString()
@@ -24,7 +36,13 @@ class JoinActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkRequires(email: String, nickName: String, password: String, confirmPassword: String) {
+    // Check Empty Fields and Forms
+    private fun checkRequires(
+        email: String,
+        nickName: String,
+        password: String,
+        confirmPassword: String
+    ) {
         if (email == "" || nickName == "" || password == "" || confirmPassword == "") {
             showToast("모든 정보를 입력해주세요")
         } else if (password != confirmPassword) {
@@ -53,6 +71,7 @@ class JoinActivity : AppCompatActivity() {
         }
     }
 
+    // Save User Info
     private fun saveUserInfo(email: String, nickName: String, password: String) {
         // To Do: Save Token Key
         userUtil.saveUserPref(userUtil.prefsAuth, isAuthenticated.toString())
@@ -62,8 +81,8 @@ class JoinActivity : AppCompatActivity() {
         userUtil.saveUserPref(userUtil.prefsPassword, password)
     }
 
-    private fun showToast(text: String) {
-        val toast = Toast.makeText(this@JoinActivity, text, Toast.LENGTH_LONG)
-        toast.show()
+    // Show Toast
+    private fun showToast(message: String) {
+        Toast.makeText(this@JoinActivity, message, Toast.LENGTH_LONG).show()
     }
 }
