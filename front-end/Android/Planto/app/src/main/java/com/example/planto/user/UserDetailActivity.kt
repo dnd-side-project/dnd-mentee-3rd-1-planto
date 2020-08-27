@@ -3,47 +3,54 @@ package com.example.planto.user
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.auth0.android.jwt.JWT
 import com.example.planto.R
+import com.example.planto.helper.Constants
 import kotlinx.android.synthetic.main.activity_user_detail.*
+import java.util.*
 
 class UserDetailActivity : AppCompatActivity() {
 
+    // ---> Instances
+
+    val userUtil = UserUtil()
+
+    // ---> Overrides
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_detail)
 
+        setOnClicks()
+        updateUI()
+    }
+
+    // ---> Methods
+
+    // Set OnClickListeners
+    private fun setOnClicks() {
+        // Leave Service Btn
         buttonLeaveService.setOnClickListener {
             val intent = Intent(this, LeaveServiceActivity::class.java)
             startActivity(intent)
         }
-
+        // Edit Profile Btn
         buttonEditProfile.setOnClickListener {
             val intent = Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
         }
-
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        loadUserInformation()
-    }
-
-    private fun loadUserInformation() {
-        // To Do: Request & Show User Information
-        val testUser = mapOf("email" to "test@test.test", "nickName" to "Test", "password" to "1")
-        val adminUser = mapOf("email" to "planto@planto.com", "nickName" to "Plantö", "password" to "1")
-        val allUsers = listOf(testUser, adminUser)
-
-        val email = UserUtil().loadUserPref(UserUtil().prefsEmail)
-
-        for (user in allUsers) {
-            if (user[UserUtil().prefsEmail] == email) {
-                tvUserEmail.text = user[UserUtil().prefsEmail]
-                tvUserNickName.text = user[UserUtil().prefsNickName]
-            }
+    // Update UI
+    private fun updateUI() {
+        val token = UserUtil().loadUserPref(userUtil.prefsToken)
+        if (token != "") {
+            val email = JWT(token).getClaim(Constants.EMAIL_STR).asString()
+            val nickName = JWT(token).getClaim(Constants.USERNAME_STR).asString()
+            tvUserEmail.text = email ?: ""
+            tvUserNickName.text = nickName ?: ""
         }
     }
+
 }
