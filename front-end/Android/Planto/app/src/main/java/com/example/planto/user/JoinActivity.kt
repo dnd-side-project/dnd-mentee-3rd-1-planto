@@ -73,10 +73,15 @@ class JoinActivity : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call<Join>, response: Response<Join>) {
-                // Succeeded to Join
-                Log.e("Planto", "response: $response\nbody: ${response.body()}")
-                val message = "Succeeded!"
-                showToast(message)
+                // Check Response Code
+                if (response.code() == 201) {  // Succeeded to Join
+                    val message = "가입 성공! 로그인해주세요!"
+                    showToast(message)
+                    finish()
+                } else {  // Bad Request
+                    val message = "가입에 실패했어요! 다시 시도해주세요."
+                    showToast(message)
+                }
             }
         })
 
