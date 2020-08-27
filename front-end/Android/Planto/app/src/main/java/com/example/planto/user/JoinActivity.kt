@@ -100,7 +100,7 @@ class JoinActivity : AppCompatActivity() {
 
     // Show Toast
     private fun showToast(message: String) {
-        Toast.makeText(this@JoinActivity, message, Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
     }
 
 }

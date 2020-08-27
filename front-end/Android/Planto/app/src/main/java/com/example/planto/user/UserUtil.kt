@@ -9,6 +9,7 @@ class UserUtil {
     val prefsEmail = "email"
     val prefsNickName = "nickName"
     val prefsPassword = "password"
+    val prefsToken = "token"
     private val defValue = ""
 
     private val strFalse = "false"
