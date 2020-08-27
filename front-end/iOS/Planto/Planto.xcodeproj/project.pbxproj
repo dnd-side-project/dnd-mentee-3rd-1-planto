@@ -100,6 +100,10 @@
 				C66DCFA9DC04CF144D7AC96C /* Pods-Planto.debug.xcconfig */,
 				3123496C578C9AEA0D38D2E8 /* Pods-Planto.release.xcconfig */,
 			);
+<<<<<<< HEAD
+=======
+			name = Pods;
+>>>>>>> eff8041730bcf07899cc698565e41c3d53ade58b
 			path = Pods;
 			sourceTree = "<group>";
 		};
