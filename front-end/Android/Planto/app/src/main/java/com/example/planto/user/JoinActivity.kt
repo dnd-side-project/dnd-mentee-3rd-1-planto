@@ -32,6 +32,7 @@ class JoinActivity : AppCompatActivity() {
 
     // Init OnClickListeners
     private fun setOnClicks() {
+        // Join Btn
         buttonJoin.setOnClickListener {
             val email = editTextJoinEmail.text.toString()
             val nickName = editTextJoinNickName.text.toString()
@@ -74,7 +75,7 @@ class JoinActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<Join>, response: Response<Join>) {
                 // [Check Response Code]
-                if (response.code() == 201) {
+                if (response.code() == 201) {  // OK
                     // [Succeeded to Join]
                     saveUserInfo(email)
 
@@ -100,7 +101,7 @@ class JoinActivity : AppCompatActivity() {
 
     // Show Toast
     private fun showToast(message: String) {
-        Toast.makeText(this@JoinActivity, message, Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
     }
 
 }

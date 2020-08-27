@@ -100,16 +100,6 @@
             android:inputType="textNoSuggestions|textPassword" />
     </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/checkBoxAutoLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/auto_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogInPassword" />
-
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
@@ -119,7 +109,7 @@
         android:background="@android:color/transparent"
         android:text="@string/forgot_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxAutoLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutLogInPassword" />
 
     <TextView
         android:id="@+id/loginTitle"
