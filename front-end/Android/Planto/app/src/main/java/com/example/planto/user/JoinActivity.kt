@@ -2,16 +2,22 @@ package com.example.planto.user
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.planto.R
+import com.example.planto.helper.Constants
+import com.example.planto.helper.RetrofitClient
+import com.example.planto.user.request.Join
+import com.example.planto.user.request.JoinService
 import kotlinx.android.synthetic.main.activity_join.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class JoinActivity : AppCompatActivity() {
 
     // ---> Instances
 
-    private var isAuthenticated = false
-    private var isAutoLogin = false
     private val userUtil = UserUtil()
 
     // ---> Overrides
@@ -56,27 +62,47 @@ class JoinActivity : AppCompatActivity() {
 
     // Request Join
     private fun requestJoin(email: String, nickName: String, password: String) {
-        var responseCode = 200
+        val retrofit = RetrofitClient.getInstance()
+        val joinService: JoinService = retrofit.create(JoinService::class.java)
 
-        if (responseCode == 200) {
-            isAuthenticated = true
-            isAutoLogin = true
-            saveUserInfo(email, nickName, password)
-            // To Do: Request Log the Created User In
-            showToast("To Do: Login")
-        } else {
-            showToast("입력하신 정보를 확인해주세요")
-        }
+        joinService.requestJoin(email, password, nickName).enqueue(object : Callback<Join> {
+            override fun onFailure(call: Call<Join>, t: Throwable) {
+                // Failed to Join
+                val message = "네트워크 상태를 확인해주세요."
+                showToast(message)
+            }
+
+            override fun onResponse(call: Call<Join>, response: Response<Join>) {
+                // Succeeded to Join
+                Log.e("Planto", "response: $response\nbody: ${response.body()}")
+                val message = "Succeeded!"
+                showToast(message)
+            }
+        })
+
+
+//        var responseCode = 200
+//
+//        if (responseCode == 200) {
+//            isAuthenticated = true
+//            isAutoLogin = true
+//            saveUserInfo(email, nickName, password)
+//            // To Do: Request Log the Created User In
+//            showToast("To Do: Login")
+//        } else {
+//            showToast("입력하신 정보를 확인해주세요")
+//        }
     }
 
     // Save User Info
     private fun saveUserInfo(email: String, nickName: String, password: String) {
         // To Do: Save Token Key
-        userUtil.saveUserPref(userUtil.prefsAuth, isAuthenticated.toString())
-        userUtil.saveUserPref(userUtil.prefsAutoLogin, isAutoLogin.toString())
+        userUtil.saveUserPref(userUtil.prefsAuth, Constants.TRUE_STR)
+        userUtil.saveUserPref(userUtil.prefsAutoLogin, Constants.TRUE_STR)
         userUtil.saveUserPref(userUtil.prefsEmail, email)
         userUtil.saveUserPref(userUtil.prefsNickName, nickName)
         userUtil.saveUserPref(userUtil.prefsPassword, password)
+        // todo: save token
     }
 
     // Show Toast
