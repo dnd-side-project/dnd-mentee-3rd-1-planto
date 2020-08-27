@@ -3,13 +3,10 @@ package com.example.planto.user
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.planto.R
 import com.example.planto.helper.Constants
 import com.example.planto.helper.RetrofitClient
-import com.example.planto.user.request.Join
-import com.example.planto.user.request.JoinService
 import com.example.planto.user.request.SignIn
 import com.example.planto.user.request.SignInService
 import kotlinx.android.synthetic.main.activity_log_in.*
@@ -29,6 +26,7 @@ class LogInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
 
+        updateUI()
         setOnClicks()
     }
 
@@ -47,6 +45,15 @@ class LogInActivity : AppCompatActivity() {
         buttonJoin.setOnClickListener {
             val intent = Intent(this, JoinActivity::class.java)
             startActivity(intent)
+        }
+    }
+
+    // Update UI
+    private fun updateUI() {
+        if (userUtil.loadUserPref(userUtil.prefsAuth) == Constants.TRUE_STR) {
+            val intent = Intent(applicationContext, UserDetailActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -77,9 +84,17 @@ class LogInActivity : AppCompatActivity() {
                 // [Check Response Code]
                 if (response.code() == 200) {  // OK
                     // [Succeeded to Sign In]
-                    // TODO: Save User + Toast + Activity Move
-                    Log.e("Planto", "body: ${response.body()}")
-                    Log.e("Planto", "body: ${response.body()}")
+                    val tokenLength = response.body().toString().length
+                    val token = response.body().toString().substring(13, tokenLength - 1)
+
+                    val message = "로그인 성공! 반가워요!"
+                    showToast(message)
+
+                    saveUserInfo(email, token)
+
+                    val intent = Intent(applicationContext, UserDetailActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 } else {  // Bad Request
                     val message = "로그인에 실패했어요! 정보를 확인해주세요."
                     showToast(message)
@@ -90,12 +105,10 @@ class LogInActivity : AppCompatActivity() {
     }
 
     // Save User Info
-    private fun saveUserInfo(email: String, password: String, token: String) {
-        // ToDo: Decode JWT
+    private fun saveUserInfo(email: String, token: String) {
         userUtil.saveUserPref(userUtil.prefsAuth, Constants.TRUE_STR)
         userUtil.saveUserPref(userUtil.prefsAutoLogin, Constants.TRUE_STR)
         userUtil.saveUserPref(userUtil.prefsEmail, email)
-        userUtil.saveUserPref(userUtil.prefsPassword, password)
         userUtil.saveUserPref(userUtil.prefsToken, token)
     }
 

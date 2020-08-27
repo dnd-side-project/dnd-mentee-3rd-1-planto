@@ -1,5 +1,6 @@
 package com.example.planto.user.request
 
 data class SignIn (
-    val token: Any
+    val token: String
 )
+
