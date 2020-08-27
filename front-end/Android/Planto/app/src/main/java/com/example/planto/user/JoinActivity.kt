@@ -2,7 +2,6 @@ package com.example.planto.user
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.planto.R
 import com.example.planto.helper.Constants
@@ -62,56 +61,46 @@ class JoinActivity : AppCompatActivity() {
 
     // Request Join
     private fun requestJoin(email: String, nickName: String, password: String) {
+        // [Init Retrofit & Service]
         val retrofit = RetrofitClient.getInstance()
         val joinService: JoinService = retrofit.create(JoinService::class.java)
-
+        // [Start Join Process]
         joinService.requestJoin(email, password, nickName).enqueue(object : Callback<Join> {
             override fun onFailure(call: Call<Join>, t: Throwable) {
-                // Failed to Join
+                // [Failed to Join]
                 val message = "네트워크 상태를 확인해주세요."
                 showToast(message)
             }
 
             override fun onResponse(call: Call<Join>, response: Response<Join>) {
-                // Check Response Code
-                if (response.code() == 201) {  // Succeeded to Join
+                // [Check Response Code]
+                if (response.code() == 201) {
+                    // [Succeeded to Join]
+                    saveUserInfo(email)
+
                     val message = "가입 성공! 로그인해주세요!"
                     showToast(message)
-                    finish()
+
+                    finish()  // Back to the previous Activity
                 } else {  // Bad Request
                     val message = "가입에 실패했어요! 다시 시도해주세요."
                     showToast(message)
                 }
             }
+
         })
-
-
-//        var responseCode = 200
-//
-//        if (responseCode == 200) {
-//            isAuthenticated = true
-//            isAutoLogin = true
-//            saveUserInfo(email, nickName, password)
-//            // To Do: Request Log the Created User In
-//            showToast("To Do: Login")
-//        } else {
-//            showToast("입력하신 정보를 확인해주세요")
-//        }
     }
 
     // Save User Info
-    private fun saveUserInfo(email: String, nickName: String, password: String) {
-        // To Do: Save Token Key
+    private fun saveUserInfo(email: String) {
         userUtil.saveUserPref(userUtil.prefsAuth, Constants.TRUE_STR)
         userUtil.saveUserPref(userUtil.prefsAutoLogin, Constants.TRUE_STR)
         userUtil.saveUserPref(userUtil.prefsEmail, email)
-        userUtil.saveUserPref(userUtil.prefsNickName, nickName)
-        userUtil.saveUserPref(userUtil.prefsPassword, password)
-        // todo: save token
     }
 
     // Show Toast
     private fun showToast(message: String) {
         Toast.makeText(this@JoinActivity, message, Toast.LENGTH_LONG).show()
     }
+
 }
